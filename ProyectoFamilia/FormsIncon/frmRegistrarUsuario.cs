@@ -1,5 +1,4 @@
-﻿using CapaNegocio;
-using ProyectoFamilia.Class;
+﻿
 using ProyectoFamilia.Notifications;
 using System;
 using System.Collections.Generic;
@@ -28,16 +27,16 @@ namespace ProyectoFamilia.FormsIncon
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            SqlParameter[] pa = new SqlParameter[34];
-            ConexionFamilia1 objCnx = null;
-            //tmGuardarUsuario.Start();
+            //SqlParameter[] pa = new SqlParameter[34];
+            //ConexionFamilia1 objCnx = null;
+            ////tmGuardarUsuario.Start();
 
-            //refreshTimer();
-            string usuario = "";
-            string password = "";
-            //recibe los parametros del los textbox
-            usuario = txtUsuario.Text;
-            password = txtPassword.Text;
+            ////refreshTimer();
+            //string usuario = "";
+            //string password = "";
+            ////recibe los parametros del los textbox
+            //usuario = txtUsuario.Text;
+            //password = txtPassword.Text;
 
             //if (txtUsuario.Text != "" && txtPassword.Text != "")
             //{

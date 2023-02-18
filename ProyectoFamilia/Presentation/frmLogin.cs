@@ -1,4 +1,4 @@
-﻿using ProyectoFamilia.Class;
+﻿using CapaConexion;
 using ProyectoFamilia.Notifications;
 using System;
 using System.Collections.Generic;
@@ -26,26 +26,26 @@ namespace ProyectoFamilia.Presentation
         }
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            SqlConnection c = ConexionSql.conexion();
-            SqlCommand comand = new SqlCommand("SELECT * FROM Login WHERE usuario=@usuario AND password =@password", c);
-            comand.Parameters.AddWithValue("@usuario", txtUsuario.Text);
-            comand.Parameters.AddWithValue("@password", txtPassword.Text);
+            //SqlConnection c = ConexionSql();
+            //SqlCommand comand = new SqlCommand("SELECT * FROM Login WHERE usuario=@usuario AND password =@password", c);
+            //comand.Parameters.AddWithValue("@usuario", txtUsuario.Text);
+            //comand.Parameters.AddWithValue("@password", txtPassword.Text);
 
-            c.Open();
-            SqlDataReader reader = comand.ExecuteReader();
+            //c.Open();
+            //SqlDataReader reader = comand.ExecuteReader();
            
-            if (reader.HasRows)
-            {
-                frmMenuPrincipal MenuPrincipal =  new frmMenuPrincipal();
-                MenuPrincipal.Show();
-                this.Alert("Bienvenido " + txtUsuario.Text, Notify.enmType.Info);
+            //if (reader.HasRows)
+            //{
+            //    frmMenuPrincipal MenuPrincipal =  new frmMenuPrincipal();
+            //    MenuPrincipal.Show();
+            //    this.Alert("Bienvenido " + txtUsuario.Text, Notify.enmType.Info);
 
-            }
-            else
-            {
-                System.Windows.Forms.MessageBox.Show("El Usuario o Contraseña es incorrecto, porfavor Intente nuevamente", "Error Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            c.Close();
+            //}
+            //else
+            //{
+            //    System.Windows.Forms.MessageBox.Show("El Usuario o Contraseña es incorrecto, porfavor Intente nuevamente", "Error Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+            //c.Close();
         }
 
         private void txtUsuario_Enter(object sender, EventArgs e)
