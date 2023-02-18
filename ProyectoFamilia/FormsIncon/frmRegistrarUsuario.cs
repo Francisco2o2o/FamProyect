@@ -29,7 +29,7 @@ namespace ProyectoFamilia.FormsIncon
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             SqlParameter[] pa = new SqlParameter[34];
-            ConexionFamilia objCnx = null;
+            ConexionFamilia1 objCnx = null;
             //tmGuardarUsuario.Start();
 
             //refreshTimer();
