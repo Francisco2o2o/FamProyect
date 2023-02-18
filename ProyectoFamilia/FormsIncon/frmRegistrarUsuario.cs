@@ -1,4 +1,5 @@
-﻿using ProyectoFamilia.Class;
+﻿using CapaNegocio;
+using ProyectoFamilia.Class;
 using ProyectoFamilia.Notifications;
 using System;
 using System.Collections.Generic;
@@ -27,7 +28,8 @@ namespace ProyectoFamilia.FormsIncon
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            
+            SqlParameter[] pa = new SqlParameter[34];
+            ConexionFamilia objCnx = null;
             //tmGuardarUsuario.Start();
 
             //refreshTimer();
@@ -37,42 +39,45 @@ namespace ProyectoFamilia.FormsIncon
             usuario = txtUsuario.Text;
             password = txtPassword.Text;
 
-            if (txtUsuario.Text != "" && txtPassword.Text != "")
-            {
-                try
-                {
-                    SqlConnection c = ConexionSql.conexion();
-                    c.Open();
-                    using (SqlCommand command = new SqlCommand("INSERT INTOo Logino (usuario,password) VALUES (@usuario, @password)", c))
-                    {
-                        // Añadir los parámetros al comando SqlCommand
-                        command.Parameters.AddWithValue("@usuario", usuario);
-                        command.Parameters.AddWithValue("@password", password);
+            //if (txtUsuario.Text != "" && txtPassword.Text != "")
+            //{
+            //try
+            //{
+            //    objCnx = new  ConexionFamilia("");
 
-                        // Ejecutar la consulta INSERT
+            //    //using (SqlCommand command = new SqlCommand("INSERT INTOo Logino (usuario,password) VALUES (@usuario, @password)", c))
+            //   //objCnx.EjecutarProcedimiento("uspGuardarCliente", pa); Consulta
+            //    {
+            //        // Añadir los parámetros al comando SqlCommand
+            //        pa[0] = new SqlParameter("@peidCliente", SqlDbType.Int);
+            //        pa[0].Value = objCliente.idCliente;
 
-                        //if (pbGuardarUsuario.Value == 100)
-                        //{
-                            command.ExecuteNonQuery();
-                            // Mostrar una alerta informando que el usuario ha sido guardado
-                            this.Alert("Usuario Guardado", Notify.enmType.Info);
-                        
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageFM.Show("Erro Al guardar datos de Usuario",
-                  "Error del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            //        // Ejecutar la consulta INSERT
 
-            }
-            else
-            {
-                this.Alert("Completar Campos", Notify.enmType.Error);
-            }
-       }
+            //        //if (pbGuardarUsuario.Value == 100)
+            //        //{
+            //        command.ExecuteNonQuery();
+            //            // Mostrar una alerta informando que el usuario ha sido guardado
+            //            this.Alert("Usuario Guardado", Notify.enmType.Info);
+
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageFM.Show("Erro Al guardar datos de Usuario",
+            //  "Error del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+
+            //}
+            //else
+            //{
+            //    this.Alert("Completar Campos", Notify.enmType.Error);
+        }
+
 
     }
 
 }
+
+
 

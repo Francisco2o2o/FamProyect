@@ -1,43 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Text;
+using System.IO;
+
 
 namespace CapaNegocio
 {
     public class ConexionFamilia
     {
-        public SqlConnection BConexion;
-
-        public SqlTransaction myTransa;
-        private SqlConnection cmdComando;
+        public SqlConnection strConexion;
+        //public IDbTransaction myTrans;
+        public SqlTransaction myTrans;
+        private SqlCommand cmdComando;
         private Boolean bActiva = false;
         private String lsCadena = "";
-        private int nTimeOurt;
+        private int nTimeOut;
 
-        public ConexionFamilia(String pBaseDatos = "", int pnTimeOut = 7200)
+        //Constructor
+        public ConexionFamilia(string psBaseDatos = "", int pnTimenOut = 7200)
         {
-            //Despues de comprar si los datos estan llenados con el archivo text.
-            LeerIni(pBaseDatos);
-
-            //se realiza la conexion y se guarda en la variable BConexion 
-            BConexion = new SqlConnection(lsCadena);
-            //Se apertura la conexion
-            BConexion.Open();
-            nTimeOurt = pnTimeOut;
+            LeerIni(psBaseDatos);
+            strConexion = new SqlConnection(lsCadena);
+            strConexion.Open();
+            nTimeOut = pnTimenOut;
         }
-        private Boolean LeerIni(string pBaseDatos)
+
+        //Funcion que lee el archivo ini , donde obtiene la cadena de conección
+        private Boolean LeerIni(string psBaseDatos)
         {
-            Boolean bResult = false; //Variable
-            String lsTxt;
+            Boolean bResult = false;
+            String lsIni;
             try
             {
-                lsTxt = "Conex.txt"; //Nombre del Archivo
-
-                //Enviar parametros a LeerArchivo
-                lsCadena = LeerArchivo(pBaseDatos, lsTxt);
+                lsIni = "Conex.Text";
+                lsCadena = LeerArchivo(psBaseDatos, lsIni);
                 bResult = true;
             }
             catch (Exception)
@@ -47,31 +50,25 @@ namespace CapaNegocio
             return bResult;
         }
 
-        //LeerArchvo Recibe los pararemos de LeerIni
-        private String LeerArchivo(String pBaseDatos, String lsTxt)
+        private String LeerArchivo(string psBaseDatos, string lsIni)
         {
-
+           
             int k = 0;
             String Pass = "";
             String Usuario = "";
             String BaseDatos = "";
-            String lsCadenaCon = "";
-            String cArchivo = "";
-            String cClave1 = "";
-            String cClave2 = "";
-            String sLine = "";
-            String Source = "";
+            String lsCadenaCon = ""; String cArchivo = ""; String cClave1 = ""; String cClave2 = ""; String sLine = ""; String Source = "";
             try
             {
                 cArchivo = System.AppDomain.CurrentDomain.BaseDirectory.ToString();
 
                 if (cArchivo.Substring(cArchivo.Length - 1, 1) == "\\")
                 {
-                    cArchivo = cArchivo + lsTxt;
+                    cArchivo = cArchivo + lsIni;
                 }
                 else
                 {
-                    cArchivo = cArchivo + @"\" + lsTxt;
+                    cArchivo = cArchivo + @"\" + lsIni;
                 }
 
                 StreamReader objReader = new StreamReader(cArchivo, Encoding.Default);
@@ -83,8 +80,8 @@ namespace CapaNegocio
                         k = sLine.IndexOf("=");
                         if (k > 0)
                         {
-                            //Clave1 = nombre
-                            //Clave2=Valor que se le da a la Clave1
+                            //cClave1 = oEnc.ConvertirClave(sLine.Substring(0, k), "", false);
+                            //cClave2 = oEnc.ConvertirClave(sLine.Substring(k + 1, sLine.Length - (k + 1)), "", false);
                             cClave1 = sLine.Substring(0, k);
                             cClave2 = sLine.Substring(k + 1, sLine.Length - (k + 1));
                             if (cClave1 == "Server")
@@ -93,12 +90,13 @@ namespace CapaNegocio
                             }
                             else if (cClave1 == "DataBase")
                             {
-                                if (pBaseDatos == "")
+                                if (psBaseDatos == "")
                                 {
-                                    pBaseDatos = cClave2;
+                                    psBaseDatos = cClave2;
                                 }
-
-                                BaseDatos = pBaseDatos;
+                                //Sino le especifica la base de datos
+                                //obtiene la base de datos del Ini
+                                BaseDatos = psBaseDatos;
                             }
                             else if (cClave1 == "Password")
                             {
@@ -117,7 +115,6 @@ namespace CapaNegocio
             {
                 throw new Exception(ex.Message);
             }
-            //arma la cadena de conexion
             if (Pass.Trim() == "" || Usuario.Trim() == "")
                 lsCadena = "Integrated Security=True;INITIAL CATALOG=" + ((BaseDatos.Trim())) + ";DATA SOURCE=" + ((Source.Trim())) + "";
             else
@@ -126,5 +123,199 @@ namespace CapaNegocio
             lsCadenaCon = lsCadena;
             return lsCadenaCon;
         }
+
+        public Int32 EjecutarProcedimiento(string storedProcedureName, params object[] parameterValues)
+        {
+
+            Int32 nRowsAfec = 0;
+            try
+            {
+                if (bActiva == true)
+                {
+                    cmdComando = new SqlCommand(storedProcedureName, strConexion, myTrans);
+                    cmdComando.CommandTimeout = nTimeOut;
+                }
+                else
+                {
+                    cmdComando = new SqlCommand(storedProcedureName, strConexion);
+                    cmdComando.CommandTimeout = nTimeOut;
+                }
+                cmdComando.CommandType = CommandType.StoredProcedure;
+                AssignParameterValues(cmdComando, parameterValues);
+
+                nRowsAfec = cmdComando.ExecuteNonQuery();
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return nRowsAfec;
+        }
+
+        void AssignParameterValues(DbCommand command, object[] values)
+        {
+            foreach (IDataParameter parameter in values)
+            {
+                command.Parameters.Add(parameter);
+            }
+
+        }
+
+
+        public DataSet EjecutarProcedimientoDS(string storedProcedureName, params object[] parameterValues)
+        {
+            DataSet dsResultado = new DataSet();
+            SqlDataAdapter da;
+            try
+            {
+                if (bActiva == true)
+                {
+                    cmdComando = new SqlCommand(storedProcedureName, strConexion, myTrans);
+                    cmdComando.CommandTimeout = nTimeOut;
+
+                }
+                else
+                {
+                    cmdComando = new SqlCommand(storedProcedureName, strConexion);
+                    cmdComando.CommandTimeout = nTimeOut;
+
+                }
+                cmdComando.CommandType = CommandType.StoredProcedure;
+                AssignParameterValues(cmdComando, parameterValues);
+                da = new SqlDataAdapter(cmdComando);
+                da.Fill(dsResultado);
+                return dsResultado;
+            }
+            catch (Exception EX)
+            {
+                throw new Exception(EX.Message);
+            }
+
+        }
+
+
+        public DataTable EjecutarProcedimientoDT(string storedProcedureName, params object[] parameterValues)
+        {
+            DataTable dtResultado = new DataTable();
+            SqlDataAdapter da;
+            try
+            {
+                if (bActiva == true)
+                {
+                    cmdComando = new SqlCommand(storedProcedureName, strConexion, myTrans);
+                    cmdComando.CommandTimeout = nTimeOut;
+
+                }
+                else
+                {
+                    cmdComando = new SqlCommand(storedProcedureName, strConexion);
+                    cmdComando.CommandTimeout = nTimeOut;
+
+                }
+                cmdComando.CommandType = CommandType.StoredProcedure;
+                if (parameterValues != null)
+                {
+                    AssignParameterValues(cmdComando, parameterValues);
+                }
+
+                da = new SqlDataAdapter(cmdComando);
+                da.Fill(dtResultado);
+                return dtResultado;
+            }
+            catch (Exception EX)
+            {
+                throw new Exception(EX.Message);
+            }
+
+        }
+
+        public DataTable CargaDataTable(String sSQL)
+        {
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+            try
+            {
+                cmdComando = new SqlCommand(sSQL, strConexion, myTrans);
+                cmdComando.CommandTimeout = nTimeOut;
+                SqlDataAdapter da = new SqlDataAdapter(cmdComando);
+                da.Fill(ds);
+                dt = ds.Tables[0];
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return dt;
+        }
+
+        public DataSet CargaDataSet(String sSQL)
+        {
+            DataSet ds = new DataSet();
+            try
+            {
+                cmdComando = new SqlCommand(sSQL, strConexion, myTrans);
+                cmdComando.CommandTimeout = nTimeOut;
+                SqlDataAdapter da = new SqlDataAdapter(cmdComando);
+                da.Fill(ds);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return ds;
+        }
+
+        public Int32 Ejecutar(String sSQL)
+        {
+            Int32 nRowsAfec = 0;
+            try
+            {
+                if (bActiva == true)
+                {
+                    cmdComando = new SqlCommand(sSQL, strConexion, myTrans);
+                    cmdComando.CommandTimeout = nTimeOut;
+                }
+                else
+                {
+                    cmdComando = new SqlCommand(sSQL, strConexion);
+                    cmdComando.CommandTimeout = nTimeOut;
+                }
+
+                nRowsAfec = cmdComando.ExecuteNonQuery();
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return nRowsAfec;
+        }
+
+        public void CierraConexion()
+        {
+            strConexion.Close();
+            strConexion.Dispose();
+        }
+
+        public void BeginT()
+        {
+            myTrans = strConexion.BeginTransaction();
+            bActiva = true;
+        }
+
+        public void Commit()
+        {
+            myTrans.Commit();
+            bActiva = false;
+        }
+
+        public void RollBackT()
+        {
+            myTrans.Rollback();
+            bActiva = false;
+        }
     }
 }
+
+
