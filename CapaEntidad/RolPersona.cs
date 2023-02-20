@@ -8,15 +8,23 @@ namespace CapaEntidad
 {
     public class RolPersona
     {
-        string nombre;
+        string nombreRol;
+        int idRolPersona;
+        DateTime rfechaRegistro;
 
-        public string Nombre { get => nombre; set => nombre = value; }
+        public string NombreRol { get => nombreRol; set => nombreRol = value; }
+        public DateTime RfechaRegistro { get => rfechaRegistro; set => rfechaRegistro = value; }
+        public int IdRolPersona { get => idRolPersona; set => idRolPersona = value; }
 
-        public RolPersona(String nombre)
+        public RolPersona(Int32 idRoles, String nombreroles)
         {
 
-            nombre = nombre;
+            NombreRol = nombreroles;
+            IdRolPersona = idRoles;
+
         }
+
+       
     }
 }
 

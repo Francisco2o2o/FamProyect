@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace CapaNegocio
 {
-    public class NeRolPersona
+    public class NeOcupacion
     {
-        public List<RolPersona> NeLLenarRol(Int32 idRol, String nombreRol, Boolean buscar)
+        public List<OcupacionPersona> NeLLenarOcupacion(Int32 idOcupacion, String nomOcupacion, Boolean buscar)
         {
 
-            daTraerRol daobjUsuario = new daTraerRol();
+            daOcupacion daobjOcupacion = new daOcupacion();
             try
             {
-                return daobjUsuario.daLLenarRol(idRol, nombreRol, buscar);
+                return daobjOcupacion.daLLenarOcupacion(idOcupacion, nomOcupacion, buscar);
             }
             catch (Exception ex)
             {
@@ -25,6 +25,4 @@ namespace CapaNegocio
 
         }
     }
-
-
 }

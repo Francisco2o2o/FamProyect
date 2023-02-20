@@ -46,7 +46,7 @@ namespace ProyectoFamilia.FormsIncome
             imagePersona.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
             return ms.GetBuffer();
         }
-        public void fnGuardarPersona()
+        public String fnGuardarPersona()
         {
             Persona objpersona = new Persona(); //Clase persona , creamos
             NePersona NEobjPersona = new NePersona();
@@ -54,28 +54,26 @@ namespace ProyectoFamilia.FormsIncome
 
             try
             {
-
+                objpersona.DocPersona = Convert.ToString(txtDocumento.Text.Trim());
                 objpersona.NomPersona = Convert.ToString(txtNombre.Text.Trim());
                 objpersona.ApePat = Convert.ToString(txtapePat.Text.Trim());
                 objpersona.ApeMat = Convert.ToString(txtapeMat.Text.Trim());
-
-                objpersona.OcupacionPersona = Convert.ToString(txtOcupacion.Text.Trim());
-
-                //objpersona.Rol = Convert.ToInt32(cboRol.SelectedValue);
-
+                objpersona.Ocupacion = Convert.ToInt32(cboOcupacion.SelectedValue);
+                objpersona.Rol = Convert.ToInt32(cboRol.SelectedValue);
                 objpersona.CorreoPersona = Convert.ToString(txtCorreo.Text.Trim());
-                objpersona.DocPersona = Convert.ToString(txtDocumento.Text.Trim());
                 objpersona.FotoPersona = ConvertirImg();
-                objpersona.CumPersona = Convert.ToDateTime(dtCumPersona.Value);
+                objpersona.FechaNacimiento = Convert.ToDateTime(dtFechaNacimiento.Value);
                 objpersona.RegPersona = DateTime.Now;
                 lcValidar =NEobjPersona.NeGuardarPersona(objpersona, 0).Trim();
                 //fnLimpiarControles();
                 //fnHabilitarControles(false);
+
+                return lcValidar;
             }
             catch (Exception ex)
             {
               
-                lcValidar = "NO";
+                return  "NO";
             }
             
         }
@@ -83,14 +81,14 @@ namespace ProyectoFamilia.FormsIncome
         private void GuardarMiembroFamilia_Click(object sender, EventArgs e)
         {
             String lcResultado = "";
-            fnGuardarPersona();
+            lcResultado= fnGuardarPersona();
             if (lcResultado == "OK")
             {
-                //MessageBox.Show("Se Grabo Satisfactoriamente Personal Trabajador", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Se Grabo Satisfactoriamente Personal Trabajador", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                //MessageBox.Show("Error al Grabar Personal Trabajador. Comunicar a Administrador de Sistema", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Error al Grabar Personal Trabajador. Comunicar a Administrador de Sistema", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -104,7 +102,7 @@ namespace ProyectoFamilia.FormsIncome
             }
         }
 
-        public static List<RolPersona> fnLLenarRol(ComboBox cbo, Int32 idRol, Boolean buscar)
+        public static List<RolPersona> fnLLenarRol(ComboBox cbo, Int32 idRol, String nombreRol, Boolean buscar)
         {
             NeRolPersona objrol = new NeRolPersona();
 
@@ -112,15 +110,16 @@ namespace ProyectoFamilia.FormsIncome
 
             try
             {
-                lstRol = objrol.NeRolPer(0, buscar);
-                cbo.ValueMember = "idMoneda";              
+                lstRol = objrol.NeLLenarRol(idRol, nombreRol, buscar);
+                cbo.ValueMember = "idRolPersona";
+                cbo.DisplayMember = "nombreRol";
                 cbo.DataSource = lstRol;
 
                 return lstRol;
             }
             catch (Exception ex)
             {
-                //objUtil.gsLogAplicativo("FrmRegistrarVehiculo", "fnLLenarClaseVehiculo", ex.Message);
+                
                 return lstRol;
             }
             finally
@@ -130,10 +129,38 @@ namespace ProyectoFamilia.FormsIncome
         }
 
 
-            private void frmRegistrarMiembros_Load(object sender, EventArgs e)
+        public static List<OcupacionPersona> fnLLenarOcupacion(ComboBox cbo, Int32 idOcupacion, String nomOcupacion, Boolean buscar)
+        {
+            NeOcupacion objOcupacion = new NeOcupacion();
+
+            List<OcupacionPersona> lstOcupacion = new List<OcupacionPersona>();
+
+            try
             {
-            fnLLenarRol(cboRol, 0, false);
+                lstOcupacion = objOcupacion.NeLLenarOcupacion(idOcupacion, nomOcupacion, buscar);
+                // variables de la clase
+                cbo.ValueMember = "IdOcupacion";//ValueMember ->Oculta
+                cbo.DisplayMember = "NombreOcupacion";//DisplayMember ->Muestra
+                cbo.DataSource = lstOcupacion;
+
+                return lstOcupacion;
             }
+            catch (Exception ex)
+            {
+
+                return lstOcupacion;
+            }
+            finally
+            {
+                lstOcupacion = null;
+            }
+        }
+
+        private void frmRegistrarMiembros_Load(object sender, EventArgs e)
+            {
+            fnLLenarRol(cboRol, 0,"", false);
+            fnLLenarOcupacion(cboOcupacion, 0, "", false);
+        }
 
         public void fnTrarDatosPersona()
         {

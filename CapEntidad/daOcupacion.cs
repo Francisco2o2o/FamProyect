@@ -10,44 +10,43 @@ using System.Threading.Tasks;
 
 namespace CapDatos
 {
-    public class daTraerRol
+    public class daOcupacion
     {
-
-        public List<RolPersona> daLLenarRol(Int32 idRol,  String nombreRol, Boolean buscar)
+        public List<OcupacionPersona> daLLenarOcupacion(Int32 idOcupacion, String nomOcupacion, Boolean buscar)
         {
 
 
             SqlParameter[] pa = new SqlParameter[0];
-            DataTable dtUsuario = new DataTable();
+            DataTable dtOcupacion = new DataTable();
             ConexionSql objCnx = null;
-            
+
 
             try
             {
 
                 objCnx = new ConexionSql("");
-                dtUsuario = objCnx.EjecutarProcedimientoDT("uspLlenarRol", pa);
+                dtOcupacion = objCnx.EjecutarProcedimientoDT("uspLlenarOcupacion", pa);
 
-                List<RolPersona> rol = new List<RolPersona>();
-                rol.Add(new RolPersona(
+                List<OcupacionPersona> ocupa = new List<OcupacionPersona>();
+                ocupa.Add(new OcupacionPersona(
                         0,
                         Convert.ToString(buscar ? "TODOS" : "Selecc. opcion")
 
                         )
                     );
-                        
 
-                foreach (DataRow drMenu in dtUsuario.Rows)
+
+                foreach (DataRow drMenu in dtOcupacion.Rows)
                 {
-                    rol.Add(new RolPersona(
-                         Convert.ToInt32(drMenu["idRol"]),
-                        Convert.ToString(drMenu["nomRol"])
+                    ocupa.Add(new OcupacionPersona(
+                         Convert.ToInt32(drMenu["idOcupacion"]),
+                        Convert.ToString(drMenu["nomOcupacion"]) //campos de la tabla Ocupacion
                         )
                      );
-                        
+
                 }
 
-                return rol;
+                return ocupa;
 
             }
             catch (Exception ex)
@@ -61,8 +60,7 @@ namespace CapDatos
                     objCnx.CierraConexion();
                 objCnx = null;
             }
-
         }
-
     }
+
 }
