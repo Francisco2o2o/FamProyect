@@ -9,6 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="MB\**" />
+    <EmbeddedResource Remove="MB\**" />
+    <None Remove="MB\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="FormsIncon\frmRegistrarUsuario.Designer.cs~RF136c4c3.TMP" />
   </ItemGroup>
 
@@ -32,10 +38,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="MB\" />
   </ItemGroup>
 
   <ItemGroup>

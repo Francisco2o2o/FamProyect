@@ -53,6 +53,8 @@
             this.btnCerrarFormularios = new System.Windows.Forms.PictureBox();
             this.tmHoraFecha = new System.Windows.Forms.Timer(this.components);
             this.tmFormulario = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.PanelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PanelSupeior.SuspendLayout();
@@ -325,6 +327,8 @@
             // 
             // PanelCentral
             // 
+            this.PanelCentral.Controls.Add(this.panel2);
+            this.PanelCentral.Controls.Add(this.panel1);
             this.PanelCentral.Controls.Add(this.btnCerrarFormularios);
             this.PanelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelCentral.Location = new System.Drawing.Point(254, 39);
@@ -352,6 +356,22 @@
             // tmFormulario
             // 
             this.tmFormulario.Tick += new System.EventHandler(this.tmFormulario_Tick);
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(649, 567);
+            this.panel1.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(649, 314);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(301, 253);
+            this.panel2.TabIndex = 2;
             // 
             // frmMenuPrincipal
             // 
@@ -409,5 +429,7 @@
         private Label lblPbFormularios;
         private CircularProgressBar.CircularProgressBar pbCargarFormularios;
         private System.Windows.Forms.Timer tmFormulario;
+        private Panel panel2;
+        private Panel panel1;
     }
 }

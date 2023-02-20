@@ -76,7 +76,6 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(264, 20);
             this.txtUsuario.TabIndex = 2;
-            
             // 
             // txtPassword
             // 
@@ -86,7 +85,6 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(264, 20);
             this.txtPassword.TabIndex = 3;
-           
             // 
             // btnGuardar
             // 
@@ -170,7 +168,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(466, 201);
+            this.ClientSize = new System.Drawing.Size(466, 196);
             this.Controls.Add(this.siticoneSeparator2);
             this.Controls.Add(this.siticoneSeparator1);
             this.Controls.Add(this.pictureBox2);

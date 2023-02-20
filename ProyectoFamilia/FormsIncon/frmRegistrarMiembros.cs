@@ -1,6 +1,8 @@
 ﻿
 using CapaEntidad;
 using CapaNegocio;
+using Microsoft.Identity.Client;
+using ProyectoFamilia.Notifications;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,14 +15,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
+
 namespace ProyectoFamilia.FormsIncome
 {
     public partial class frmRegistrarMiembros : Form
     {
+        BuscarPersona Api = new BuscarPersona();
         public frmRegistrarMiembros()
         {
             InitializeComponent();
         }
+
+        public void Alert(string mensaje, Notify.enmType type)
+        {
+            Notify frm = new Notify();
+            frm.showAlert(mensaje, type);
+        }
+
         static Int16 lnTipoCon = 0;
 
         private Byte[] ConvertirImg()
@@ -122,7 +133,40 @@ namespace ProyectoFamilia.FormsIncome
             private void frmRegistrarMiembros_Load(object sender, EventArgs e)
             {
             fnLLenarRol(cboRol, 0, false);
-            } 
-        
+            }
+
+        public void fnTrarDatosPersona()
+        {
+            string token = "?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Imh0dHBzLmZyYW56QGdtYWlsLmNvbSJ9.zZV6zWvLKoce0NNoVIN9wXnAYtx6ieduZET1ynUJgfM";
+            try
+            {
+                if (txtDocumento.Text.Length == 8)
+                {
+                    //token
+                    dynamic respuesta = Api.Get("https://dniruc.apisperu.com/api/v1/dni/" + txtDocumento.Text + token);
+                    txtNombre.Text = respuesta.nombres.ToString();
+                    txtapePat.Text = respuesta.apellidoPaterno.ToString();
+                    txtapeMat.Text = respuesta.apellidoMaterno.ToString();
+                    this.Alert("Datos Encontrados", Notify.enmType.Info);
+                }
+
+                else
+                {
+                    this.Alert("Error Al buscar DNI", Notify.enmType.Error);
+                }
+            }
+            catch (Exception)
+            {
+                this.Alert("Ingrese documento valido", Notify.enmType.Error);
+
+            }
+        }
+            
+        private void btnBuscarPersona_Click(object sender, EventArgs e)
+        {
+            fnTrarDatosPersona();
+
+
+        }
     }
 }
