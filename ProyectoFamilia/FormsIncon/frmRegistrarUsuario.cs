@@ -30,35 +30,35 @@ namespace ProyectoFamilia.FormsIncon
 
         public void fnGuardarUsuario()
         {
-            Usuario objUsuario = new Usuario(); //Clase persona , creamos
-            NeUsuario NEobjUsuario = new NeUsuario();
-            String lcValidar = "";
+            //Usuario objUsuario = new Usuario(); //Clase persona , creamos
+            //NeUsuario NEobjUsuario = new NeUsuario();
+            //String lcValidar = "";
 
-            try
-            {
-                //objpersona.DocPersona = Convert.ToString(txtDocumento.Text.Trim());
-                objUsuario.User = Convert.ToString(txtUsuario.Text.Trim());
-                objUsuario.Password = Convert.ToString(txtPassword.Text.Trim());
-                objUsuario.FechaReg = DateTime.Now;
+            //try
+            //{
+            //    //objpersona.DocPersona = Convert.ToString(txtDocumento.Text.Trim());
+            //    objUsuario.User = Convert.ToString(txtUsuario.Text.Trim());
+            //    objUsuario.Password = Convert.ToString(txtPassword.Text.Trim());
+            //    objUsuario.FechaReg = DateTime.Now;
 
-                lcValidar = NEobjUsuario.NeGuardarUsuario(objUsuario, 0).Trim();
-                //fnLimpiarControles();
-                //fnHabilitarControles(false);
+            //    lcValidar = NEobjUsuario.NeGuardarUsuario(objUsuario, 0).Trim();
+            //    //fnLimpiarControles();
+            //    //fnHabilitarControles(false);
 
-                return lcValidar;
-            }
-            catch (Exception ex)
-            {
+            //    return lcValidar;
+            //}
+            //catch (Exception ex)
+            //{
 
-                return "NO";
-            }
+            //    return "NO";
+            //}
         }
 
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             String lcResultado = "";
-            lcResultado = fnGuardarUsuario();
+            //lcResultado = fnGuardarUsuario();
             fnGuardarUsuario();
 
             if (lcResultado == "OK")
