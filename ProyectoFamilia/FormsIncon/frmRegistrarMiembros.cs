@@ -101,7 +101,7 @@ namespace ProyectoFamilia.FormsIncome
                 imagePersona.Image = new Bitmap(open.FileName);
             }
         }
-
+        #region Llenar Rol Persona
         public static List<RolPersona> fnLLenarRol(ComboBox cbo, Int32 idRol, String nombreRol, Boolean buscar)
         {
             NeRolPersona objrol = new NeRolPersona();
@@ -127,8 +127,8 @@ namespace ProyectoFamilia.FormsIncome
                 lstRol = null;
             }
         }
-
-
+        #endregion
+        #region Llenar ComboBox Ocupacion Persona
         public static List<OcupacionPersona> fnLLenarOcupacion(ComboBox cbo, Int32 idOcupacion, String nomOcupacion, Boolean buscar)
         {
             NeOcupacion objOcupacion = new NeOcupacion();
@@ -156,12 +156,16 @@ namespace ProyectoFamilia.FormsIncome
             }
         }
 
+        #endregion
         private void frmRegistrarMiembros_Load(object sender, EventArgs e)
-            {
+               
+     {
             fnLLenarRol(cboRol, 0,"", false);
             fnLLenarOcupacion(cboOcupacion, 0, "", false);
+            dtRegistroPersona.Visible = false;
         }
 
+        #region TraerDatos Persona
         public void fnTrarDatosPersona()
         {
             string token = "?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Imh0dHBzLmZyYW56QGdtYWlsLmNvbSJ9.zZV6zWvLKoce0NNoVIN9wXnAYtx6ieduZET1ynUJgfM";
@@ -188,11 +192,25 @@ namespace ProyectoFamilia.FormsIncome
 
             }
         }
-            
-        private void btnBuscarPersona_Click(object sender, EventArgs e)
+        #endregion
+        private void dtFechaNacimiento_ValueChanged(object sender, EventArgs e)
+        {
+            if (DateTime.Now.Subtract(dtFechaNacimiento.Value).TotalDays / 365.25 > 100)
+            {
+                MessageBox.Show("La fecha seleccionada es inválida. Por favor, elija una fecha que no sea mayor a 100 años a partir de la fecha actual.");
+                dtFechaNacimiento.Focus();
+                return;
+            }
+        }
+
+        private void GuardarMiembroFamilia_Click_1(object sender, EventArgs e)
         {
             fnTrarDatosPersona();
+        }
 
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
 
         }
     }
