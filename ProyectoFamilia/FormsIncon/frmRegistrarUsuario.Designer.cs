@@ -43,6 +43,7 @@
             this.siticoneSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
             this.siticoneSeparator2 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
             this.MoverFormulario = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
+            this.dtFechaRegistroUsuario = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
             this.pSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -90,7 +91,7 @@
             // 
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnGuardar.Location = new System.Drawing.Point(38, 137);
+            this.btnGuardar.Location = new System.Drawing.Point(38, 162);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(395, 31);
             this.btnGuardar.TabIndex = 4;
@@ -163,12 +164,27 @@
             this.MoverFormulario.TargetControl = this.pSuperior;
             this.MoverFormulario.UseTransparentDrag = true;
             // 
+            // dtFechaRegistroUsuario
+            // 
+            this.dtFechaRegistroUsuario.Checked = true;
+            this.dtFechaRegistroUsuario.FillColor = System.Drawing.Color.White;
+            this.dtFechaRegistroUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dtFechaRegistroUsuario.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtFechaRegistroUsuario.Location = new System.Drawing.Point(213, 120);
+            this.dtFechaRegistroUsuario.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtFechaRegistroUsuario.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtFechaRegistroUsuario.Name = "dtFechaRegistroUsuario";
+            this.dtFechaRegistroUsuario.Size = new System.Drawing.Size(220, 36);
+            this.dtFechaRegistroUsuario.TabIndex = 6;
+            this.dtFechaRegistroUsuario.Value = new System.DateTime(2023, 2, 21, 17, 58, 42, 79);
+            // 
             // frmRegistrarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(466, 196);
+            this.ClientSize = new System.Drawing.Size(466, 203);
+            this.Controls.Add(this.dtFechaRegistroUsuario);
             this.Controls.Add(this.siticoneSeparator2);
             this.Controls.Add(this.siticoneSeparator1);
             this.Controls.Add(this.pictureBox2);
@@ -206,5 +222,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneSeparator siticoneSeparator1;
         private Siticone.Desktop.UI.WinForms.SiticoneSeparator siticoneSeparator2;
         private Siticone.Desktop.UI.WinForms.SiticoneDragControl MoverFormulario;
+        private Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker dtFechaRegistroUsuario;
     }
 }

@@ -78,19 +78,20 @@ namespace ProyectoFamilia.FormsIncome
             
         }
 
-        private void GuardarMiembroFamilia_Click(object sender, EventArgs e)
-        {
-            String lcResultado = "";
-            lcResultado= fnGuardarPersona();
-            if (lcResultado == "OK")
-            {
-                MessageBox.Show("Se Grabo Satisfactoriamente Personal Trabajador", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Error al Grabar Personal Trabajador. Comunicar a Administrador de Sistema", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-        }
+        //private void GuardarMiembroFamilia_Click(object sender, EventArgs e)
+        //{
+        //    String lcResultado = "";
+        //    lcResultado= fnGuardarPersona();
+            
+        //    if (lcResultado == "OK")
+        //    {
+        //        MessageBox.Show("Se Grabo Satisfactoriamente Personal Trabajador", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Error al Grabar Personal Trabajador. Comunicar a Administrador de Sistema", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        //    }
+        //}
 
         private void btnFotoMiembroFamilia_Click(object sender, EventArgs e)
         {
@@ -193,25 +194,43 @@ namespace ProyectoFamilia.FormsIncome
             }
         }
         #endregion
-        private void dtFechaNacimiento_ValueChanged(object sender, EventArgs e)
+
+        public void fnValidadFecha()
         {
-            if (DateTime.Now.Subtract(dtFechaNacimiento.Value).TotalDays / 365.25 > 100)
+            DateTime fechaInicio = dtFechaInicio.Value;
+            DateTime fechaReferencia = new DateTime(2023, 02, 21);
+            int diasTranscurridos = (fechaInicio - fechaReferencia).Days;
+            if (diasTranscurridos < 100)
             {
-                MessageBox.Show("La fecha seleccionada es inválida. Por favor, elija una fecha que no sea mayor a 100 años a partir de la fecha actual.");
-                dtFechaNacimiento.Focus();
-                return;
+                MessageBox.Show("La fecha debe ser menos de 100","Titulo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
         }
 
         private void GuardarMiembroFamilia_Click_1(object sender, EventArgs e)
         {
-            fnTrarDatosPersona();
+            String lcResultado = "";
+            lcResultado = fnGuardarPersona();
+            fnValidadFecha();
+
+            if (lcResultado == "OK")
+            {
+                MessageBox.Show("Se Grabo Satisfactoriamente Personal Trabajador", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Error al Grabar Personal Trabajador. Comunicar a Administrador de Sistema", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBuscarPersona_Click(object sender, EventArgs e)
+        {
+            fnTrarDatosPersona();
         }
     }
 }

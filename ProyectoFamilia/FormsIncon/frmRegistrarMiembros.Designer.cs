@@ -64,8 +64,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.siticoneHtmlLabel2 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.siticoneHtmlLabel1 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.siticoneDateTimePicker2 = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
-            this.siticoneDateTimePicker1 = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
+            this.dtFechaFin = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
+            this.dtFechaInicio = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Moverformulario = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
             this.rjProgressBar1 = new RJCodeAdvance.RJControls.RJProgressBar();
@@ -132,7 +132,6 @@
             this.pSuperior.Name = "pSuperior";
             this.pSuperior.Size = new System.Drawing.Size(1056, 40);
             this.pSuperior.TabIndex = 10;
-            
             // 
             // dtRegistroPersona
             // 
@@ -245,6 +244,7 @@
             this.btnBuscarPersona.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnBuscarPersona.TabIndex = 23;
             this.btnBuscarPersona.TabStop = false;
+            this.btnBuscarPersona.Click += new System.EventHandler(this.btnBuscarPersona_Click);
             // 
             // label10
             // 
@@ -410,7 +410,6 @@
             this.dtFechaNacimiento.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(214)))), ((int)(((byte)(202)))));
             this.dtFechaNacimiento.TabIndex = 15;
             this.dtFechaNacimiento.TextColor = System.Drawing.Color.White;
-            this.dtFechaNacimiento.ValueChanged += new System.EventHandler(this.dtFechaNacimiento_ValueChanged);
             // 
             // label7
             // 
@@ -530,8 +529,8 @@
             // 
             this.groupBox2.Controls.Add(this.siticoneHtmlLabel2);
             this.groupBox2.Controls.Add(this.siticoneHtmlLabel1);
-            this.groupBox2.Controls.Add(this.siticoneDateTimePicker2);
-            this.groupBox2.Controls.Add(this.siticoneDateTimePicker1);
+            this.groupBox2.Controls.Add(this.dtFechaFin);
+            this.groupBox2.Controls.Add(this.dtFechaInicio);
             this.groupBox2.Location = new System.Drawing.Point(6, 8);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(563, 79);
@@ -559,33 +558,33 @@
             this.siticoneHtmlLabel1.TabIndex = 4;
             this.siticoneHtmlLabel1.Text = "Fecha Inicio";
             // 
-            // siticoneDateTimePicker2
+            // dtFechaFin
             // 
-            this.siticoneDateTimePicker2.Checked = true;
-            this.siticoneDateTimePicker2.FillColor = System.Drawing.Color.White;
-            this.siticoneDateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.siticoneDateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.siticoneDateTimePicker2.Location = new System.Drawing.Point(295, 36);
-            this.siticoneDateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.siticoneDateTimePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.siticoneDateTimePicker2.Name = "siticoneDateTimePicker2";
-            this.siticoneDateTimePicker2.Size = new System.Drawing.Size(252, 36);
-            this.siticoneDateTimePicker2.TabIndex = 3;
-            this.siticoneDateTimePicker2.Value = new System.DateTime(2023, 2, 21, 10, 42, 3, 678);
+            this.dtFechaFin.Checked = true;
+            this.dtFechaFin.FillColor = System.Drawing.Color.White;
+            this.dtFechaFin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dtFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtFechaFin.Location = new System.Drawing.Point(295, 36);
+            this.dtFechaFin.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtFechaFin.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtFechaFin.Name = "dtFechaFin";
+            this.dtFechaFin.Size = new System.Drawing.Size(252, 36);
+            this.dtFechaFin.TabIndex = 3;
+            this.dtFechaFin.Value = new System.DateTime(2023, 2, 21, 10, 42, 3, 678);
             // 
-            // siticoneDateTimePicker1
+            // dtFechaInicio
             // 
-            this.siticoneDateTimePicker1.Checked = true;
-            this.siticoneDateTimePicker1.FillColor = System.Drawing.Color.White;
-            this.siticoneDateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.siticoneDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.siticoneDateTimePicker1.Location = new System.Drawing.Point(9, 36);
-            this.siticoneDateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.siticoneDateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.siticoneDateTimePicker1.Name = "siticoneDateTimePicker1";
-            this.siticoneDateTimePicker1.Size = new System.Drawing.Size(252, 36);
-            this.siticoneDateTimePicker1.TabIndex = 2;
-            this.siticoneDateTimePicker1.Value = new System.DateTime(2023, 2, 21, 10, 41, 40, 779);
+            this.dtFechaInicio.Checked = true;
+            this.dtFechaInicio.FillColor = System.Drawing.Color.White;
+            this.dtFechaInicio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dtFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtFechaInicio.Location = new System.Drawing.Point(9, 36);
+            this.dtFechaInicio.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtFechaInicio.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtFechaInicio.Name = "dtFechaInicio";
+            this.dtFechaInicio.Size = new System.Drawing.Size(252, 36);
+            this.dtFechaInicio.TabIndex = 2;
+            this.dtFechaInicio.Value = new System.DateTime(2023, 2, 21, 10, 41, 40, 779);
             // 
             // dataGridView1
             // 
@@ -687,8 +686,8 @@
         private GroupBox groupBox2;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel2;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel1;
-        private Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker siticoneDateTimePicker2;
-        private Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker siticoneDateTimePicker1;
+        private Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker dtFechaFin;
+        private Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker dtFechaInicio;
         private DataGridView dataGridView1;
         private PictureBox btnBuscar;
         private RJCodeAdvance.RJControls.RJProgressBar rjProgressBar1;

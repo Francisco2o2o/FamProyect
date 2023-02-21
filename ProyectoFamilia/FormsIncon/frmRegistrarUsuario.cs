@@ -1,4 +1,7 @@
 ﻿
+using CapaEntidad;
+using CapaNegocio;
+using CapDatos;
 using ProyectoFamilia.Notifications;
 using System;
 using System.Collections.Generic;
@@ -25,52 +28,51 @@ namespace ProyectoFamilia.FormsIncon
             frm.showAlert(mensaje, type);
         }
 
+        public void fnGuardarUsuario()
+        {
+            Usuario objUsuario = new Usuario(); //Clase persona , creamos
+            NeUsuario NEobjUsuario = new NeUsuario();
+            String lcValidar = "";
+
+            try
+            {
+                //objpersona.DocPersona = Convert.ToString(txtDocumento.Text.Trim());
+                objUsuario.User = Convert.ToString(txtUsuario.Text.Trim());
+                objUsuario.Password = Convert.ToString(txtPassword.Text.Trim());
+                objUsuario.FechaReg = DateTime.Now;
+
+                lcValidar = NEobjUsuario.NeGuardarUsuario(objUsuario, 0).Trim();
+                //fnLimpiarControles();
+                //fnHabilitarControles(false);
+
+                return lcValidar;
+            }
+            catch (Exception ex)
+            {
+
+                return "NO";
+            }
+        }
+
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            //SqlParameter[] pa = new SqlParameter[34];
-            //ConexionFamilia1 objCnx = null;
-            ////tmGuardarUsuario.Start();
+            String lcResultado = "";
+            lcResultado = fnGuardarUsuario();
+            fnGuardarUsuario();
 
-            ////refreshTimer();
-            //string usuario = "";
-            //string password = "";
-            ////recibe los parametros del los textbox
-            //usuario = txtUsuario.Text;
-            //password = txtPassword.Text;
+            if (lcResultado == "OK")
+            {
+                // Mostrar una alerta informando que el usuario ha sido guardado
+                this.Alert("Usuario Guardado", Notify.enmType.Info);
+            }
+            else
+            {
+                MessageFM.Show("Erro Al guardar datos de Usuario",
+          "Error del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
-            //if (txtUsuario.Text != "" && txtPassword.Text != "")
-            //{
-            //try
-            //{
-            //    objCnx = new  ConexionFamilia("");
-
-            //    //using (SqlCommand command = new SqlCommand("INSERT INTOo Logino (usuario,password) VALUES (@usuario, @password)", c))
-            //   //objCnx.EjecutarProcedimiento("uspGuardarCliente", pa); Consulta
-            //    {
-            //        // Añadir los parámetros al comando SqlCommand
-            //        pa[0] = new SqlParameter("@peidCliente", SqlDbType.Int);
-            //        pa[0].Value = objCliente.idCliente;
-
-            //        // Ejecutar la consulta INSERT
-
-            //        //if (pbGuardarUsuario.Value == 100)
-            //        //{
-            //        command.ExecuteNonQuery();
-            //            // Mostrar una alerta informando que el usuario ha sido guardado
-            //            this.Alert("Usuario Guardado", Notify.enmType.Info);
-
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageFM.Show("Erro Al guardar datos de Usuario",
-            //  "Error del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-
-            //}
-            //else
-            //{
-            //    this.Alert("Completar Campos", Notify.enmType.Error);
+            this.Alert("Completar Campos", Notify.enmType.Error);
         }
 
 
