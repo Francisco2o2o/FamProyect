@@ -617,6 +617,7 @@
             this.rjProgressBar1.SymbolAfter = "";
             this.rjProgressBar1.SymbolBefore = "";
             this.rjProgressBar1.TabIndex = 28;
+            this.rjProgressBar1.Click += new System.EventHandler(this.rjProgressBar1_Click);
             // 
             // frmRegistrarMiembros
             // 

@@ -13,10 +13,10 @@ namespace CapaNegocio
         public String NeGuardarPersona(Persona objpersona, Int32 condicion)
         {
 
-            daGuardarPersona objPersona = new daGuardarPersona(); // se crea una instancia para acceder a sus propiedades
+            daGuardarPersona objPersona = new daGuardarPersona();
             try
             {
-                return objPersona.daGuardaPersona(objpersona, condicion);
+                return objPersona.daGuardaPersona(objpersona,condicion);
             }
             catch (Exception ex)
             {

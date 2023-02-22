@@ -54,6 +54,7 @@ namespace ProyectoFamilia.FormsIncome
 
             try
             {
+                
                 objpersona.DocPersona = Convert.ToString(txtDocumento.Text.Trim());
                 objpersona.NomPersona = Convert.ToString(txtNombre.Text.Trim());
                 objpersona.ApePat = Convert.ToString(txtapePat.Text.Trim());
@@ -78,20 +79,7 @@ namespace ProyectoFamilia.FormsIncome
             
         }
 
-        //private void GuardarMiembroFamilia_Click(object sender, EventArgs e)
-        //{
-        //    String lcResultado = "";
-        //    lcResultado= fnGuardarPersona();
-            
-        //    if (lcResultado == "OK")
-        //    {
-        //        MessageBox.Show("Se Grabo Satisfactoriamente Personal Trabajador", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Error al Grabar Personal Trabajador. Comunicar a Administrador de Sistema", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-        //    }
-        //}
+      
 
         private void btnFotoMiembroFamilia_Click(object sender, EventArgs e)
         {
@@ -103,31 +91,31 @@ namespace ProyectoFamilia.FormsIncome
             }
         }
         #region Llenar Rol Persona
-        public static List<RolPersona> fnLLenarRol(ComboBox cbo, Int32 idRol, String nombreRol, Boolean buscar)
-        {
-            NeRolPersona objrol = new NeRolPersona();
-
-            List<RolPersona> lstRol = new List<RolPersona>();
-
-            try
+            public static List<RolPersona> fnLLenarRol(ComboBox cbo, Int32 idRol, String nombreRol, Boolean buscar)
             {
-                lstRol = objrol.NeLLenarRol(idRol, nombreRol, buscar);
-                cbo.ValueMember = "idRolPersona";
-                cbo.DisplayMember = "nombreRol";
-                cbo.DataSource = lstRol;
+                NeRolPersona objrol = new NeRolPersona();
 
-                return lstRol;
-            }
-            catch (Exception ex)
-            {
+                List<RolPersona> lstRol = new List<RolPersona>();
+
+                try
+                {
+                    lstRol = objrol.NeLLenarRol(idRol, nombreRol, buscar);
+                    cbo.ValueMember = "idRolPersona";
+                    cbo.DisplayMember = "nombreRol";
+                    cbo.DataSource = lstRol;
+
+                    return lstRol;
+                }
+                catch (Exception ex)
+                {
                 
-                return lstRol;
+                    return lstRol;
+                }
+                finally
+                {
+                    lstRol = null;
+                }
             }
-            finally
-            {
-                lstRol = null;
-            }
-        }
         #endregion
         #region Llenar ComboBox Ocupacion Persona
         public static List<OcupacionPersona> fnLLenarOcupacion(ComboBox cbo, Int32 idOcupacion, String nomOcupacion, Boolean buscar)
@@ -231,6 +219,11 @@ namespace ProyectoFamilia.FormsIncome
         private void btnBuscarPersona_Click(object sender, EventArgs e)
         {
             fnTrarDatosPersona();
+        }
+
+        private void rjProgressBar1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

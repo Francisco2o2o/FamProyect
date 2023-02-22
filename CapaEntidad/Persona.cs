@@ -8,6 +8,7 @@ namespace CapaEntidad
 {
     public class Persona
     {
+
         string nomPersona, apePat, apeMat, docPersona, correoPersona;
         Byte[] fotoPersona;
         int rol, ocupacion;
@@ -23,6 +24,8 @@ namespace CapaEntidad
         public byte[] FotoPersona { get => fotoPersona; set => fotoPersona = value; }
         public DateTime RegPersona { get => regPersona; set => regPersona = value; }
         public DateTime FechaNacimiento { get => fechaNacimiento; set => fechaNacimiento = value; }
+       
 
+        
     }
 }

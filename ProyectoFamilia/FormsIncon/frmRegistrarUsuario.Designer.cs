@@ -44,9 +44,13 @@
             this.siticoneSeparator2 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
             this.MoverFormulario = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
             this.dtFechaRegistroUsuario = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
+            this.cboNombrePersona = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -91,7 +95,7 @@
             // 
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnGuardar.Location = new System.Drawing.Point(38, 162);
+            this.btnGuardar.Location = new System.Drawing.Point(38, 178);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(395, 31);
             this.btnGuardar.TabIndex = 4;
@@ -114,10 +118,11 @@
             // 
             this.pSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(214)))), ((int)(((byte)(202)))));
             this.pSuperior.Controls.Add(this.label3);
+            this.pSuperior.Controls.Add(this.dtFechaRegistroUsuario);
             this.pSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.pSuperior.Location = new System.Drawing.Point(0, 0);
             this.pSuperior.Name = "pSuperior";
-            this.pSuperior.Size = new System.Drawing.Size(466, 36);
+            this.pSuperior.Size = new System.Drawing.Size(464, 36);
             this.pSuperior.TabIndex = 6;
             // 
             // pictureBox1
@@ -170,7 +175,7 @@
             this.dtFechaRegistroUsuario.FillColor = System.Drawing.Color.White;
             this.dtFechaRegistroUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dtFechaRegistroUsuario.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtFechaRegistroUsuario.Location = new System.Drawing.Point(213, 120);
+            this.dtFechaRegistroUsuario.Location = new System.Drawing.Point(213, 0);
             this.dtFechaRegistroUsuario.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtFechaRegistroUsuario.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtFechaRegistroUsuario.Name = "dtFechaRegistroUsuario";
@@ -178,13 +183,52 @@
             this.dtFechaRegistroUsuario.TabIndex = 6;
             this.dtFechaRegistroUsuario.Value = new System.DateTime(2023, 2, 21, 17, 58, 42, 79);
             // 
+            // cboNombrePersona
+            // 
+            this.cboNombrePersona.BackColor = System.Drawing.Color.Transparent;
+            this.cboNombrePersona.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cboNombrePersona.BorderRadius = 5;
+            this.cboNombrePersona.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboNombrePersona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboNombrePersona.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboNombrePersona.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboNombrePersona.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cboNombrePersona.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cboNombrePersona.ItemHeight = 30;
+            this.cboNombrePersona.Location = new System.Drawing.Point(168, 124);
+            this.cboNombrePersona.Name = "cboNombrePersona";
+            this.cboNombrePersona.Size = new System.Drawing.Size(265, 36);
+            this.cboNombrePersona.TabIndex = 12;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(68, 139);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 21);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Nombre";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::ProyectoFamilia.Properties.Resources.family;
+            this.pictureBox3.Location = new System.Drawing.Point(38, 136);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 14;
+            this.pictureBox3.TabStop = false;
+            // 
             // frmRegistrarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(466, 203);
-            this.Controls.Add(this.dtFechaRegistroUsuario);
+            this.ClientSize = new System.Drawing.Size(464, 236);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cboNombrePersona);
             this.Controls.Add(this.siticoneSeparator2);
             this.Controls.Add(this.siticoneSeparator1);
             this.Controls.Add(this.pictureBox2);
@@ -198,10 +242,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRegistrarUsuario";
             this.Text = "frmRegistrarUsuario";
+            this.Load += new System.EventHandler(this.frmRegistrarUsuario_Load);
             this.pSuperior.ResumeLayout(false);
             this.pSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,5 +269,8 @@
         private Siticone.Desktop.UI.WinForms.SiticoneSeparator siticoneSeparator2;
         private Siticone.Desktop.UI.WinForms.SiticoneDragControl MoverFormulario;
         private Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker dtFechaRegistroUsuario;
+        private Siticone.Desktop.UI.WinForms.SiticoneComboBox cboNombrePersona;
+        private Label label4;
+        private PictureBox pictureBox3;
     }
 }

@@ -10,19 +10,19 @@ namespace CapaNegocio
 {
     public class NeUsuario
     {
-        //public String NeGuardarUsuario(Usuario objUsuario, Int32 condicion)
-        //{
+        public String NeGuardarUsuario(Usuario objusuario, Int32 condicion)
+        {
 
-        //    //daUsuario objUsuario = new daUsuario(); // se crea una instancia para acceder a sus propiedades
-        //    //try
-        //    //{
-        //    //    return objUsuario.daGuardaUsuario(objUsuario, condicion);
-        //    //}
-        //    //catch (Exception ex)
-        //    //{
-        //    //    throw new Exception(ex.Message);
-        //    //}
+            daUsuario objUsuario = new daUsuario(); // se crea una instancia para acceder a sus propiedades
+            try
+            {
+                return objUsuario.daGuardaUsuario(objusuario, condicion);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
 
-        //}
+        }
     }
 }

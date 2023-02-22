@@ -28,30 +28,31 @@ namespace ProyectoFamilia.FormsIncon
             frm.showAlert(mensaje, type);
         }
 
-        public void fnGuardarUsuario()
+        public String fnGuardarUsuario()
         {
-            //Usuario objUsuario = new Usuario(); //Clase persona , creamos
-            //NeUsuario NEobjUsuario = new NeUsuario();
-            //String lcValidar = "";
+            Usuario objusuario = new Usuario(); //Clase persona , creamos
+            NeUsuario NEobjUsuario = new NeUsuario();//Nombre de la clase CapaNegocio
+            String lcValidar = "";
 
-            //try
-            //{
-            //    //objpersona.DocPersona = Convert.ToString(txtDocumento.Text.Trim());
-            //    objUsuario.User = Convert.ToString(txtUsuario.Text.Trim());
-            //    objUsuario.Password = Convert.ToString(txtPassword.Text.Trim());
-            //    objUsuario.FechaReg = DateTime.Now;
+            try
+            {
+                //objpersona.DocPersona = Convert.ToString(txtDocumento.Text.Trim());
+                objusuario.User = Convert.ToString(txtUsuario.Text.Trim());
+                objusuario.Password = Convert.ToString(txtPassword.Text.Trim());
+                objusuario.IdPersona = Convert.ToInt32(cboNombrePersona.SelectedValue);
+                objusuario.FechaReg = DateTime.Now;
 
-            //    lcValidar = NEobjUsuario.NeGuardarUsuario(objUsuario, 0).Trim();
-            //    //fnLimpiarControles();
-            //    //fnHabilitarControles(false);
+                lcValidar = NEobjUsuario.NeGuardarUsuario(objusuario, 0).Trim();
+                //fnLimpiarControles();
+                //fnHabilitarControles(false);
 
-            //    return lcValidar;
-            //}
-            //catch (Exception ex)
-            //{
+                return lcValidar;
+            }
+            catch (Exception ex)
+            {
 
-            //    return "NO";
-            //}
+                return "NO";
+            }
         }
 
 
@@ -59,7 +60,8 @@ namespace ProyectoFamilia.FormsIncon
         {
             String lcResultado = "";
             //lcResultado = fnGuardarUsuario();
-            fnGuardarUsuario();
+            
+               lcResultado=fnGuardarUsuario();
 
             if (lcResultado == "OK")
             {
@@ -72,10 +74,42 @@ namespace ProyectoFamilia.FormsIncon
           "Error del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            this.Alert("Completar Campos", Notify.enmType.Error);
+            //this.Alert("Completar Campos", Notify.enmType.Error);
         }
 
+        public static List<NomPersona> fnLLenarNomPersona(ComboBox cbo, Int32 idnomPersona, String nomPersona, Boolean buscar)
+        {
+            NeNomPersona objnompersona = new NeNomPersona();
 
+            List<NomPersona> lstNomPersona = new List<NomPersona>();
+
+            try
+            {
+                lstNomPersona = objnompersona.NeLLenarNomPersona(idnomPersona, nomPersona, buscar);
+                // variables de la clase
+                cbo.ValueMember = "idPers";//ValueMember ->Oculta
+                cbo.DisplayMember = "nombPers";//DisplayMember ->Muestra
+                cbo.DataSource = lstNomPersona;
+
+                return lstNomPersona;
+            }
+            catch (Exception ex)
+            {
+             
+
+                return lstNomPersona;
+            }
+            finally
+            {
+                lstNomPersona = null;
+            }
+        }
+
+        private void frmRegistrarUsuario_Load(object sender, EventArgs e)
+        {
+            fnLLenarNomPersona(cboNombrePersona, 0, "", false);
+            dtFechaRegistroUsuario.Visible = false;
+        }
     }
 
 }
