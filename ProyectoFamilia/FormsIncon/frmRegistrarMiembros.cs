@@ -3,6 +3,7 @@ using CapaEntidad;
 using CapaNegocio;
 using Microsoft.Identity.Client;
 using ProyectoFamilia.Notifications;
+using Siticone.Desktop.UI.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +27,10 @@ namespace ProyectoFamilia.FormsIncome
             InitializeComponent();
         }
 
+        //Variable para buscar
+        static Boolean pasoLoad;
+        static Int32 tabInicio = 0;
+
         public void Alert(string mensaje, Notify.enmType type)
         {
             Notify frm = new Notify();
@@ -34,6 +39,8 @@ namespace ProyectoFamilia.FormsIncome
 
         static Int16 lnTipoCon = 0;
 
+
+        #region Formato imagen 
         private Byte[] ConvertirImg()
         {
             MemoryStream ms = new MemoryStream();
@@ -46,6 +53,9 @@ namespace ProyectoFamilia.FormsIncome
             imagePersona.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
             return ms.GetBuffer();
         }
+        #endregion
+
+        #region Funcion para guardarPersona
         public String fnGuardarPersona()
         {
             Persona objpersona = new Persona(); //Clase persona , creamos
@@ -54,7 +64,7 @@ namespace ProyectoFamilia.FormsIncome
 
             try
             {
-                
+                objpersona.IdPersona = Convert.ToInt32(txtIdPersona.Text.Trim());
                 objpersona.DocPersona = Convert.ToString(txtDocumento.Text.Trim());
                 objpersona.NomPersona = Convert.ToString(txtNombre.Text.Trim());
                 objpersona.ApePat = Convert.ToString(txtapePat.Text.Trim());
@@ -65,7 +75,7 @@ namespace ProyectoFamilia.FormsIncome
                 objpersona.FotoPersona = ConvertirImg();
                 objpersona.FechaNacimiento = Convert.ToDateTime(dtFechaNacimiento.Value);
                 objpersona.RegPersona = DateTime.Now;
-                lcValidar =NEobjPersona.NeGuardarPersona(objpersona, 0).Trim();
+                lcValidar = NEobjPersona.NeGuardarPersona(objpersona, 0).Trim();
                 //fnLimpiarControles();
                 //fnHabilitarControles(false);
 
@@ -73,14 +83,14 @@ namespace ProyectoFamilia.FormsIncome
             }
             catch (Exception ex)
             {
-              
-                return  "NO";
+
+                return "NO";
             }
-            
+
         }
+        #endregion
 
-      
-
+        #region Formato Imagen
         private void btnFotoMiembroFamilia_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
@@ -90,32 +100,33 @@ namespace ProyectoFamilia.FormsIncome
                 imagePersona.Image = new Bitmap(open.FileName);
             }
         }
+        #endregion
         #region Llenar Rol Persona
-            public static List<RolPersona> fnLLenarRol(ComboBox cbo, Int32 idRol, String nombreRol, Boolean buscar)
+        public static List<RolPersona> fnLLenarRol(ComboBox cbo, Int32 idRol, String nombreRol, Boolean buscar)
+        {
+            NeRolPersona objrol = new NeRolPersona();
+
+            List<RolPersona> lstRol = new List<RolPersona>();
+
+            try
             {
-                NeRolPersona objrol = new NeRolPersona();
+                lstRol = objrol.NeLLenarRol(idRol, nombreRol, buscar);
+                cbo.ValueMember = "idRolPersona";
+                cbo.DisplayMember = "nombreRol";
+                cbo.DataSource = lstRol;
 
-                List<RolPersona> lstRol = new List<RolPersona>();
-
-                try
-                {
-                    lstRol = objrol.NeLLenarRol(idRol, nombreRol, buscar);
-                    cbo.ValueMember = "idRolPersona";
-                    cbo.DisplayMember = "nombreRol";
-                    cbo.DataSource = lstRol;
-
-                    return lstRol;
-                }
-                catch (Exception ex)
-                {
-                
-                    return lstRol;
-                }
-                finally
-                {
-                    lstRol = null;
-                }
+                return lstRol;
             }
+            catch (Exception ex)
+            {
+
+                return lstRol;
+            }
+            finally
+            {
+                lstRol = null;
+            }
+        }
         #endregion
         #region Llenar ComboBox Ocupacion Persona
         public static List<OcupacionPersona> fnLLenarOcupacion(ComboBox cbo, Int32 idOcupacion, String nomOcupacion, Boolean buscar)
@@ -147,11 +158,18 @@ namespace ProyectoFamilia.FormsIncome
 
         #endregion
         private void frmRegistrarMiembros_Load(object sender, EventArgs e)
-               
-     {
-            fnLLenarRol(cboRol, 0,"", false);
+
+        {
+            pasoLoad = false;
+            fnLLenarRol(cboRol, 0, "", false);
             fnLLenarOcupacion(cboOcupacion, 0, "", false);
             dtRegistroPersona.Visible = false;
+
+
+            //Buscar Persona
+            
+            Boolean bResult;
+            pasoLoad = true;
         }
 
         #region TraerDatos Persona
@@ -190,10 +208,11 @@ namespace ProyectoFamilia.FormsIncome
             int diasTranscurridos = (fechaInicio - fechaReferencia).Days;
             if (diasTranscurridos < 100)
             {
-                MessageBox.Show("La fecha debe ser menos de 100","Titulo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("La fecha debe ser menos de 100", "Titulo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
+        #region Guardar Persona
         private void GuardarMiembroFamilia_Click_1(object sender, EventArgs e)
         {
             String lcResultado = "";
@@ -210,10 +229,128 @@ namespace ProyectoFamilia.FormsIncome
             }
         }
 
+        #endregion
+
+
+
+        private void fnCalcularPaginacion(Int32 totalRegistros, Int32 filas, Int32 totalResultados, ComboBox cboPag, SiticoneCircleButton btnTotPag, SiticoneCircleButton btnNumFil, SiticoneCircleButton btnTotReg)
+        {
+            Int32 residuo;
+            Int32 cantidadPaginas;
+            residuo = totalRegistros % filas;
+            if (residuo == 0)
+            {
+                cantidadPaginas = (totalRegistros / filas);
+            }
+            else
+            {
+                cantidadPaginas = (totalRegistros / filas) + 1;
+            }
+
+            cboPag.Items.Clear();
+
+            for (Int32 i = 1; i <= cantidadPaginas; i++)
+            {
+                cboPag.Items.Add(i);
+
+            }
+
+            cboPag.SelectedIndex = 0;
+            btnTotPag.Text = Convert.ToString(cantidadPaginas);
+            btnNumFil.Text = Convert.ToString(totalResultados);
+            btnTotReg.Text = Convert.ToString(totalRegistros);
+
+        }
+        private Boolean fnBuscarPersona(DataGridView dgv, Int32 numPagina)
+        {
+            NeBuscarPersona objper = new NeBuscarPersona();
+
+            DataTable dtPersona = new DataTable();
+            String nomPersona;
+            Int32 filas = 15;
+            Int32 idTipoPersona;
+            Int32 idTipoDocumento;
+            String estado;
+            try
+            {
+
+                nomPersona = Convert.ToString(txtBuscarPersona.Text.ToString());
+
+                dtPersona = objper.NeBuscarPer(nomPersona, numPagina);
+
+                Int32 totalResultados = dtPersona.Rows.Count;
+
+
+                if (totalResultados > 0)
+                {
+
+                    DataTable dt = new DataTable();
+
+                    dgRegistrarPersona.Columns.Add("ID", "ID"); // nombre que se asignara a columna -  Texto de la columna
+                    dgRegistrarPersona.Columns.Add("Nom", "Nombre");
+                    dgRegistrarPersona.Columns.Add("ApePat", "Apellido Paterno");
+                    dgRegistrarPersona.Columns.Add("ApeMat", "Apellido Materno");
+                    dgRegistrarPersona.Columns.Add("Doc", "Documento");
+                    dgRegistrarPersona.Columns.Add("CorreoPer", "Correo");
+                    dgRegistrarPersona.Columns.Add("Ocu", "Ocupacion");
+                    dgRegistrarPersona.Columns.Add("Rol", "Rol Familiar");
+
+                }
+                foreach (DataRow item in dtPersona.Rows)
+                {
+                    dgRegistrarPersona.Rows.Add(
+                        item["idPersona"],
+                        item["nomPersona"],
+                        item["apePat"],
+                        item["apeMat"],
+                        item["docPersona"],
+                        item["correoPersona"],
+                        item["nomOcupacion"],
+                        item["nomRol"]
+                        );
+                    Int32 totalRegistros = Convert.ToInt32(dtPersona.Rows[0][7]);
+                    fnCalcularPaginacion(
+                        totalRegistros,
+                        filas,
+                        totalResultados,
+                        cboPagina,
+                        btnTotalPaginas,
+                        btnNumFilas,
+                        btnTotalReg
+                        );
+                    btnNumFilas.Text = Convert.ToString(totalResultados);
+                }
+                    return true;
+                
+            }
+            
+
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+            finally
+            {
+
+                objper = null;
+
+            }
+            
+        }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-
+            Boolean bResul;
+            
+            if (pasoLoad)
+            {
+                bResul = fnBuscarPersona(dgRegistrarPersona,0);
+                if (!bResul)
+                {
+                    MessageBox.Show("Error al Buscar Familiar. Comunicar a Administrador de Sistema", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
         }
 
         private void btnBuscarPersona_Click(object sender, EventArgs e)
@@ -224,6 +361,21 @@ namespace ProyectoFamilia.FormsIncome
         private void rjProgressBar1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cboPagina_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Boolean bResul;
+
+            Int32 numPagina = Convert.ToInt32(cboPagina.Text.ToString());
+            if (pasoLoad)
+            {
+                bResul = fnBuscarPersona(dgRegistrarPersona, numPagina);
+                if (!bResul)
+                {
+                    MessageBox.Show("Error al Buscar Cliente. Comunicar a Administrador de Sistema", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
         }
     }
 }

@@ -40,6 +40,8 @@ namespace CapDatos
                 pa[8].Value = objpersona.RegPersona;
                 pa[9] = new SqlParameter("@fechaNacimiento", SqlDbType.Date);
                 pa[9].Value = objpersona.FechaNacimiento;
+                pa[10] = new SqlParameter("@idPersona", SqlDbType.Int);
+                pa[10].Value = objpersona.IdPersona;
 
 
 

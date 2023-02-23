@@ -44,6 +44,7 @@
             this.btnBuscarPersona = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtIdPersona = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.GuardarMiembroFamilia = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.txtCorreo = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.txtapeMat = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
@@ -54,31 +55,38 @@
             this.dtFechaNacimiento = new RJCodeAdvance.RJControls.RJDatePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tbPersona = new System.Windows.Forms.TabControl();
             this.tpReg = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnTotalReg = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
+            this.btnNumFilas = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
+            this.siticoneHtmlLabel6 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            this.btnTotalPaginas = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
+            this.cboPagina = new System.Windows.Forms.ComboBox();
+            this.siticoneHtmlLabel5 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            this.siticoneHtmlLabel4 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.btnBuscar = new System.Windows.Forms.PictureBox();
             this.siticoneHtmlLabel3 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.txtBuscar = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.txtBuscarPersona = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.siticoneHtmlLabel2 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.siticoneHtmlLabel1 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.dtFechaFin = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
             this.dtFechaInicio = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgRegistrarPersona = new System.Windows.Forms.DataGridView();
             this.Moverformulario = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
             this.rjProgressBar1 = new RJCodeAdvance.RJControls.RJProgressBar();
             this.pSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagePersona)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscarPersona)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.tbPersona.SuspendLayout();
             this.tpReg.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgRegistrarPersona)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -258,6 +266,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtIdPersona);
             this.groupBox1.Controls.Add(this.GuardarMiembroFamilia);
             this.groupBox1.Controls.Add(this.txtCorreo);
             this.groupBox1.Controls.Add(this.txtapeMat);
@@ -279,6 +288,24 @@
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Personales";
+            // 
+            // txtIdPersona
+            // 
+            this.txtIdPersona.DefaultText = "";
+            this.txtIdPersona.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtIdPersona.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtIdPersona.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdPersona.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdPersona.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdPersona.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtIdPersona.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdPersona.Location = new System.Drawing.Point(752, 185);
+            this.txtIdPersona.Name = "txtIdPersona";
+            this.txtIdPersona.PasswordChar = '\0';
+            this.txtIdPersona.PlaceholderText = "";
+            this.txtIdPersona.SelectedText = "";
+            this.txtIdPersona.Size = new System.Drawing.Size(195, 36);
+            this.txtIdPersona.TabIndex = 25;
             // 
             // GuardarMiembroFamilia
             // 
@@ -431,15 +458,15 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Seleccionar Fotografía";
             // 
-            // tabControl1
+            // tbPersona
             // 
-            this.tabControl1.Controls.Add(this.tpReg);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(0, 46);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1056, 446);
-            this.tabControl1.TabIndex = 27;
+            this.tbPersona.Controls.Add(this.tpReg);
+            this.tbPersona.Controls.Add(this.tabPage2);
+            this.tbPersona.Location = new System.Drawing.Point(0, 46);
+            this.tbPersona.Name = "tbPersona";
+            this.tbPersona.SelectedIndex = 0;
+            this.tbPersona.Size = new System.Drawing.Size(1056, 485);
+            this.tbPersona.TabIndex = 27;
             // 
             // tpReg
             // 
@@ -454,7 +481,7 @@
             this.tpReg.Location = new System.Drawing.Point(4, 24);
             this.tpReg.Name = "tpReg";
             this.tpReg.Padding = new System.Windows.Forms.Padding(3);
-            this.tpReg.Size = new System.Drawing.Size(1048, 418);
+            this.tpReg.Size = new System.Drawing.Size(1048, 457);
             this.tpReg.TabIndex = 0;
             this.tpReg.Text = "REGISTRO";
             this.tpReg.UseVisualStyleBackColor = true;
@@ -471,18 +498,103 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnTotalReg);
+            this.tabPage2.Controls.Add(this.btnNumFilas);
+            this.tabPage2.Controls.Add(this.siticoneHtmlLabel6);
+            this.tabPage2.Controls.Add(this.btnTotalPaginas);
+            this.tabPage2.Controls.Add(this.cboPagina);
+            this.tabPage2.Controls.Add(this.siticoneHtmlLabel5);
+            this.tabPage2.Controls.Add(this.siticoneHtmlLabel4);
             this.tabPage2.Controls.Add(this.btnBuscar);
             this.tabPage2.Controls.Add(this.siticoneHtmlLabel3);
-            this.tabPage2.Controls.Add(this.txtBuscar);
+            this.tabPage2.Controls.Add(this.txtBuscarPersona);
             this.tabPage2.Controls.Add(this.groupBox2);
-            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Controls.Add(this.dgRegistrarPersona);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1048, 418);
+            this.tabPage2.Size = new System.Drawing.Size(1048, 457);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "MIEMBROS";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnTotalReg
+            // 
+            this.btnTotalReg.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTotalReg.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTotalReg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTotalReg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTotalReg.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnTotalReg.ForeColor = System.Drawing.Color.White;
+            this.btnTotalReg.Location = new System.Drawing.Point(977, 401);
+            this.btnTotalReg.Name = "btnTotalReg";
+            this.btnTotalReg.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
+            this.btnTotalReg.Size = new System.Drawing.Size(25, 25);
+            this.btnTotalReg.TabIndex = 15;
+            // 
+            // btnNumFilas
+            // 
+            this.btnNumFilas.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNumFilas.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNumFilas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNumFilas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNumFilas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnNumFilas.ForeColor = System.Drawing.Color.White;
+            this.btnNumFilas.Location = new System.Drawing.Point(876, 401);
+            this.btnNumFilas.Name = "btnNumFilas";
+            this.btnNumFilas.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
+            this.btnNumFilas.Size = new System.Drawing.Size(25, 25);
+            this.btnNumFilas.TabIndex = 14;
+            // 
+            // siticoneHtmlLabel6
+            // 
+            this.siticoneHtmlLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneHtmlLabel6.Location = new System.Drawing.Point(907, 405);
+            this.siticoneHtmlLabel6.Name = "siticoneHtmlLabel6";
+            this.siticoneHtmlLabel6.Size = new System.Drawing.Size(67, 17);
+            this.siticoneHtmlLabel6.TabIndex = 13;
+            this.siticoneHtmlLabel6.Text = "Registros de";
+            // 
+            // btnTotalPaginas
+            // 
+            this.btnTotalPaginas.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTotalPaginas.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTotalPaginas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTotalPaginas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTotalPaginas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnTotalPaginas.ForeColor = System.Drawing.Color.White;
+            this.btnTotalPaginas.Location = new System.Drawing.Point(815, 401);
+            this.btnTotalPaginas.Name = "btnTotalPaginas";
+            this.btnTotalPaginas.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
+            this.btnTotalPaginas.Size = new System.Drawing.Size(25, 25);
+            this.btnTotalPaginas.TabIndex = 12;
+            // 
+            // cboPagina
+            // 
+            this.cboPagina.FormattingEnabled = true;
+            this.cboPagina.Location = new System.Drawing.Point(731, 405);
+            this.cboPagina.Name = "cboPagina";
+            this.cboPagina.Size = new System.Drawing.Size(56, 23);
+            this.cboPagina.TabIndex = 11;
+            this.cboPagina.SelectedIndexChanged += new System.EventHandler(this.cboPagina_SelectedIndexChanged);
+            // 
+            // siticoneHtmlLabel5
+            // 
+            this.siticoneHtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(793, 405);
+            this.siticoneHtmlLabel5.Name = "siticoneHtmlLabel5";
+            this.siticoneHtmlLabel5.Size = new System.Drawing.Size(16, 17);
+            this.siticoneHtmlLabel5.TabIndex = 10;
+            this.siticoneHtmlLabel5.Text = "de";
+            // 
+            // siticoneHtmlLabel4
+            // 
+            this.siticoneHtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneHtmlLabel4.Location = new System.Drawing.Point(686, 409);
+            this.siticoneHtmlLabel4.Name = "siticoneHtmlLabel4";
+            this.siticoneHtmlLabel4.Size = new System.Drawing.Size(39, 17);
+            this.siticoneHtmlLabel4.TabIndex = 9;
+            this.siticoneHtmlLabel4.Text = "Pagina";
             // 
             // btnBuscar
             // 
@@ -505,25 +617,25 @@
             this.siticoneHtmlLabel3.TabIndex = 6;
             this.siticoneHtmlLabel3.Text = "BUSQUEDA";
             // 
-            // txtBuscar
+            // txtBuscarPersona
             // 
-            this.txtBuscar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBuscar.BorderRadius = 3;
-            this.txtBuscar.DefaultText = "";
-            this.txtBuscar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBuscar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBuscar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBuscar.Font = new System.Drawing.Font("Ebrima", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBuscar.Location = new System.Drawing.Point(597, 42);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.PasswordChar = '\0';
-            this.txtBuscar.PlaceholderText = "";
-            this.txtBuscar.SelectedText = "";
-            this.txtBuscar.Size = new System.Drawing.Size(405, 35);
-            this.txtBuscar.TabIndex = 7;
+            this.txtBuscarPersona.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtBuscarPersona.BorderRadius = 3;
+            this.txtBuscarPersona.DefaultText = "";
+            this.txtBuscarPersona.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBuscarPersona.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBuscarPersona.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBuscarPersona.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBuscarPersona.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBuscarPersona.Font = new System.Drawing.Font("Ebrima", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBuscarPersona.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBuscarPersona.Location = new System.Drawing.Point(597, 42);
+            this.txtBuscarPersona.Name = "txtBuscarPersona";
+            this.txtBuscarPersona.PasswordChar = '\0';
+            this.txtBuscarPersona.PlaceholderText = "";
+            this.txtBuscarPersona.SelectedText = "";
+            this.txtBuscarPersona.Size = new System.Drawing.Size(405, 35);
+            this.txtBuscarPersona.TabIndex = 7;
             // 
             // groupBox2
             // 
@@ -586,14 +698,14 @@
             this.dtFechaInicio.TabIndex = 2;
             this.dtFechaInicio.Value = new System.DateTime(2023, 2, 21, 10, 41, 40, 779);
             // 
-            // dataGridView1
+            // dgRegistrarPersona
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 103);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(1034, 309);
-            this.dataGridView1.TabIndex = 0;
+            this.dgRegistrarPersona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgRegistrarPersona.Location = new System.Drawing.Point(6, 94);
+            this.dgRegistrarPersona.Name = "dgRegistrarPersona";
+            this.dgRegistrarPersona.RowTemplate.Height = 25;
+            this.dgRegistrarPersona.Size = new System.Drawing.Size(1034, 295);
+            this.dgRegistrarPersona.TabIndex = 0;
             // 
             // Moverformulario
             // 
@@ -617,7 +729,6 @@
             this.rjProgressBar1.SymbolAfter = "";
             this.rjProgressBar1.SymbolBefore = "";
             this.rjProgressBar1.TabIndex = 28;
-            this.rjProgressBar1.Click += new System.EventHandler(this.rjProgressBar1_Click);
             // 
             // frmRegistrarMiembros
             // 
@@ -626,7 +737,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1056, 533);
             this.Controls.Add(this.rjProgressBar1);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tbPersona);
             this.Controls.Add(this.pSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRegistrarMiembros";
@@ -638,7 +749,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscarPersona)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
+            this.tbPersona.ResumeLayout(false);
             this.tpReg.ResumeLayout(false);
             this.tpReg.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -646,7 +757,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgRegistrarPersona)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -677,20 +788,28 @@
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtapePat;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtNombre;
         private Siticone.Desktop.UI.WinForms.SiticoneButton GuardarMiembroFamilia;
-        private TabControl tabControl1;
+        private TabControl tbPersona;
         private TabPage tpReg;
         private Label label3;
         private TabPage tabPage2;
         private Siticone.Desktop.UI.WinForms.SiticoneDragControl Moverformulario;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel3;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtBuscar;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtBuscarPersona;
         private GroupBox groupBox2;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel2;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel1;
         private Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker dtFechaFin;
         private Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker dtFechaInicio;
-        private DataGridView dataGridView1;
+        private DataGridView dgRegistrarPersona;
         private PictureBox btnBuscar;
         private RJCodeAdvance.RJControls.RJProgressBar rjProgressBar1;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtIdPersona;
+        private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel5;
+        private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel4;
+        private Siticone.Desktop.UI.WinForms.SiticoneCircleButton btnTotalReg;
+        private Siticone.Desktop.UI.WinForms.SiticoneCircleButton btnNumFilas;
+        private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel6;
+        private Siticone.Desktop.UI.WinForms.SiticoneCircleButton btnTotalPaginas;
+        private ComboBox cboPagina;
     }
 }
