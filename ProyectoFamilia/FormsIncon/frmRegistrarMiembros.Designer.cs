@@ -59,10 +59,10 @@
             this.tpReg = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnTotalReg = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
-            this.btnNumFilas = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
+            this.btnTotalReg = new RJCodeAdvance.RJControls.RJButton();
+            this.btnNumFilas = new RJCodeAdvance.RJControls.RJButton();
+            this.btnTotalPaginas = new RJCodeAdvance.RJControls.RJButton();
             this.siticoneHtmlLabel6 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.btnTotalPaginas = new Siticone.Desktop.UI.WinForms.SiticoneCircleButton();
             this.cboPagina = new System.Windows.Forms.ComboBox();
             this.siticoneHtmlLabel5 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.siticoneHtmlLabel4 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
@@ -77,6 +77,7 @@
             this.dgRegistrarPersona = new System.Windows.Forms.DataGridView();
             this.Moverformulario = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
             this.rjProgressBar1 = new RJCodeAdvance.RJControls.RJProgressBar();
+            this.siticonevSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneVSeparator();
             this.pSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagePersona)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscarPersona)).BeginInit();
@@ -498,10 +499,11 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.siticonevSeparator1);
             this.tabPage2.Controls.Add(this.btnTotalReg);
             this.tabPage2.Controls.Add(this.btnNumFilas);
-            this.tabPage2.Controls.Add(this.siticoneHtmlLabel6);
             this.tabPage2.Controls.Add(this.btnTotalPaginas);
+            this.tabPage2.Controls.Add(this.siticoneHtmlLabel6);
             this.tabPage2.Controls.Add(this.cboPagina);
             this.tabPage2.Controls.Add(this.siticoneHtmlLabel5);
             this.tabPage2.Controls.Add(this.siticoneHtmlLabel4);
@@ -517,34 +519,61 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "MIEMBROS";
             this.tabPage2.UseVisualStyleBackColor = true;
+            
             // 
             // btnTotalReg
             // 
-            this.btnTotalReg.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTotalReg.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTotalReg.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTotalReg.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTotalReg.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnTotalReg.BackColor = System.Drawing.Color.DarkGray;
+            this.btnTotalReg.BackgroundColor = System.Drawing.Color.DarkGray;
+            this.btnTotalReg.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnTotalReg.BorderRadius = 5;
+            this.btnTotalReg.BorderSize = 0;
+            this.btnTotalReg.FlatAppearance.BorderSize = 0;
+            this.btnTotalReg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTotalReg.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnTotalReg.ForeColor = System.Drawing.Color.White;
-            this.btnTotalReg.Location = new System.Drawing.Point(977, 401);
+            this.btnTotalReg.Location = new System.Drawing.Point(980, 395);
             this.btnTotalReg.Name = "btnTotalReg";
-            this.btnTotalReg.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
-            this.btnTotalReg.Size = new System.Drawing.Size(25, 25);
-            this.btnTotalReg.TabIndex = 15;
+            this.btnTotalReg.Size = new System.Drawing.Size(43, 31);
+            this.btnTotalReg.TabIndex = 155;
+            this.btnTotalReg.TextColor = System.Drawing.Color.White;
+            this.btnTotalReg.UseVisualStyleBackColor = false;
             // 
             // btnNumFilas
             // 
-            this.btnNumFilas.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNumFilas.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNumFilas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNumFilas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNumFilas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnNumFilas.BackColor = System.Drawing.Color.DarkGray;
+            this.btnNumFilas.BackgroundColor = System.Drawing.Color.DarkGray;
+            this.btnNumFilas.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnNumFilas.BorderRadius = 5;
+            this.btnNumFilas.BorderSize = 0;
+            this.btnNumFilas.FlatAppearance.BorderSize = 0;
+            this.btnNumFilas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNumFilas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnNumFilas.ForeColor = System.Drawing.Color.White;
-            this.btnNumFilas.Location = new System.Drawing.Point(876, 401);
+            this.btnNumFilas.Location = new System.Drawing.Point(858, 395);
             this.btnNumFilas.Name = "btnNumFilas";
-            this.btnNumFilas.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
-            this.btnNumFilas.Size = new System.Drawing.Size(25, 25);
-            this.btnNumFilas.TabIndex = 14;
+            this.btnNumFilas.Size = new System.Drawing.Size(43, 31);
+            this.btnNumFilas.TabIndex = 154;
+            this.btnNumFilas.TextColor = System.Drawing.Color.White;
+            this.btnNumFilas.UseVisualStyleBackColor = false;
+            // 
+            // btnTotalPaginas
+            // 
+            this.btnTotalPaginas.BackColor = System.Drawing.Color.DarkGray;
+            this.btnTotalPaginas.BackgroundColor = System.Drawing.Color.DarkGray;
+            this.btnTotalPaginas.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnTotalPaginas.BorderRadius = 5;
+            this.btnTotalPaginas.BorderSize = 0;
+            this.btnTotalPaginas.FlatAppearance.BorderSize = 0;
+            this.btnTotalPaginas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTotalPaginas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnTotalPaginas.ForeColor = System.Drawing.Color.White;
+            this.btnTotalPaginas.Location = new System.Drawing.Point(776, 395);
+            this.btnTotalPaginas.Name = "btnTotalPaginas";
+            this.btnTotalPaginas.Size = new System.Drawing.Size(43, 31);
+            this.btnTotalPaginas.TabIndex = 153;
+            this.btnTotalPaginas.TextColor = System.Drawing.Color.White;
+            this.btnTotalPaginas.UseVisualStyleBackColor = false;
             // 
             // siticoneHtmlLabel6
             // 
@@ -555,24 +584,10 @@
             this.siticoneHtmlLabel6.TabIndex = 13;
             this.siticoneHtmlLabel6.Text = "Registros de";
             // 
-            // btnTotalPaginas
-            // 
-            this.btnTotalPaginas.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTotalPaginas.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTotalPaginas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTotalPaginas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTotalPaginas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnTotalPaginas.ForeColor = System.Drawing.Color.White;
-            this.btnTotalPaginas.Location = new System.Drawing.Point(815, 401);
-            this.btnTotalPaginas.Name = "btnTotalPaginas";
-            this.btnTotalPaginas.ShadowDecoration.Mode = Siticone.Desktop.UI.WinForms.Enums.ShadowMode.Circle;
-            this.btnTotalPaginas.Size = new System.Drawing.Size(25, 25);
-            this.btnTotalPaginas.TabIndex = 12;
-            // 
             // cboPagina
             // 
             this.cboPagina.FormattingEnabled = true;
-            this.cboPagina.Location = new System.Drawing.Point(731, 405);
+            this.cboPagina.Location = new System.Drawing.Point(694, 400);
             this.cboPagina.Name = "cboPagina";
             this.cboPagina.Size = new System.Drawing.Size(56, 23);
             this.cboPagina.TabIndex = 11;
@@ -581,7 +596,7 @@
             // siticoneHtmlLabel5
             // 
             this.siticoneHtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(793, 405);
+            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(756, 400);
             this.siticoneHtmlLabel5.Name = "siticoneHtmlLabel5";
             this.siticoneHtmlLabel5.Size = new System.Drawing.Size(16, 17);
             this.siticoneHtmlLabel5.TabIndex = 10;
@@ -590,7 +605,7 @@
             // siticoneHtmlLabel4
             // 
             this.siticoneHtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneHtmlLabel4.Location = new System.Drawing.Point(686, 409);
+            this.siticoneHtmlLabel4.Location = new System.Drawing.Point(649, 404);
             this.siticoneHtmlLabel4.Name = "siticoneHtmlLabel4";
             this.siticoneHtmlLabel4.Size = new System.Drawing.Size(39, 17);
             this.siticoneHtmlLabel4.TabIndex = 9;
@@ -730,6 +745,14 @@
             this.rjProgressBar1.SymbolBefore = "";
             this.rjProgressBar1.TabIndex = 28;
             // 
+            // siticonevSeparator1
+            // 
+            this.siticonevSeparator1.FillColor = System.Drawing.Color.Black;
+            this.siticonevSeparator1.Location = new System.Drawing.Point(834, 395);
+            this.siticonevSeparator1.Name = "siticonevSeparator1";
+            this.siticonevSeparator1.Size = new System.Drawing.Size(10, 31);
+            this.siticonevSeparator1.TabIndex = 156;
+            // 
             // frmRegistrarMiembros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -802,14 +825,15 @@
         private Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker dtFechaInicio;
         private DataGridView dgRegistrarPersona;
         private PictureBox btnBuscar;
-        private RJCodeAdvance.RJControls.RJProgressBar rjProgressBar1;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtIdPersona;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel5;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel4;
-        private Siticone.Desktop.UI.WinForms.SiticoneCircleButton btnTotalReg;
-        private Siticone.Desktop.UI.WinForms.SiticoneCircleButton btnNumFilas;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel6;
-        private Siticone.Desktop.UI.WinForms.SiticoneCircleButton btnTotalPaginas;
         private ComboBox cboPagina;
+        private RJCodeAdvance.RJControls.RJProgressBar rjProgressBar1;
+        private RJCodeAdvance.RJControls.RJButton btnTotalReg;
+        private RJCodeAdvance.RJControls.RJButton btnNumFilas;
+        private RJCodeAdvance.RJControls.RJButton btnTotalPaginas;
+        private Siticone.Desktop.UI.WinForms.SiticoneVSeparator siticonevSeparator1;
     }
 }

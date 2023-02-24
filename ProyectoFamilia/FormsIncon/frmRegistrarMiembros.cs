@@ -19,13 +19,25 @@ using System.Windows.Forms;
 
 namespace ProyectoFamilia.FormsIncome
 {
+
     public partial class frmRegistrarMiembros : Form
     {
+
         BuscarPersona Api = new BuscarPersona();
         public frmRegistrarMiembros()
         {
             InitializeComponent();
+            dgRegistrarPersona.Columns.Add("Numero", "N°");
+            //dgRegistrarPersona.Columns.Add("Id", "ID"); // nombre que se asignara a columna -  Texto de la columna
+            dgRegistrarPersona.Columns.Add("Nom", "Nombre");
+            dgRegistrarPersona.Columns.Add("ApePat", "Apellido Paterno");
+            dgRegistrarPersona.Columns.Add("ApeMat", "Apellido Materno");
+            dgRegistrarPersona.Columns.Add("Doc", "Documento");
+            dgRegistrarPersona.Columns.Add("CorreoPer", "Correo");
+            dgRegistrarPersona.Columns.Add("Ocu", "Ocupacion");
+            dgRegistrarPersona.Columns.Add("Rol", "Rol Familiar");
         }
+
 
         //Variable para buscar
         static Boolean pasoLoad;
@@ -167,7 +179,7 @@ namespace ProyectoFamilia.FormsIncome
 
 
             //Buscar Persona
-            
+
             Boolean bResult;
             pasoLoad = true;
         }
@@ -233,7 +245,7 @@ namespace ProyectoFamilia.FormsIncome
 
 
 
-        private void fnCalcularPaginacion(Int32 totalRegistros, Int32 filas, Int32 totalResultados, ComboBox cboPag, SiticoneCircleButton btnTotPag, SiticoneCircleButton btnNumFil, SiticoneCircleButton btnTotReg)
+        private void fnCalcularPaginacion(Int32 totalRegistros, Int32 filas, Int32 totalResultados /*, ComboBox cboPag, SiticoneCircleButton btnTotPag, SiticoneCircleButton btnNumFil, SiticoneCircleButton btnTotReg*/)
         {
             Int32 residuo;
             Int32 cantidadPaginas;
@@ -246,19 +258,22 @@ namespace ProyectoFamilia.FormsIncome
             {
                 cantidadPaginas = (totalRegistros / filas) + 1;
             }
-
-            cboPag.Items.Clear();
+            cboPagina.Items.Clear();
 
             for (Int32 i = 1; i <= cantidadPaginas; i++)
             {
-                cboPag.Items.Add(i);
+                cboPagina.Items.Add(i);
 
             }
 
-            cboPag.SelectedIndex = 0;
-            btnTotPag.Text = Convert.ToString(cantidadPaginas);
-            btnNumFil.Text = Convert.ToString(totalResultados);
-            btnTotReg.Text = Convert.ToString(totalRegistros);
+            //cboPag.SelectedIndex = 0;
+            //btnTotPag.Text = Convert.ToString(cantidadPaginas);
+            //btnNumFil.Text = Convert.ToString(totalResultados);
+            //btnTotReg.Text = Convert.ToString(totalRegistros);
+            cboPagina.SelectedIndex = 0;
+            btnTotalPaginas.Text = Convert.ToString(cantidadPaginas);
+            btnNumFilas.Text = Convert.ToString(totalResultados);
+            btnTotalReg.Text = Convert.ToString(totalRegistros);
 
         }
         private Boolean fnBuscarPersona(DataGridView dgv, Int32 numPagina)
@@ -268,6 +283,7 @@ namespace ProyectoFamilia.FormsIncome
             DataTable dtPersona = new DataTable();
             String nomPersona;
             Int32 filas = 15;
+            Int32 totalResultados = 0;
             Int32 idTipoPersona;
             Int32 idTipoDocumento;
             String estado;
@@ -277,53 +293,65 @@ namespace ProyectoFamilia.FormsIncome
                 nomPersona = Convert.ToString(txtBuscarPersona.Text.ToString());
 
                 dtPersona = objper.NeBuscarPer(nomPersona, numPagina);
+                dgRegistrarPersona.Rows.Clear();
+                 totalResultados = dtPersona.Rows.Count;
 
-                Int32 totalResultados = dtPersona.Rows.Count;
 
-
-                if (totalResultados > 0)
+                if (dtPersona.Rows.Count > 0)
                 {
+                    Int32 y;
+                    if (numPagina == 0)
+                    {
+                        y = 0;
+                    }
+                    else
+                    {
+                        tabInicio = (numPagina - 1) * filas;
+                        y = tabInicio;
+                    }
 
-                    DataTable dt = new DataTable();
-
-                    dgRegistrarPersona.Columns.Add("ID", "ID"); // nombre que se asignara a columna -  Texto de la columna
-                    dgRegistrarPersona.Columns.Add("Nom", "Nombre");
-                    dgRegistrarPersona.Columns.Add("ApePat", "Apellido Paterno");
-                    dgRegistrarPersona.Columns.Add("ApeMat", "Apellido Materno");
-                    dgRegistrarPersona.Columns.Add("Doc", "Documento");
-                    dgRegistrarPersona.Columns.Add("CorreoPer", "Correo");
-                    dgRegistrarPersona.Columns.Add("Ocu", "Ocupacion");
-                    dgRegistrarPersona.Columns.Add("Rol", "Rol Familiar");
+                    //DataTable dt = new DataTable();
+                    //dgRegistrarPersona.Columns.Clear();
+                    foreach (DataRow item in dtPersona.Rows)
+                    {
+                        y++;
+                        dgRegistrarPersona.Rows.Add(
+                            y,
+                            //item["idPersona"],
+                            item["nomPersona"],
+                            item["apePat"],
+                            item["apeMat"],
+                            item["docPersona"],
+                            item["correoPersona"],
+                            item["nomOcupacion"],
+                            item["nomRol"]
+                            ); 
+                    }
 
                 }
-                foreach (DataRow item in dtPersona.Rows)
+
+                if (numPagina == 0)
                 {
-                    dgRegistrarPersona.Rows.Add(
-                        item["idPersona"],
-                        item["nomPersona"],
-                        item["apePat"],
-                        item["apeMat"],
-                        item["docPersona"],
-                        item["correoPersona"],
-                        item["nomOcupacion"],
-                        item["nomRol"]
-                        );
-                    Int32 totalRegistros = Convert.ToInt32(dtPersona.Rows[0][7]);
+                    Int32 totalRegistros = Convert.ToInt32(dtPersona.Rows[0][0]);
                     fnCalcularPaginacion(
-                        totalRegistros,
-                        filas,
-                        totalResultados,
-                        cboPagina,
-                        btnTotalPaginas,
-                        btnNumFilas,
-                        btnTotalReg
-                        );
-                    btnNumFilas.Text = Convert.ToString(totalResultados);
+                            totalRegistros,
+                            filas,
+                            totalResultados
+                            //cboPagina,
+                            //btnTotalPaginas,
+                            //btnNumFilas,
+                            //btnTotalReg
+                            );
+                    
+
                 }
-                    return true;
-                
+                //btnNumFilas.Text = Convert.ToString(filas);
+                //btnTotalReg.Text = Convert.ToString(totalRegistros);
+
+
+                return true;
             }
-            
+
 
             catch (Exception ex)
             {
@@ -336,16 +364,16 @@ namespace ProyectoFamilia.FormsIncome
                 objper = null;
 
             }
-            
+
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             Boolean bResul;
-            
+
             if (pasoLoad)
             {
-                bResul = fnBuscarPersona(dgRegistrarPersona,0);
+                bResul = fnBuscarPersona(dgRegistrarPersona, 0);
                 if (!bResul)
                 {
                     MessageBox.Show("Error al Buscar Familiar. Comunicar a Administrador de Sistema", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -358,10 +386,6 @@ namespace ProyectoFamilia.FormsIncome
             fnTrarDatosPersona();
         }
 
-        private void rjProgressBar1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void cboPagina_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -377,5 +401,6 @@ namespace ProyectoFamilia.FormsIncome
                 }
             }
         }
+
     }
 }
