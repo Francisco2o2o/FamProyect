@@ -11,19 +11,21 @@ namespace CapDatos
 {
     public class daBuscarPersona
     {
-        public DataTable daBuscarPers(String nomPersona, Int32 numPagina)
+        public DataTable daBuscarPers(Boolean habilitarFechas, DateTime fechaInical, DateTime fechaFinal, String nomPersona, Int32 numPagina)
         {
 
-            SqlParameter[] pa = new SqlParameter[2];
+            SqlParameter[] pa = new SqlParameter[5];
             DataTable dtPersona;
             ConexionSql objCnx = null;
             
 
             try
             {
-                
-                pa[0] = new SqlParameter("@NombreP", SqlDbType.NVarChar, 45) { Value = nomPersona };
-                pa[1] = new SqlParameter("@peNumPagina", SqlDbType.Int) { Value = numPagina };
+                pa[0] = new SqlParameter("@peHabilitarFechas", SqlDbType.Bit) { Value = habilitarFechas };
+                pa[1] = new SqlParameter("@peFechaInical", SqlDbType.DateTime) { Value = fechaInical };
+                pa[2] = new SqlParameter("@peFechaFinal", SqlDbType.DateTime) { Value = fechaFinal };
+                pa[3] = new SqlParameter("@NombreP", SqlDbType.NVarChar, 45) { Value = nomPersona };
+                pa[4] = new SqlParameter("@peNumPagina", SqlDbType.Int) { Value = numPagina };
                 objCnx = new ConexionSql("");
                 dtPersona = objCnx.EjecutarProcedimientoDT("uspBuscarPersona", pa);
 

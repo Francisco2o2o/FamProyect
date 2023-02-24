@@ -59,6 +59,7 @@
             this.tpReg = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.siticonevSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneVSeparator();
             this.btnTotalReg = new RJCodeAdvance.RJControls.RJButton();
             this.btnNumFilas = new RJCodeAdvance.RJControls.RJButton();
@@ -78,7 +79,7 @@
             this.dgRegistrarPersona = new System.Windows.Forms.DataGridView();
             this.Moverformulario = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
             this.rjProgressBar1 = new RJCodeAdvance.RJControls.RJProgressBar();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.chkHabilitarFechas = new Siticone.Desktop.UI.WinForms.SiticoneCheckBox();
             this.pSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagePersona)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscarPersona)).BeginInit();
@@ -86,10 +87,10 @@
             this.tbPersona.SuspendLayout();
             this.tpReg.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgRegistrarPersona)).BeginInit();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -309,6 +310,7 @@
             this.txtIdPersona.SelectedText = "";
             this.txtIdPersona.Size = new System.Drawing.Size(195, 36);
             this.txtIdPersona.TabIndex = 25;
+            this.txtIdPersona.Visible = false;
             // 
             // GuardarMiembroFamilia
             // 
@@ -501,6 +503,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.chkHabilitarFechas);
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Controls.Add(this.btnBuscar);
             this.tabPage2.Controls.Add(this.siticoneHtmlLabel3);
@@ -514,6 +517,22 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "MIEMBROS";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.siticonevSeparator1);
+            this.groupBox3.Controls.Add(this.btnTotalReg);
+            this.groupBox3.Controls.Add(this.btnNumFilas);
+            this.groupBox3.Controls.Add(this.btnTotalPaginas);
+            this.groupBox3.Controls.Add(this.siticoneHtmlLabel6);
+            this.groupBox3.Controls.Add(this.cboPagina);
+            this.groupBox3.Controls.Add(this.siticoneHtmlLabel5);
+            this.groupBox3.Controls.Add(this.siticoneHtmlLabel4);
+            this.groupBox3.Location = new System.Drawing.Point(627, 384);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(410, 51);
+            this.groupBox3.TabIndex = 157;
+            this.groupBox3.TabStop = false;
             // 
             // siticonevSeparator1
             // 
@@ -663,9 +682,9 @@
             this.groupBox2.Controls.Add(this.siticoneHtmlLabel1);
             this.groupBox2.Controls.Add(this.dtFechaFin);
             this.groupBox2.Controls.Add(this.dtFechaInicio);
-            this.groupBox2.Location = new System.Drawing.Point(6, 8);
+            this.groupBox2.Location = new System.Drawing.Point(9, 42);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(563, 79);
+            this.groupBox2.Size = new System.Drawing.Size(563, 81);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Buscar por fecha";
@@ -721,10 +740,10 @@
             // dgRegistrarPersona
             // 
             this.dgRegistrarPersona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgRegistrarPersona.Location = new System.Drawing.Point(6, 94);
+            this.dgRegistrarPersona.Location = new System.Drawing.Point(6, 139);
             this.dgRegistrarPersona.Name = "dgRegistrarPersona";
             this.dgRegistrarPersona.RowTemplate.Height = 25;
-            this.dgRegistrarPersona.Size = new System.Drawing.Size(1034, 284);
+            this.dgRegistrarPersona.Size = new System.Drawing.Size(1034, 239);
             this.dgRegistrarPersona.TabIndex = 0;
             // 
             // Moverformulario
@@ -750,21 +769,22 @@
             this.rjProgressBar1.SymbolBefore = "";
             this.rjProgressBar1.TabIndex = 28;
             // 
-            // groupBox3
+            // chkHabilitarFechas
             // 
-            this.groupBox3.Controls.Add(this.siticonevSeparator1);
-            this.groupBox3.Controls.Add(this.btnTotalReg);
-            this.groupBox3.Controls.Add(this.btnNumFilas);
-            this.groupBox3.Controls.Add(this.btnTotalPaginas);
-            this.groupBox3.Controls.Add(this.siticoneHtmlLabel6);
-            this.groupBox3.Controls.Add(this.cboPagina);
-            this.groupBox3.Controls.Add(this.siticoneHtmlLabel5);
-            this.groupBox3.Controls.Add(this.siticoneHtmlLabel4);
-            this.groupBox3.Location = new System.Drawing.Point(627, 384);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(410, 51);
-            this.groupBox3.TabIndex = 157;
-            this.groupBox3.TabStop = false;
+            this.chkHabilitarFechas.AutoSize = true;
+            this.chkHabilitarFechas.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chkHabilitarFechas.CheckedState.BorderRadius = 0;
+            this.chkHabilitarFechas.CheckedState.BorderThickness = 0;
+            this.chkHabilitarFechas.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chkHabilitarFechas.Location = new System.Drawing.Point(18, 17);
+            this.chkHabilitarFechas.Name = "chkHabilitarFechas";
+            this.chkHabilitarFechas.Size = new System.Drawing.Size(57, 19);
+            this.chkHabilitarFechas.TabIndex = 158;
+            this.chkHabilitarFechas.Text = "Fecha";
+            this.chkHabilitarFechas.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chkHabilitarFechas.UncheckedState.BorderRadius = 0;
+            this.chkHabilitarFechas.UncheckedState.BorderThickness = 0;
+            this.chkHabilitarFechas.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             // 
             // frmRegistrarMiembros
             // 
@@ -790,12 +810,12 @@
             this.tpReg.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgRegistrarPersona)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -851,5 +871,6 @@
         private RJCodeAdvance.RJControls.RJButton btnTotalPaginas;
         private Siticone.Desktop.UI.WinForms.SiticoneVSeparator siticonevSeparator1;
         private GroupBox groupBox3;
+        private Siticone.Desktop.UI.WinForms.SiticoneCheckBox chkHabilitarFechas;
     }
 }

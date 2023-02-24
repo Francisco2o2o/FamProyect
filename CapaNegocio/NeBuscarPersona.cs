@@ -10,13 +10,13 @@ namespace CapaNegocio
 {
     public class NeBuscarPersona
     {
-        public DataTable NeBuscarPer(String nomPersona, Int32 numPagina)
+        public DataTable NeBuscarPer(Boolean habilitarFechas, DateTime fechaInical, DateTime fechaFinal, String nomPersona, Int32 numPagina)
         {
 
             daBuscarPersona objPersona = new daBuscarPersona();
             try
             {
-                return objPersona.daBuscarPers(nomPersona, numPagina);
+                return objPersona.daBuscarPers(habilitarFechas, fechaInical, fechaFinal, nomPersona, numPagina);
             }
             catch (Exception ex)
             {

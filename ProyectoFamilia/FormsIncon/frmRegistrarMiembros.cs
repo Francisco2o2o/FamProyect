@@ -287,12 +287,15 @@ namespace ProyectoFamilia.FormsIncome
             Int32 idTipoPersona;
             Int32 idTipoDocumento;
             String estado;
+            DateTime fechaInicial = dtFechaInicio.Value;
+            DateTime fechaFinal = dtFechaFin.Value;
+            Boolean habilitarFechas = chkHabilitarFechas.Checked ? true : false;
             try
             {
 
                 nomPersona = Convert.ToString(txtBuscarPersona.Text.ToString());
 
-                dtPersona = objper.NeBuscarPer(nomPersona, numPagina);
+                dtPersona = objper.NeBuscarPer(habilitarFechas,fechaInicial, fechaFinal, nomPersona, numPagina);
                 dgRegistrarPersona.Rows.Clear();
                  totalResultados = dtPersona.Rows.Count;
 
