@@ -342,8 +342,6 @@ namespace ProyectoFamilia.FormsIncome
                             //btnNumFilas,
                             //btnTotalReg
                             );
-                    
-
                 }
                 //btnNumFilas.Text = Convert.ToString(filas);
                 //btnTotalReg.Text = Convert.ToString(totalRegistros);

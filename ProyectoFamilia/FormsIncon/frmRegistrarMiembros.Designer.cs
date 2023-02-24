@@ -59,6 +59,7 @@
             this.tpReg = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.siticonevSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneVSeparator();
             this.btnTotalReg = new RJCodeAdvance.RJControls.RJButton();
             this.btnNumFilas = new RJCodeAdvance.RJControls.RJButton();
             this.btnTotalPaginas = new RJCodeAdvance.RJControls.RJButton();
@@ -77,7 +78,7 @@
             this.dgRegistrarPersona = new System.Windows.Forms.DataGridView();
             this.Moverformulario = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
             this.rjProgressBar1 = new RJCodeAdvance.RJControls.RJProgressBar();
-            this.siticonevSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneVSeparator();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.pSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagePersona)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscarPersona)).BeginInit();
@@ -88,6 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgRegistrarPersona)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -499,14 +501,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.siticonevSeparator1);
-            this.tabPage2.Controls.Add(this.btnTotalReg);
-            this.tabPage2.Controls.Add(this.btnNumFilas);
-            this.tabPage2.Controls.Add(this.btnTotalPaginas);
-            this.tabPage2.Controls.Add(this.siticoneHtmlLabel6);
-            this.tabPage2.Controls.Add(this.cboPagina);
-            this.tabPage2.Controls.Add(this.siticoneHtmlLabel5);
-            this.tabPage2.Controls.Add(this.siticoneHtmlLabel4);
+            this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Controls.Add(this.btnBuscar);
             this.tabPage2.Controls.Add(this.siticoneHtmlLabel3);
             this.tabPage2.Controls.Add(this.txtBuscarPersona);
@@ -519,7 +514,14 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "MIEMBROS";
             this.tabPage2.UseVisualStyleBackColor = true;
-            
+            // 
+            // siticonevSeparator1
+            // 
+            this.siticonevSeparator1.FillColor = System.Drawing.Color.Black;
+            this.siticonevSeparator1.Location = new System.Drawing.Point(206, 16);
+            this.siticonevSeparator1.Name = "siticonevSeparator1";
+            this.siticonevSeparator1.Size = new System.Drawing.Size(10, 31);
+            this.siticonevSeparator1.TabIndex = 156;
             // 
             // btnTotalReg
             // 
@@ -532,7 +534,7 @@
             this.btnTotalReg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTotalReg.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnTotalReg.ForeColor = System.Drawing.Color.White;
-            this.btnTotalReg.Location = new System.Drawing.Point(980, 395);
+            this.btnTotalReg.Location = new System.Drawing.Point(361, 14);
             this.btnTotalReg.Name = "btnTotalReg";
             this.btnTotalReg.Size = new System.Drawing.Size(43, 31);
             this.btnTotalReg.TabIndex = 155;
@@ -550,7 +552,7 @@
             this.btnNumFilas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNumFilas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnNumFilas.ForeColor = System.Drawing.Color.White;
-            this.btnNumFilas.Location = new System.Drawing.Point(858, 395);
+            this.btnNumFilas.Location = new System.Drawing.Point(222, 14);
             this.btnNumFilas.Name = "btnNumFilas";
             this.btnNumFilas.Size = new System.Drawing.Size(43, 31);
             this.btnNumFilas.TabIndex = 154;
@@ -568,7 +570,7 @@
             this.btnTotalPaginas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTotalPaginas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnTotalPaginas.ForeColor = System.Drawing.Color.White;
-            this.btnTotalPaginas.Location = new System.Drawing.Point(776, 395);
+            this.btnTotalPaginas.Location = new System.Drawing.Point(154, 14);
             this.btnTotalPaginas.Name = "btnTotalPaginas";
             this.btnTotalPaginas.Size = new System.Drawing.Size(43, 31);
             this.btnTotalPaginas.TabIndex = 153;
@@ -578,16 +580,17 @@
             // siticoneHtmlLabel6
             // 
             this.siticoneHtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneHtmlLabel6.Location = new System.Drawing.Point(907, 405);
+            this.siticoneHtmlLabel6.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.siticoneHtmlLabel6.Location = new System.Drawing.Point(271, 19);
             this.siticoneHtmlLabel6.Name = "siticoneHtmlLabel6";
-            this.siticoneHtmlLabel6.Size = new System.Drawing.Size(67, 17);
+            this.siticoneHtmlLabel6.Size = new System.Drawing.Size(89, 23);
             this.siticoneHtmlLabel6.TabIndex = 13;
             this.siticoneHtmlLabel6.Text = "Registros de";
             // 
             // cboPagina
             // 
             this.cboPagina.FormattingEnabled = true;
-            this.cboPagina.Location = new System.Drawing.Point(694, 400);
+            this.cboPagina.Location = new System.Drawing.Point(66, 19);
             this.cboPagina.Name = "cboPagina";
             this.cboPagina.Size = new System.Drawing.Size(56, 23);
             this.cboPagina.TabIndex = 11;
@@ -596,18 +599,20 @@
             // siticoneHtmlLabel5
             // 
             this.siticoneHtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(756, 400);
+            this.siticoneHtmlLabel5.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(128, 17);
             this.siticoneHtmlLabel5.Name = "siticoneHtmlLabel5";
-            this.siticoneHtmlLabel5.Size = new System.Drawing.Size(16, 17);
+            this.siticoneHtmlLabel5.Size = new System.Drawing.Size(20, 23);
             this.siticoneHtmlLabel5.TabIndex = 10;
             this.siticoneHtmlLabel5.Text = "de";
             // 
             // siticoneHtmlLabel4
             // 
             this.siticoneHtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneHtmlLabel4.Location = new System.Drawing.Point(649, 404);
+            this.siticoneHtmlLabel4.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.siticoneHtmlLabel4.Location = new System.Drawing.Point(10, 17);
             this.siticoneHtmlLabel4.Name = "siticoneHtmlLabel4";
-            this.siticoneHtmlLabel4.Size = new System.Drawing.Size(39, 17);
+            this.siticoneHtmlLabel4.Size = new System.Drawing.Size(50, 23);
             this.siticoneHtmlLabel4.TabIndex = 9;
             this.siticoneHtmlLabel4.Text = "Pagina";
             // 
@@ -719,7 +724,7 @@
             this.dgRegistrarPersona.Location = new System.Drawing.Point(6, 94);
             this.dgRegistrarPersona.Name = "dgRegistrarPersona";
             this.dgRegistrarPersona.RowTemplate.Height = 25;
-            this.dgRegistrarPersona.Size = new System.Drawing.Size(1034, 295);
+            this.dgRegistrarPersona.Size = new System.Drawing.Size(1034, 284);
             this.dgRegistrarPersona.TabIndex = 0;
             // 
             // Moverformulario
@@ -745,13 +750,21 @@
             this.rjProgressBar1.SymbolBefore = "";
             this.rjProgressBar1.TabIndex = 28;
             // 
-            // siticonevSeparator1
+            // groupBox3
             // 
-            this.siticonevSeparator1.FillColor = System.Drawing.Color.Black;
-            this.siticonevSeparator1.Location = new System.Drawing.Point(834, 395);
-            this.siticonevSeparator1.Name = "siticonevSeparator1";
-            this.siticonevSeparator1.Size = new System.Drawing.Size(10, 31);
-            this.siticonevSeparator1.TabIndex = 156;
+            this.groupBox3.Controls.Add(this.siticonevSeparator1);
+            this.groupBox3.Controls.Add(this.btnTotalReg);
+            this.groupBox3.Controls.Add(this.btnNumFilas);
+            this.groupBox3.Controls.Add(this.btnTotalPaginas);
+            this.groupBox3.Controls.Add(this.siticoneHtmlLabel6);
+            this.groupBox3.Controls.Add(this.cboPagina);
+            this.groupBox3.Controls.Add(this.siticoneHtmlLabel5);
+            this.groupBox3.Controls.Add(this.siticoneHtmlLabel4);
+            this.groupBox3.Location = new System.Drawing.Point(627, 384);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(410, 51);
+            this.groupBox3.TabIndex = 157;
+            this.groupBox3.TabStop = false;
             // 
             // frmRegistrarMiembros
             // 
@@ -781,6 +794,8 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgRegistrarPersona)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -835,5 +850,6 @@
         private RJCodeAdvance.RJControls.RJButton btnNumFilas;
         private RJCodeAdvance.RJControls.RJButton btnTotalPaginas;
         private Siticone.Desktop.UI.WinForms.SiticoneVSeparator siticonevSeparator1;
+        private GroupBox groupBox3;
     }
 }
