@@ -28,796 +28,891 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistrarMiembros));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pSuperior = new System.Windows.Forms.Panel();
-            this.dtRegistroPersona = new RJCodeAdvance.RJControls.RJDatePicker();
-            this.btnImagePersona = new RJCodeAdvance.RJControls.RJButton();
-            this.imagePersona = new RJCodeAdvance.RJControls.RJCircularPictureBox();
-            this.txtDocumento = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.cboOcupacion = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
-            this.cboRol = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
-            this.btnBuscarPersona = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtIdPersona = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.GuardarMiembroFamilia = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.txtCorreo = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.txtapeMat = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.txtapePat = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.txtNombre = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dtFechaNacimiento = new RJCodeAdvance.RJControls.RJDatePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tbPersona = new System.Windows.Forms.TabControl();
-            this.tpReg = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.siticonevSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneVSeparator();
-            this.btnTotalReg = new RJCodeAdvance.RJControls.RJButton();
-            this.btnNumFilas = new RJCodeAdvance.RJControls.RJButton();
-            this.btnTotalPaginas = new RJCodeAdvance.RJControls.RJButton();
-            this.siticoneHtmlLabel6 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.cboPagina = new System.Windows.Forms.ComboBox();
-            this.siticoneHtmlLabel5 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.siticoneHtmlLabel4 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.btnBuscar = new System.Windows.Forms.PictureBox();
-            this.siticoneHtmlLabel3 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.txtBuscarPersona = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.siticoneHtmlLabel2 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.siticoneHtmlLabel1 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.dtFechaFin = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
-            this.dtFechaInicio = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
-            this.dgRegistrarPersona = new System.Windows.Forms.DataGridView();
-            this.Moverformulario = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(this.components);
-            this.rjProgressBar1 = new RJCodeAdvance.RJControls.RJProgressBar();
-            this.chkHabilitarFechas = new Siticone.Desktop.UI.WinForms.SiticoneCheckBox();
-            this.pSuperior.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imagePersona)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBuscarPersona)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.tbPersona.SuspendLayout();
-            this.tpReg.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgRegistrarPersona)).BeginInit();
-            this.SuspendLayout();
+            label1 = new Label();
+            label2 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            pSuperior = new Panel();
+            dtRegistroPersona = new RJCodeAdvance.RJControls.RJDatePicker();
+            btnImagePersona = new RJCodeAdvance.RJControls.RJButton();
+            imagePersona = new RJCodeAdvance.RJControls.RJCircularPictureBox();
+            txtDocumento = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            cboOcupacion = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
+            cboRol = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
+            btnBuscarPersona = new PictureBox();
+            label10 = new Label();
+            groupBox1 = new GroupBox();
+            txtIdPersona = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            GuardarMiembroFamilia = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            txtCorreo = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            txtapeMat = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            txtapePat = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            txtNombre = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            label9 = new Label();
+            label8 = new Label();
+            dtFechaNacimiento = new RJCodeAdvance.RJControls.RJDatePicker();
+            label7 = new Label();
+            label6 = new Label();
+            tbPersona = new TabControl();
+            tpReg = new TabPage();
+            label3 = new Label();
+            tabPage2 = new TabPage();
+            chkHabilitarFechas = new Siticone.Desktop.UI.WinForms.SiticoneCheckBox();
+            groupBox3 = new GroupBox();
+            siticonevSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneVSeparator();
+            btnTotalReg = new RJCodeAdvance.RJControls.RJButton();
+            btnNumFilas = new RJCodeAdvance.RJControls.RJButton();
+            btnTotalPaginas = new RJCodeAdvance.RJControls.RJButton();
+            siticoneHtmlLabel6 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            cboPagina = new ComboBox();
+            siticoneHtmlLabel5 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            siticoneHtmlLabel4 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            btnBuscar = new PictureBox();
+            siticoneHtmlLabel3 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            txtBuscarPersona = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            groupBox2 = new GroupBox();
+            siticoneHtmlLabel2 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            siticoneHtmlLabel1 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            dtFechaFin = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
+            dtFechaInicio = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
+            dgRegistrarPersona = new DataGridView();
+            Moverformulario = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(components);
+            rjProgressBar1 = new RJCodeAdvance.RJControls.RJProgressBar();
+            circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
+            lblNombre1 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            lblCorreo1 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            lblFecha = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            pictureBox1 = new PictureBox();
+            btnPasarDatos = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            pSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)imagePersona).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnBuscarPersona).BeginInit();
+            groupBox1.SuspendLayout();
+            tbPersona.SuspendLayout();
+            tpReg.SuspendLayout();
+            tabPage2.SuspendLayout();
+            groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btnBuscar).BeginInit();
+            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgRegistrarPersona).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(6, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre";
+            label1.AutoSize = true;
+            label1.Font = new Font("Ebrima", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(37, 48);
+            label1.Name = "label1";
+            label1.Size = new Size(68, 21);
+            label1.TabIndex = 0;
+            label1.Text = "Nombre";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(6, 98);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 21);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Apellido Paterno";
+            label2.AutoSize = true;
+            label2.Font = new Font("Ebrima", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(37, 140);
+            label2.Name = "label2";
+            label2.Size = new Size(125, 21);
+            label2.TabIndex = 1;
+            label2.Text = "Apellido Paterno";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(3, 7);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 21);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Ocupacion";
+            label4.AutoSize = true;
+            label4.Font = new Font("Ebrima", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(40, 7);
+            label4.Name = "label4";
+            label4.Size = new Size(84, 21);
+            label4.TabIndex = 3;
+            label4.Text = "Ocupacion";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(12, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(177, 24);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Registrar Familiar";
+            label5.AutoSize = true;
+            label5.Font = new Font("Century Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(12, 9);
+            label5.Name = "label5";
+            label5.Size = new Size(177, 24);
+            label5.TabIndex = 9;
+            label5.Text = "Registrar Familiar";
             // 
             // pSuperior
             // 
-            this.pSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(214)))), ((int)(((byte)(202)))));
-            this.pSuperior.Controls.Add(this.label5);
-            this.pSuperior.Controls.Add(this.dtRegistroPersona);
-            this.pSuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pSuperior.Location = new System.Drawing.Point(0, 0);
-            this.pSuperior.Name = "pSuperior";
-            this.pSuperior.Size = new System.Drawing.Size(1056, 40);
-            this.pSuperior.TabIndex = 10;
+            pSuperior.BackColor = Color.FromArgb(78, 214, 202);
+            pSuperior.Controls.Add(label5);
+            pSuperior.Controls.Add(dtRegistroPersona);
+            pSuperior.Dock = DockStyle.Top;
+            pSuperior.Location = new Point(0, 0);
+            pSuperior.Name = "pSuperior";
+            pSuperior.Size = new Size(1084, 40);
+            pSuperior.TabIndex = 10;
             // 
             // dtRegistroPersona
             // 
-            this.dtRegistroPersona.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(124)))), ((int)(((byte)(150)))));
-            this.dtRegistroPersona.BorderSize = 2;
-            this.dtRegistroPersona.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dtRegistroPersona.Location = new System.Drawing.Point(285, 2);
-            this.dtRegistroPersona.MinimumSize = new System.Drawing.Size(0, 35);
-            this.dtRegistroPersona.Name = "dtRegistroPersona";
-            this.dtRegistroPersona.Size = new System.Drawing.Size(283, 35);
-            this.dtRegistroPersona.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(214)))), ((int)(((byte)(202)))));
-            this.dtRegistroPersona.TabIndex = 22;
-            this.dtRegistroPersona.TextColor = System.Drawing.Color.White;
+            dtRegistroPersona.BorderColor = Color.FromArgb(0, 124, 150);
+            dtRegistroPersona.BorderSize = 2;
+            dtRegistroPersona.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            dtRegistroPersona.Location = new Point(797, 2);
+            dtRegistroPersona.MinimumSize = new Size(0, 35);
+            dtRegistroPersona.Name = "dtRegistroPersona";
+            dtRegistroPersona.Size = new Size(283, 35);
+            dtRegistroPersona.SkinColor = Color.FromArgb(78, 214, 202);
+            dtRegistroPersona.TabIndex = 22;
+            dtRegistroPersona.TextColor = Color.White;
             // 
             // btnImagePersona
             // 
-            this.btnImagePersona.BackColor = System.Drawing.Color.Transparent;
-            this.btnImagePersona.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnImagePersona.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(124)))), ((int)(((byte)(150)))));
-            this.btnImagePersona.BorderRadius = 10;
-            this.btnImagePersona.BorderSize = 2;
-            this.btnImagePersona.FlatAppearance.BorderSize = 0;
-            this.btnImagePersona.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImagePersona.ForeColor = System.Drawing.Color.Black;
-            this.btnImagePersona.Location = new System.Drawing.Point(340, 243);
-            this.btnImagePersona.Name = "btnImagePersona";
-            this.btnImagePersona.Size = new System.Drawing.Size(316, 40);
-            this.btnImagePersona.TabIndex = 11;
-            this.btnImagePersona.Text = "Importar Fotografía";
-            this.btnImagePersona.TextColor = System.Drawing.Color.Black;
-            this.btnImagePersona.UseVisualStyleBackColor = false;
-            this.btnImagePersona.Click += new System.EventHandler(this.btnFotoMiembroFamilia_Click);
+            btnImagePersona.BackColor = Color.Transparent;
+            btnImagePersona.BackgroundColor = Color.Transparent;
+            btnImagePersona.BorderColor = Color.FromArgb(0, 124, 150);
+            btnImagePersona.BorderRadius = 10;
+            btnImagePersona.BorderSize = 2;
+            btnImagePersona.FlatAppearance.BorderSize = 0;
+            btnImagePersona.FlatStyle = FlatStyle.Flat;
+            btnImagePersona.ForeColor = Color.Black;
+            btnImagePersona.Location = new Point(378, 343);
+            btnImagePersona.Name = "btnImagePersona";
+            btnImagePersona.Size = new Size(316, 40);
+            btnImagePersona.TabIndex = 11;
+            btnImagePersona.Text = "Importar Fotografía";
+            btnImagePersona.TextColor = Color.Black;
+            btnImagePersona.UseVisualStyleBackColor = false;
+            btnImagePersona.Click += btnFotoMiembroFamilia_Click;
             // 
             // imagePersona
             // 
-            this.imagePersona.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.imagePersona.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(124)))), ((int)(((byte)(150)))));
-            this.imagePersona.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(124)))), ((int)(((byte)(150)))));
-            this.imagePersona.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.imagePersona.BorderSize = 2;
-            this.imagePersona.GradientAngle = 50F;
-            this.imagePersona.Image = ((System.Drawing.Image)(resources.GetObject("imagePersona.Image")));
-            this.imagePersona.Location = new System.Drawing.Point(439, 102);
-            this.imagePersona.Name = "imagePersona";
-            this.imagePersona.Size = new System.Drawing.Size(119, 119);
-            this.imagePersona.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imagePersona.TabIndex = 12;
-            this.imagePersona.TabStop = false;
+            imagePersona.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            imagePersona.BorderColor = Color.FromArgb(0, 124, 150);
+            imagePersona.BorderColor2 = Color.FromArgb(0, 124, 150);
+            imagePersona.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            imagePersona.BorderSize = 2;
+            imagePersona.GradientAngle = 50F;
+            imagePersona.Image = (Image)resources.GetObject("imagePersona.Image");
+            imagePersona.Location = new Point(441, 128);
+            imagePersona.Name = "imagePersona";
+            imagePersona.Size = new Size(185, 185);
+            imagePersona.SizeMode = PictureBoxSizeMode.StretchImage;
+            imagePersona.TabIndex = 12;
+            imagePersona.TabStop = false;
             // 
             // txtDocumento
             // 
-            this.txtDocumento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDocumento.BorderRadius = 3;
-            this.txtDocumento.DefaultText = "";
-            this.txtDocumento.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDocumento.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDocumento.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDocumento.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDocumento.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDocumento.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDocumento.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDocumento.Location = new System.Drawing.Point(684, 31);
-            this.txtDocumento.Name = "txtDocumento";
-            this.txtDocumento.PasswordChar = '\0';
-            this.txtDocumento.PlaceholderText = "";
-            this.txtDocumento.SelectedText = "";
-            this.txtDocumento.Size = new System.Drawing.Size(310, 36);
-            this.txtDocumento.TabIndex = 26;
+            txtDocumento.BorderColor = Color.FromArgb(64, 64, 64);
+            txtDocumento.BorderRadius = 3;
+            txtDocumento.DefaultText = "";
+            txtDocumento.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtDocumento.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtDocumento.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtDocumento.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtDocumento.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtDocumento.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtDocumento.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtDocumento.Location = new Point(721, 35);
+            txtDocumento.Name = "txtDocumento";
+            txtDocumento.PasswordChar = '\0';
+            txtDocumento.PlaceholderText = "";
+            txtDocumento.SelectedText = "";
+            txtDocumento.Size = new Size(282, 36);
+            txtDocumento.TabIndex = 26;
             // 
             // cboOcupacion
             // 
-            this.cboOcupacion.BackColor = System.Drawing.Color.Transparent;
-            this.cboOcupacion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cboOcupacion.BorderRadius = 3;
-            this.cboOcupacion.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboOcupacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboOcupacion.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboOcupacion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboOcupacion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cboOcupacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cboOcupacion.ItemHeight = 30;
-            this.cboOcupacion.Location = new System.Drawing.Point(3, 31);
-            this.cboOcupacion.Name = "cboOcupacion";
-            this.cboOcupacion.Size = new System.Drawing.Size(316, 36);
-            this.cboOcupacion.TabIndex = 25;
+            cboOcupacion.BackColor = Color.Transparent;
+            cboOcupacion.BorderColor = Color.FromArgb(64, 64, 64);
+            cboOcupacion.BorderRadius = 3;
+            cboOcupacion.DrawMode = DrawMode.OwnerDrawFixed;
+            cboOcupacion.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboOcupacion.FocusedColor = Color.FromArgb(94, 148, 255);
+            cboOcupacion.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cboOcupacion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cboOcupacion.ForeColor = Color.FromArgb(68, 88, 112);
+            cboOcupacion.ItemHeight = 30;
+            cboOcupacion.Location = new Point(40, 35);
+            cboOcupacion.Name = "cboOcupacion";
+            cboOcupacion.Size = new Size(316, 36);
+            cboOcupacion.TabIndex = 25;
             // 
             // cboRol
             // 
-            this.cboRol.BackColor = System.Drawing.Color.Transparent;
-            this.cboRol.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cboRol.BorderRadius = 3;
-            this.cboRol.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboRol.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboRol.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboRol.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cboRol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cboRol.ItemHeight = 30;
-            this.cboRol.Location = new System.Drawing.Point(343, 31);
-            this.cboRol.Name = "cboRol";
-            this.cboRol.Size = new System.Drawing.Size(310, 36);
-            this.cboRol.TabIndex = 24;
+            cboRol.BackColor = Color.Transparent;
+            cboRol.BorderColor = Color.FromArgb(64, 64, 64);
+            cboRol.BorderRadius = 3;
+            cboRol.DrawMode = DrawMode.OwnerDrawFixed;
+            cboRol.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboRol.FocusedColor = Color.FromArgb(94, 148, 255);
+            cboRol.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cboRol.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cboRol.ForeColor = Color.FromArgb(68, 88, 112);
+            cboRol.ItemHeight = 30;
+            cboRol.Location = new Point(381, 35);
+            cboRol.Name = "cboRol";
+            cboRol.Size = new Size(310, 36);
+            cboRol.TabIndex = 24;
             // 
             // btnBuscarPersona
             // 
-            this.btnBuscarPersona.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarPersona.Image")));
-            this.btnBuscarPersona.Location = new System.Drawing.Point(1000, 31);
-            this.btnBuscarPersona.Name = "btnBuscarPersona";
-            this.btnBuscarPersona.Size = new System.Drawing.Size(32, 32);
-            this.btnBuscarPersona.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnBuscarPersona.TabIndex = 23;
-            this.btnBuscarPersona.TabStop = false;
-            this.btnBuscarPersona.Click += new System.EventHandler(this.btnBuscarPersona_Click);
+            btnBuscarPersona.Image = (Image)resources.GetObject("btnBuscarPersona.Image");
+            btnBuscarPersona.Location = new Point(967, 39);
+            btnBuscarPersona.Name = "btnBuscarPersona";
+            btnBuscarPersona.Size = new Size(32, 32);
+            btnBuscarPersona.SizeMode = PictureBoxSizeMode.AutoSize;
+            btnBuscarPersona.TabIndex = 23;
+            btnBuscarPersona.TabStop = false;
+            btnBuscarPersona.Click += btnBuscarPersona_Click;
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(343, 7);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(37, 21);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "Rol ";
+            label10.AutoSize = true;
+            label10.Font = new Font("Ebrima", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.Location = new Point(381, 11);
+            label10.Name = "label10";
+            label10.Size = new Size(37, 21);
+            label10.TabIndex = 21;
+            label10.Text = "Rol ";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtIdPersona);
-            this.groupBox1.Controls.Add(this.GuardarMiembroFamilia);
-            this.groupBox1.Controls.Add(this.txtCorreo);
-            this.groupBox1.Controls.Add(this.txtapeMat);
-            this.groupBox1.Controls.Add(this.txtapePat);
-            this.groupBox1.Controls.Add(this.txtNombre);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.dtFechaNacimiento);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.btnImagePersona);
-            this.groupBox1.Controls.Add(this.imagePersona);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(3, 84);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1039, 328);
-            this.groupBox1.TabIndex = 13;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos Personales";
+            groupBox1.Controls.Add(btnPasarDatos);
+            groupBox1.Controls.Add(txtIdPersona);
+            groupBox1.Controls.Add(GuardarMiembroFamilia);
+            groupBox1.Controls.Add(txtCorreo);
+            groupBox1.Controls.Add(txtapeMat);
+            groupBox1.Controls.Add(txtapePat);
+            groupBox1.Controls.Add(txtNombre);
+            groupBox1.Controls.Add(label9);
+            groupBox1.Controls.Add(label8);
+            groupBox1.Controls.Add(dtFechaNacimiento);
+            groupBox1.Controls.Add(label7);
+            groupBox1.Controls.Add(label6);
+            groupBox1.Controls.Add(btnImagePersona);
+            groupBox1.Controls.Add(imagePersona);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            groupBox1.Location = new Point(3, 107);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(1065, 404);
+            groupBox1.TabIndex = 13;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Datos Personales";
             // 
             // txtIdPersona
             // 
-            this.txtIdPersona.DefaultText = "";
-            this.txtIdPersona.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtIdPersona.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtIdPersona.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdPersona.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdPersona.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdPersona.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtIdPersona.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdPersona.Location = new System.Drawing.Point(752, 185);
-            this.txtIdPersona.Name = "txtIdPersona";
-            this.txtIdPersona.PasswordChar = '\0';
-            this.txtIdPersona.PlaceholderText = "";
-            this.txtIdPersona.SelectedText = "";
-            this.txtIdPersona.Size = new System.Drawing.Size(195, 36);
-            this.txtIdPersona.TabIndex = 25;
-            this.txtIdPersona.Visible = false;
+            txtIdPersona.DefaultText = "";
+            txtIdPersona.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtIdPersona.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtIdPersona.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtIdPersona.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtIdPersona.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtIdPersona.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtIdPersona.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtIdPersona.Location = new Point(789, 164);
+            txtIdPersona.Name = "txtIdPersona";
+            txtIdPersona.PasswordChar = '\0';
+            txtIdPersona.PlaceholderText = "";
+            txtIdPersona.SelectedText = "";
+            txtIdPersona.Size = new Size(195, 36);
+            txtIdPersona.TabIndex = 25;
+            txtIdPersona.Visible = false;
             // 
             // GuardarMiembroFamilia
             // 
-            this.GuardarMiembroFamilia.BorderRadius = 3;
-            this.GuardarMiembroFamilia.BorderThickness = 1;
-            this.GuardarMiembroFamilia.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.GuardarMiembroFamilia.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.GuardarMiembroFamilia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.GuardarMiembroFamilia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.GuardarMiembroFamilia.FillColor = System.Drawing.Color.White;
-            this.GuardarMiembroFamilia.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.GuardarMiembroFamilia.ForeColor = System.Drawing.Color.Black;
-            this.GuardarMiembroFamilia.Location = new System.Drawing.Point(752, 238);
-            this.GuardarMiembroFamilia.Name = "GuardarMiembroFamilia";
-            this.GuardarMiembroFamilia.Size = new System.Drawing.Size(195, 45);
-            this.GuardarMiembroFamilia.TabIndex = 24;
-            this.GuardarMiembroFamilia.Text = "Guardar";
-            this.GuardarMiembroFamilia.Click += new System.EventHandler(this.GuardarMiembroFamilia_Click_1);
+            GuardarMiembroFamilia.BorderRadius = 3;
+            GuardarMiembroFamilia.BorderThickness = 1;
+            GuardarMiembroFamilia.DisabledState.BorderColor = Color.DarkGray;
+            GuardarMiembroFamilia.DisabledState.CustomBorderColor = Color.DarkGray;
+            GuardarMiembroFamilia.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            GuardarMiembroFamilia.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            GuardarMiembroFamilia.FillColor = Color.White;
+            GuardarMiembroFamilia.Font = new Font("Ebrima", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            GuardarMiembroFamilia.ForeColor = Color.Black;
+            GuardarMiembroFamilia.Location = new Point(801, 338);
+            GuardarMiembroFamilia.Name = "GuardarMiembroFamilia";
+            GuardarMiembroFamilia.Size = new Size(195, 45);
+            GuardarMiembroFamilia.TabIndex = 24;
+            GuardarMiembroFamilia.Text = "Guardar";
+            GuardarMiembroFamilia.Click += GuardarMiembroFamilia_Click_1;
             // 
             // txtCorreo
             // 
-            this.txtCorreo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCorreo.BorderRadius = 2;
-            this.txtCorreo.DefaultText = "";
-            this.txtCorreo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCorreo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCorreo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCorreo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCorreo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCorreo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCorreo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCorreo.Location = new System.Drawing.Point(6, 247);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.PasswordChar = '\0';
-            this.txtCorreo.PlaceholderText = "";
-            this.txtCorreo.SelectedText = "";
-            this.txtCorreo.Size = new System.Drawing.Size(310, 36);
-            this.txtCorreo.TabIndex = 23;
+            txtCorreo.BorderColor = Color.FromArgb(64, 64, 64);
+            txtCorreo.BorderRadius = 2;
+            txtCorreo.DefaultText = "";
+            txtCorreo.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtCorreo.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtCorreo.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtCorreo.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtCorreo.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtCorreo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCorreo.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtCorreo.Location = new Point(37, 347);
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.PasswordChar = '\0';
+            txtCorreo.PlaceholderText = "";
+            txtCorreo.SelectedText = "";
+            txtCorreo.Size = new Size(310, 36);
+            txtCorreo.TabIndex = 23;
             // 
             // txtapeMat
             // 
-            this.txtapeMat.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtapeMat.BorderRadius = 2;
-            this.txtapeMat.DefaultText = "";
-            this.txtapeMat.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtapeMat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtapeMat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtapeMat.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtapeMat.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtapeMat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtapeMat.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtapeMat.Location = new System.Drawing.Point(6, 185);
-            this.txtapeMat.Name = "txtapeMat";
-            this.txtapeMat.PasswordChar = '\0';
-            this.txtapeMat.PlaceholderText = "";
-            this.txtapeMat.SelectedText = "";
-            this.txtapeMat.Size = new System.Drawing.Size(310, 36);
-            this.txtapeMat.TabIndex = 22;
+            txtapeMat.BorderColor = Color.FromArgb(64, 64, 64);
+            txtapeMat.BorderRadius = 2;
+            txtapeMat.DefaultText = "";
+            txtapeMat.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtapeMat.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtapeMat.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtapeMat.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtapeMat.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtapeMat.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtapeMat.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtapeMat.Location = new Point(37, 253);
+            txtapeMat.Name = "txtapeMat";
+            txtapeMat.PasswordChar = '\0';
+            txtapeMat.PlaceholderText = "";
+            txtapeMat.SelectedText = "";
+            txtapeMat.Size = new Size(310, 36);
+            txtapeMat.TabIndex = 22;
             // 
             // txtapePat
             // 
-            this.txtapePat.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtapePat.BorderRadius = 2;
-            this.txtapePat.DefaultText = "";
-            this.txtapePat.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtapePat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtapePat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtapePat.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtapePat.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtapePat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtapePat.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtapePat.Location = new System.Drawing.Point(6, 122);
-            this.txtapePat.Name = "txtapePat";
-            this.txtapePat.PasswordChar = '\0';
-            this.txtapePat.PlaceholderText = "";
-            this.txtapePat.SelectedText = "";
-            this.txtapePat.Size = new System.Drawing.Size(310, 36);
-            this.txtapePat.TabIndex = 21;
+            txtapePat.BorderColor = Color.FromArgb(64, 64, 64);
+            txtapePat.BorderRadius = 2;
+            txtapePat.DefaultText = "";
+            txtapePat.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtapePat.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtapePat.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtapePat.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtapePat.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtapePat.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtapePat.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtapePat.Location = new Point(37, 164);
+            txtapePat.Name = "txtapePat";
+            txtapePat.PasswordChar = '\0';
+            txtapePat.PlaceholderText = "";
+            txtapePat.SelectedText = "";
+            txtapePat.Size = new Size(310, 36);
+            txtapePat.TabIndex = 21;
             // 
             // txtNombre
             // 
-            this.txtNombre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNombre.BorderRadius = 2;
-            this.txtNombre.DefaultText = "";
-            this.txtNombre.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNombre.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNombre.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNombre.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNombre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtNombre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNombre.Location = new System.Drawing.Point(6, 52);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.PasswordChar = '\0';
-            this.txtNombre.PlaceholderText = "";
-            this.txtNombre.SelectedText = "";
-            this.txtNombre.Size = new System.Drawing.Size(310, 36);
-            this.txtNombre.TabIndex = 20;
+            txtNombre.BorderColor = Color.FromArgb(64, 64, 64);
+            txtNombre.BorderRadius = 2;
+            txtNombre.DefaultText = "";
+            txtNombre.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtNombre.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtNombre.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtNombre.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtNombre.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtNombre.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNombre.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtNombre.Location = new Point(37, 72);
+            txtNombre.Name = "txtNombre";
+            txtNombre.PasswordChar = '\0';
+            txtNombre.PlaceholderText = "";
+            txtNombre.SelectedText = "";
+            txtNombre.Size = new Size(310, 36);
+            txtNombre.TabIndex = 20;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(6, 161);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(130, 21);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Apellido Materno";
+            label9.AutoSize = true;
+            label9.Font = new Font("Ebrima", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.Location = new Point(37, 229);
+            label9.Name = "label9";
+            label9.Size = new Size(130, 21);
+            label9.TabIndex = 18;
+            label9.Text = "Apellido Materno";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(6, 223);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 21);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Correo";
+            label8.AutoSize = true;
+            label8.Font = new Font("Ebrima", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.Location = new Point(37, 323);
+            label8.Name = "label8";
+            label8.Size = new Size(58, 21);
+            label8.TabIndex = 16;
+            label8.Text = "Correo";
             // 
             // dtFechaNacimiento
             // 
-            this.dtFechaNacimiento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(124)))), ((int)(((byte)(150)))));
-            this.dtFechaNacimiento.BorderSize = 2;
-            this.dtFechaNacimiento.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dtFechaNacimiento.Location = new System.Drawing.Point(681, 61);
-            this.dtFechaNacimiento.MinimumSize = new System.Drawing.Size(0, 35);
-            this.dtFechaNacimiento.Name = "dtFechaNacimiento";
-            this.dtFechaNacimiento.Size = new System.Drawing.Size(316, 35);
-            this.dtFechaNacimiento.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(214)))), ((int)(((byte)(202)))));
-            this.dtFechaNacimiento.TabIndex = 15;
-            this.dtFechaNacimiento.TextColor = System.Drawing.Color.White;
+            dtFechaNacimiento.BorderColor = Color.FromArgb(0, 124, 150);
+            dtFechaNacimiento.BorderSize = 2;
+            dtFechaNacimiento.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            dtFechaNacimiento.Location = new Point(721, 72);
+            dtFechaNacimiento.MinimumSize = new Size(0, 35);
+            dtFechaNacimiento.Name = "dtFechaNacimiento";
+            dtFechaNacimiento.Size = new Size(316, 35);
+            dtFechaNacimiento.SkinColor = Color.FromArgb(78, 214, 202);
+            dtFechaNacimiento.TabIndex = 15;
+            dtFechaNacimiento.TextColor = Color.White;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(770, 37);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(158, 21);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Fecha Nacimiento:";
+            label7.AutoSize = true;
+            label7.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Location = new Point(721, 48);
+            label7.Name = "label7";
+            label7.Size = new Size(158, 21);
+            label7.TabIndex = 14;
+            label7.Text = "Fecha Nacimiento:";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(410, 52);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(185, 21);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Seleccionar Fotografía";
+            label6.AutoSize = true;
+            label6.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(441, 48);
+            label6.Name = "label6";
+            label6.Size = new Size(185, 21);
+            label6.TabIndex = 13;
+            label6.Text = "Seleccionar Fotografía";
             // 
             // tbPersona
             // 
-            this.tbPersona.Controls.Add(this.tpReg);
-            this.tbPersona.Controls.Add(this.tabPage2);
-            this.tbPersona.Location = new System.Drawing.Point(0, 46);
-            this.tbPersona.Name = "tbPersona";
-            this.tbPersona.SelectedIndex = 0;
-            this.tbPersona.Size = new System.Drawing.Size(1056, 485);
-            this.tbPersona.TabIndex = 27;
+            tbPersona.Controls.Add(tpReg);
+            tbPersona.Controls.Add(tabPage2);
+            tbPersona.Location = new Point(0, 46);
+            tbPersona.Name = "tbPersona";
+            tbPersona.SelectedIndex = 0;
+            tbPersona.Size = new Size(1084, 630);
+            tbPersona.TabIndex = 27;
             // 
             // tpReg
             // 
-            this.tpReg.Controls.Add(this.label3);
-            this.tpReg.Controls.Add(this.txtDocumento);
-            this.tpReg.Controls.Add(this.groupBox1);
-            this.tpReg.Controls.Add(this.cboOcupacion);
-            this.tpReg.Controls.Add(this.label4);
-            this.tpReg.Controls.Add(this.cboRol);
-            this.tpReg.Controls.Add(this.label10);
-            this.tpReg.Controls.Add(this.btnBuscarPersona);
-            this.tpReg.Location = new System.Drawing.Point(4, 24);
-            this.tpReg.Name = "tpReg";
-            this.tpReg.Padding = new System.Windows.Forms.Padding(3);
-            this.tpReg.Size = new System.Drawing.Size(1048, 457);
-            this.tpReg.TabIndex = 0;
-            this.tpReg.Text = "REGISTRO";
-            this.tpReg.UseVisualStyleBackColor = true;
+            tpReg.Controls.Add(pictureBox1);
+            tpReg.Controls.Add(lblFecha);
+            tpReg.Controls.Add(lblCorreo1);
+            tpReg.Controls.Add(lblNombre1);
+            tpReg.Controls.Add(btnBuscarPersona);
+            tpReg.Controls.Add(circularProgressBar1);
+            tpReg.Controls.Add(label3);
+            tpReg.Controls.Add(txtDocumento);
+            tpReg.Controls.Add(groupBox1);
+            tpReg.Controls.Add(cboOcupacion);
+            tpReg.Controls.Add(label4);
+            tpReg.Controls.Add(cboRol);
+            tpReg.Controls.Add(label10);
+            tpReg.Location = new Point(4, 24);
+            tpReg.Name = "tpReg";
+            tpReg.Padding = new Padding(3);
+            tpReg.Size = new Size(1076, 602);
+            tpReg.TabIndex = 0;
+            tpReg.Text = "REGISTRO";
+            tpReg.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(684, 7);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 21);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "Documento";
+            label3.AutoSize = true;
+            label3.Font = new Font("Ebrima", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(724, 11);
+            label3.Name = "label3";
+            label3.Size = new Size(91, 21);
+            label3.TabIndex = 27;
+            label3.Text = "Documento";
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.chkHabilitarFechas);
-            this.tabPage2.Controls.Add(this.groupBox3);
-            this.tabPage2.Controls.Add(this.btnBuscar);
-            this.tabPage2.Controls.Add(this.siticoneHtmlLabel3);
-            this.tabPage2.Controls.Add(this.txtBuscarPersona);
-            this.tabPage2.Controls.Add(this.groupBox2);
-            this.tabPage2.Controls.Add(this.dgRegistrarPersona);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1048, 457);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "MIEMBROS";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.siticonevSeparator1);
-            this.groupBox3.Controls.Add(this.btnTotalReg);
-            this.groupBox3.Controls.Add(this.btnNumFilas);
-            this.groupBox3.Controls.Add(this.btnTotalPaginas);
-            this.groupBox3.Controls.Add(this.siticoneHtmlLabel6);
-            this.groupBox3.Controls.Add(this.cboPagina);
-            this.groupBox3.Controls.Add(this.siticoneHtmlLabel5);
-            this.groupBox3.Controls.Add(this.siticoneHtmlLabel4);
-            this.groupBox3.Location = new System.Drawing.Point(627, 384);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(410, 51);
-            this.groupBox3.TabIndex = 157;
-            this.groupBox3.TabStop = false;
-            // 
-            // siticonevSeparator1
-            // 
-            this.siticonevSeparator1.FillColor = System.Drawing.Color.Black;
-            this.siticonevSeparator1.Location = new System.Drawing.Point(206, 16);
-            this.siticonevSeparator1.Name = "siticonevSeparator1";
-            this.siticonevSeparator1.Size = new System.Drawing.Size(10, 31);
-            this.siticonevSeparator1.TabIndex = 156;
-            // 
-            // btnTotalReg
-            // 
-            this.btnTotalReg.BackColor = System.Drawing.Color.DarkGray;
-            this.btnTotalReg.BackgroundColor = System.Drawing.Color.DarkGray;
-            this.btnTotalReg.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnTotalReg.BorderRadius = 5;
-            this.btnTotalReg.BorderSize = 0;
-            this.btnTotalReg.FlatAppearance.BorderSize = 0;
-            this.btnTotalReg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTotalReg.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnTotalReg.ForeColor = System.Drawing.Color.White;
-            this.btnTotalReg.Location = new System.Drawing.Point(361, 14);
-            this.btnTotalReg.Name = "btnTotalReg";
-            this.btnTotalReg.Size = new System.Drawing.Size(43, 31);
-            this.btnTotalReg.TabIndex = 155;
-            this.btnTotalReg.TextColor = System.Drawing.Color.White;
-            this.btnTotalReg.UseVisualStyleBackColor = false;
-            // 
-            // btnNumFilas
-            // 
-            this.btnNumFilas.BackColor = System.Drawing.Color.DarkGray;
-            this.btnNumFilas.BackgroundColor = System.Drawing.Color.DarkGray;
-            this.btnNumFilas.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnNumFilas.BorderRadius = 5;
-            this.btnNumFilas.BorderSize = 0;
-            this.btnNumFilas.FlatAppearance.BorderSize = 0;
-            this.btnNumFilas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNumFilas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnNumFilas.ForeColor = System.Drawing.Color.White;
-            this.btnNumFilas.Location = new System.Drawing.Point(222, 14);
-            this.btnNumFilas.Name = "btnNumFilas";
-            this.btnNumFilas.Size = new System.Drawing.Size(43, 31);
-            this.btnNumFilas.TabIndex = 154;
-            this.btnNumFilas.TextColor = System.Drawing.Color.White;
-            this.btnNumFilas.UseVisualStyleBackColor = false;
-            // 
-            // btnTotalPaginas
-            // 
-            this.btnTotalPaginas.BackColor = System.Drawing.Color.DarkGray;
-            this.btnTotalPaginas.BackgroundColor = System.Drawing.Color.DarkGray;
-            this.btnTotalPaginas.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnTotalPaginas.BorderRadius = 5;
-            this.btnTotalPaginas.BorderSize = 0;
-            this.btnTotalPaginas.FlatAppearance.BorderSize = 0;
-            this.btnTotalPaginas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTotalPaginas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnTotalPaginas.ForeColor = System.Drawing.Color.White;
-            this.btnTotalPaginas.Location = new System.Drawing.Point(154, 14);
-            this.btnTotalPaginas.Name = "btnTotalPaginas";
-            this.btnTotalPaginas.Size = new System.Drawing.Size(43, 31);
-            this.btnTotalPaginas.TabIndex = 153;
-            this.btnTotalPaginas.TextColor = System.Drawing.Color.White;
-            this.btnTotalPaginas.UseVisualStyleBackColor = false;
-            // 
-            // siticoneHtmlLabel6
-            // 
-            this.siticoneHtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneHtmlLabel6.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.siticoneHtmlLabel6.Location = new System.Drawing.Point(271, 19);
-            this.siticoneHtmlLabel6.Name = "siticoneHtmlLabel6";
-            this.siticoneHtmlLabel6.Size = new System.Drawing.Size(89, 23);
-            this.siticoneHtmlLabel6.TabIndex = 13;
-            this.siticoneHtmlLabel6.Text = "Registros de";
-            // 
-            // cboPagina
-            // 
-            this.cboPagina.FormattingEnabled = true;
-            this.cboPagina.Location = new System.Drawing.Point(66, 19);
-            this.cboPagina.Name = "cboPagina";
-            this.cboPagina.Size = new System.Drawing.Size(56, 23);
-            this.cboPagina.TabIndex = 11;
-            this.cboPagina.SelectedIndexChanged += new System.EventHandler(this.cboPagina_SelectedIndexChanged);
-            // 
-            // siticoneHtmlLabel5
-            // 
-            this.siticoneHtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneHtmlLabel5.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(128, 17);
-            this.siticoneHtmlLabel5.Name = "siticoneHtmlLabel5";
-            this.siticoneHtmlLabel5.Size = new System.Drawing.Size(20, 23);
-            this.siticoneHtmlLabel5.TabIndex = 10;
-            this.siticoneHtmlLabel5.Text = "de";
-            // 
-            // siticoneHtmlLabel4
-            // 
-            this.siticoneHtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneHtmlLabel4.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.siticoneHtmlLabel4.Location = new System.Drawing.Point(10, 17);
-            this.siticoneHtmlLabel4.Name = "siticoneHtmlLabel4";
-            this.siticoneHtmlLabel4.Size = new System.Drawing.Size(50, 23);
-            this.siticoneHtmlLabel4.TabIndex = 9;
-            this.siticoneHtmlLabel4.Text = "Pagina";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(1004, 44);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(32, 32);
-            this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnBuscar.TabIndex = 8;
-            this.btnBuscar.TabStop = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // siticoneHtmlLabel3
-            // 
-            this.siticoneHtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneHtmlLabel3.Font = new System.Drawing.Font("Ebrima", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.siticoneHtmlLabel3.Location = new System.Drawing.Point(597, 19);
-            this.siticoneHtmlLabel3.Name = "siticoneHtmlLabel3";
-            this.siticoneHtmlLabel3.Size = new System.Drawing.Size(69, 19);
-            this.siticoneHtmlLabel3.TabIndex = 6;
-            this.siticoneHtmlLabel3.Text = "BUSQUEDA";
-            // 
-            // txtBuscarPersona
-            // 
-            this.txtBuscarPersona.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBuscarPersona.BorderRadius = 3;
-            this.txtBuscarPersona.DefaultText = "";
-            this.txtBuscarPersona.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtBuscarPersona.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtBuscarPersona.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBuscarPersona.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBuscarPersona.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBuscarPersona.Font = new System.Drawing.Font("Ebrima", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBuscarPersona.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBuscarPersona.Location = new System.Drawing.Point(597, 42);
-            this.txtBuscarPersona.Name = "txtBuscarPersona";
-            this.txtBuscarPersona.PasswordChar = '\0';
-            this.txtBuscarPersona.PlaceholderText = "";
-            this.txtBuscarPersona.SelectedText = "";
-            this.txtBuscarPersona.Size = new System.Drawing.Size(405, 35);
-            this.txtBuscarPersona.TabIndex = 7;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.siticoneHtmlLabel2);
-            this.groupBox2.Controls.Add(this.siticoneHtmlLabel1);
-            this.groupBox2.Controls.Add(this.dtFechaFin);
-            this.groupBox2.Controls.Add(this.dtFechaInicio);
-            this.groupBox2.Location = new System.Drawing.Point(9, 42);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(563, 81);
-            this.groupBox2.TabIndex = 6;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Buscar por fecha";
-            // 
-            // siticoneHtmlLabel2
-            // 
-            this.siticoneHtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneHtmlLabel2.Font = new System.Drawing.Font("Ebrima", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.siticoneHtmlLabel2.Location = new System.Drawing.Point(295, 17);
-            this.siticoneHtmlLabel2.Name = "siticoneHtmlLabel2";
-            this.siticoneHtmlLabel2.Size = new System.Drawing.Size(56, 19);
-            this.siticoneHtmlLabel2.TabIndex = 5;
-            this.siticoneHtmlLabel2.Text = "Fecha Fin";
-            // 
-            // siticoneHtmlLabel1
-            // 
-            this.siticoneHtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneHtmlLabel1.Font = new System.Drawing.Font("Ebrima", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.siticoneHtmlLabel1.Location = new System.Drawing.Point(11, 17);
-            this.siticoneHtmlLabel1.Name = "siticoneHtmlLabel1";
-            this.siticoneHtmlLabel1.Size = new System.Drawing.Size(70, 19);
-            this.siticoneHtmlLabel1.TabIndex = 4;
-            this.siticoneHtmlLabel1.Text = "Fecha Inicio";
-            // 
-            // dtFechaFin
-            // 
-            this.dtFechaFin.Checked = true;
-            this.dtFechaFin.FillColor = System.Drawing.Color.White;
-            this.dtFechaFin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dtFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtFechaFin.Location = new System.Drawing.Point(295, 36);
-            this.dtFechaFin.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtFechaFin.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtFechaFin.Name = "dtFechaFin";
-            this.dtFechaFin.Size = new System.Drawing.Size(252, 36);
-            this.dtFechaFin.TabIndex = 3;
-            this.dtFechaFin.Value = new System.DateTime(2023, 2, 21, 10, 42, 3, 678);
-            // 
-            // dtFechaInicio
-            // 
-            this.dtFechaInicio.Checked = true;
-            this.dtFechaInicio.FillColor = System.Drawing.Color.White;
-            this.dtFechaInicio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dtFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtFechaInicio.Location = new System.Drawing.Point(9, 36);
-            this.dtFechaInicio.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtFechaInicio.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtFechaInicio.Name = "dtFechaInicio";
-            this.dtFechaInicio.Size = new System.Drawing.Size(252, 36);
-            this.dtFechaInicio.TabIndex = 2;
-            this.dtFechaInicio.Value = new System.DateTime(2023, 2, 21, 10, 41, 40, 779);
-            // 
-            // dgRegistrarPersona
-            // 
-            this.dgRegistrarPersona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgRegistrarPersona.Location = new System.Drawing.Point(6, 139);
-            this.dgRegistrarPersona.Name = "dgRegistrarPersona";
-            this.dgRegistrarPersona.RowTemplate.Height = 25;
-            this.dgRegistrarPersona.Size = new System.Drawing.Size(1034, 239);
-            this.dgRegistrarPersona.TabIndex = 0;
-            // 
-            // Moverformulario
-            // 
-            this.Moverformulario.DockIndicatorTransparencyValue = 0.6D;
-            this.Moverformulario.TargetControl = this.pSuperior;
-            this.Moverformulario.UseTransparentDrag = true;
-            // 
-            // rjProgressBar1
-            // 
-            this.rjProgressBar1.ChannelColor = System.Drawing.Color.DarkTurquoise;
-            this.rjProgressBar1.ChannelHeight = 10;
-            this.rjProgressBar1.ForeBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.rjProgressBar1.ForeColor = System.Drawing.Color.White;
-            this.rjProgressBar1.Location = new System.Drawing.Point(13, 498);
-            this.rjProgressBar1.Name = "rjProgressBar1";
-            this.rjProgressBar1.ShowMaximun = true;
-            this.rjProgressBar1.ShowValue = RJCodeAdvance.RJControls.TextPosition.Center;
-            this.rjProgressBar1.Size = new System.Drawing.Size(1023, 23);
-            this.rjProgressBar1.SliderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(214)))), ((int)(((byte)(202)))));
-            this.rjProgressBar1.SliderHeight = 6;
-            this.rjProgressBar1.SymbolAfter = "";
-            this.rjProgressBar1.SymbolBefore = "";
-            this.rjProgressBar1.TabIndex = 28;
+            tabPage2.Controls.Add(chkHabilitarFechas);
+            tabPage2.Controls.Add(groupBox3);
+            tabPage2.Controls.Add(btnBuscar);
+            tabPage2.Controls.Add(siticoneHtmlLabel3);
+            tabPage2.Controls.Add(txtBuscarPersona);
+            tabPage2.Controls.Add(groupBox2);
+            tabPage2.Controls.Add(dgRegistrarPersona);
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(1076, 602);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "MIEMBROS";
+            tabPage2.UseVisualStyleBackColor = true;
             // 
             // chkHabilitarFechas
             // 
-            this.chkHabilitarFechas.AutoSize = true;
-            this.chkHabilitarFechas.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.chkHabilitarFechas.CheckedState.BorderRadius = 0;
-            this.chkHabilitarFechas.CheckedState.BorderThickness = 0;
-            this.chkHabilitarFechas.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.chkHabilitarFechas.Location = new System.Drawing.Point(18, 17);
-            this.chkHabilitarFechas.Name = "chkHabilitarFechas";
-            this.chkHabilitarFechas.Size = new System.Drawing.Size(57, 19);
-            this.chkHabilitarFechas.TabIndex = 158;
-            this.chkHabilitarFechas.Text = "Fecha";
-            this.chkHabilitarFechas.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.chkHabilitarFechas.UncheckedState.BorderRadius = 0;
-            this.chkHabilitarFechas.UncheckedState.BorderThickness = 0;
-            this.chkHabilitarFechas.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            chkHabilitarFechas.AutoSize = true;
+            chkHabilitarFechas.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            chkHabilitarFechas.CheckedState.BorderRadius = 0;
+            chkHabilitarFechas.CheckedState.BorderThickness = 0;
+            chkHabilitarFechas.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            chkHabilitarFechas.Location = new Point(14, 10);
+            chkHabilitarFechas.Name = "chkHabilitarFechas";
+            chkHabilitarFechas.Size = new Size(110, 19);
+            chkHabilitarFechas.TabIndex = 158;
+            chkHabilitarFechas.Text = "Habilitar Fechas";
+            chkHabilitarFechas.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            chkHabilitarFechas.UncheckedState.BorderRadius = 0;
+            chkHabilitarFechas.UncheckedState.BorderThickness = 0;
+            chkHabilitarFechas.UncheckedState.FillColor = Color.FromArgb(125, 137, 149);
+            // 
+            // groupBox3
+            // 
+            groupBox3.Controls.Add(siticonevSeparator1);
+            groupBox3.Controls.Add(btnTotalReg);
+            groupBox3.Controls.Add(btnNumFilas);
+            groupBox3.Controls.Add(btnTotalPaginas);
+            groupBox3.Controls.Add(siticoneHtmlLabel6);
+            groupBox3.Controls.Add(cboPagina);
+            groupBox3.Controls.Add(siticoneHtmlLabel5);
+            groupBox3.Controls.Add(siticoneHtmlLabel4);
+            groupBox3.Location = new Point(630, 545);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(410, 51);
+            groupBox3.TabIndex = 157;
+            groupBox3.TabStop = false;
+            // 
+            // siticonevSeparator1
+            // 
+            siticonevSeparator1.FillColor = Color.Black;
+            siticonevSeparator1.Location = new Point(206, 16);
+            siticonevSeparator1.Name = "siticonevSeparator1";
+            siticonevSeparator1.Size = new Size(10, 31);
+            siticonevSeparator1.TabIndex = 156;
+            // 
+            // btnTotalReg
+            // 
+            btnTotalReg.BackColor = Color.DarkGray;
+            btnTotalReg.BackgroundColor = Color.DarkGray;
+            btnTotalReg.BorderColor = Color.FromArgb(64, 64, 64);
+            btnTotalReg.BorderRadius = 5;
+            btnTotalReg.BorderSize = 0;
+            btnTotalReg.FlatAppearance.BorderSize = 0;
+            btnTotalReg.FlatStyle = FlatStyle.Flat;
+            btnTotalReg.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnTotalReg.ForeColor = Color.White;
+            btnTotalReg.Location = new Point(361, 14);
+            btnTotalReg.Name = "btnTotalReg";
+            btnTotalReg.Size = new Size(43, 31);
+            btnTotalReg.TabIndex = 155;
+            btnTotalReg.TextColor = Color.White;
+            btnTotalReg.UseVisualStyleBackColor = false;
+            // 
+            // btnNumFilas
+            // 
+            btnNumFilas.BackColor = Color.DarkGray;
+            btnNumFilas.BackgroundColor = Color.DarkGray;
+            btnNumFilas.BorderColor = Color.FromArgb(64, 64, 64);
+            btnNumFilas.BorderRadius = 5;
+            btnNumFilas.BorderSize = 0;
+            btnNumFilas.FlatAppearance.BorderSize = 0;
+            btnNumFilas.FlatStyle = FlatStyle.Flat;
+            btnNumFilas.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnNumFilas.ForeColor = Color.White;
+            btnNumFilas.Location = new Point(222, 14);
+            btnNumFilas.Name = "btnNumFilas";
+            btnNumFilas.Size = new Size(43, 31);
+            btnNumFilas.TabIndex = 154;
+            btnNumFilas.TextColor = Color.White;
+            btnNumFilas.UseVisualStyleBackColor = false;
+            // 
+            // btnTotalPaginas
+            // 
+            btnTotalPaginas.BackColor = Color.DarkGray;
+            btnTotalPaginas.BackgroundColor = Color.DarkGray;
+            btnTotalPaginas.BorderColor = Color.FromArgb(64, 64, 64);
+            btnTotalPaginas.BorderRadius = 5;
+            btnTotalPaginas.BorderSize = 0;
+            btnTotalPaginas.FlatAppearance.BorderSize = 0;
+            btnTotalPaginas.FlatStyle = FlatStyle.Flat;
+            btnTotalPaginas.Font = new Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnTotalPaginas.ForeColor = Color.White;
+            btnTotalPaginas.Location = new Point(154, 14);
+            btnTotalPaginas.Name = "btnTotalPaginas";
+            btnTotalPaginas.Size = new Size(43, 31);
+            btnTotalPaginas.TabIndex = 153;
+            btnTotalPaginas.TextColor = Color.White;
+            btnTotalPaginas.UseVisualStyleBackColor = false;
+            // 
+            // siticoneHtmlLabel6
+            // 
+            siticoneHtmlLabel6.BackColor = Color.Transparent;
+            siticoneHtmlLabel6.Font = new Font("Ebrima", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            siticoneHtmlLabel6.Location = new Point(271, 19);
+            siticoneHtmlLabel6.Name = "siticoneHtmlLabel6";
+            siticoneHtmlLabel6.Size = new Size(89, 23);
+            siticoneHtmlLabel6.TabIndex = 13;
+            siticoneHtmlLabel6.Text = "Registros de";
+            // 
+            // cboPagina
+            // 
+            cboPagina.FormattingEnabled = true;
+            cboPagina.Location = new Point(66, 19);
+            cboPagina.Name = "cboPagina";
+            cboPagina.Size = new Size(56, 23);
+            cboPagina.TabIndex = 11;
+            cboPagina.SelectedIndexChanged += cboPagina_SelectedIndexChanged;
+            // 
+            // siticoneHtmlLabel5
+            // 
+            siticoneHtmlLabel5.BackColor = Color.Transparent;
+            siticoneHtmlLabel5.Font = new Font("Ebrima", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            siticoneHtmlLabel5.Location = new Point(128, 17);
+            siticoneHtmlLabel5.Name = "siticoneHtmlLabel5";
+            siticoneHtmlLabel5.Size = new Size(20, 23);
+            siticoneHtmlLabel5.TabIndex = 10;
+            siticoneHtmlLabel5.Text = "de";
+            // 
+            // siticoneHtmlLabel4
+            // 
+            siticoneHtmlLabel4.BackColor = Color.Transparent;
+            siticoneHtmlLabel4.Font = new Font("Ebrima", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            siticoneHtmlLabel4.Location = new Point(10, 17);
+            siticoneHtmlLabel4.Name = "siticoneHtmlLabel4";
+            siticoneHtmlLabel4.Size = new Size(50, 23);
+            siticoneHtmlLabel4.TabIndex = 9;
+            siticoneHtmlLabel4.Text = "Pagina";
+            // 
+            // btnBuscar
+            // 
+            btnBuscar.Image = (Image)resources.GetObject("btnBuscar.Image");
+            btnBuscar.Location = new Point(1008, 81);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(32, 32);
+            btnBuscar.SizeMode = PictureBoxSizeMode.AutoSize;
+            btnBuscar.TabIndex = 8;
+            btnBuscar.TabStop = false;
+            btnBuscar.Click += btnBuscar_Click;
+            // 
+            // siticoneHtmlLabel3
+            // 
+            siticoneHtmlLabel3.BackColor = Color.Transparent;
+            siticoneHtmlLabel3.Font = new Font("Ebrima", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            siticoneHtmlLabel3.Location = new Point(602, 53);
+            siticoneHtmlLabel3.Name = "siticoneHtmlLabel3";
+            siticoneHtmlLabel3.Size = new Size(84, 23);
+            siticoneHtmlLabel3.TabIndex = 6;
+            siticoneHtmlLabel3.Text = "BUSQUEDA";
+            // 
+            // txtBuscarPersona
+            // 
+            txtBuscarPersona.BorderColor = Color.FromArgb(64, 64, 64);
+            txtBuscarPersona.BorderRadius = 3;
+            txtBuscarPersona.DefaultText = "";
+            txtBuscarPersona.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtBuscarPersona.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtBuscarPersona.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtBuscarPersona.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtBuscarPersona.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtBuscarPersona.Font = new Font("Ebrima", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            txtBuscarPersona.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtBuscarPersona.Location = new Point(602, 78);
+            txtBuscarPersona.Name = "txtBuscarPersona";
+            txtBuscarPersona.PasswordChar = '\0';
+            txtBuscarPersona.PlaceholderText = "";
+            txtBuscarPersona.SelectedText = "";
+            txtBuscarPersona.Size = new Size(438, 36);
+            txtBuscarPersona.TabIndex = 7;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(siticoneHtmlLabel2);
+            groupBox2.Controls.Add(siticoneHtmlLabel1);
+            groupBox2.Controls.Add(dtFechaFin);
+            groupBox2.Controls.Add(dtFechaInicio);
+            groupBox2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            groupBox2.Location = new Point(9, 37);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(563, 86);
+            groupBox2.TabIndex = 6;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Buscar por fecha";
+            // 
+            // siticoneHtmlLabel2
+            // 
+            siticoneHtmlLabel2.BackColor = Color.Transparent;
+            siticoneHtmlLabel2.Font = new Font("Ebrima", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            siticoneHtmlLabel2.Location = new Point(295, 23);
+            siticoneHtmlLabel2.Name = "siticoneHtmlLabel2";
+            siticoneHtmlLabel2.Size = new Size(56, 19);
+            siticoneHtmlLabel2.TabIndex = 5;
+            siticoneHtmlLabel2.Text = "Fecha Fin";
+            // 
+            // siticoneHtmlLabel1
+            // 
+            siticoneHtmlLabel1.BackColor = Color.Transparent;
+            siticoneHtmlLabel1.Font = new Font("Ebrima", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            siticoneHtmlLabel1.Location = new Point(11, 23);
+            siticoneHtmlLabel1.Name = "siticoneHtmlLabel1";
+            siticoneHtmlLabel1.Size = new Size(70, 19);
+            siticoneHtmlLabel1.TabIndex = 4;
+            siticoneHtmlLabel1.Text = "Fecha Inicio";
+            // 
+            // dtFechaFin
+            // 
+            dtFechaFin.Checked = true;
+            dtFechaFin.FillColor = Color.White;
+            dtFechaFin.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dtFechaFin.Format = DateTimePickerFormat.Long;
+            dtFechaFin.Location = new Point(295, 42);
+            dtFechaFin.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtFechaFin.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtFechaFin.Name = "dtFechaFin";
+            dtFechaFin.Size = new Size(252, 36);
+            dtFechaFin.TabIndex = 3;
+            dtFechaFin.Value = new DateTime(2023, 2, 21, 10, 42, 3, 678);
+            // 
+            // dtFechaInicio
+            // 
+            dtFechaInicio.Checked = true;
+            dtFechaInicio.FillColor = Color.White;
+            dtFechaInicio.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dtFechaInicio.Format = DateTimePickerFormat.Long;
+            dtFechaInicio.Location = new Point(9, 42);
+            dtFechaInicio.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtFechaInicio.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtFechaInicio.Name = "dtFechaInicio";
+            dtFechaInicio.Size = new Size(252, 36);
+            dtFechaInicio.TabIndex = 2;
+            dtFechaInicio.Value = new DateTime(2023, 2, 21, 10, 41, 40, 779);
+            // 
+            // dgRegistrarPersona
+            // 
+            dgRegistrarPersona.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgRegistrarPersona.Location = new Point(6, 139);
+            dgRegistrarPersona.Name = "dgRegistrarPersona";
+            dgRegistrarPersona.RowTemplate.Height = 25;
+            dgRegistrarPersona.Size = new Size(1034, 400);
+            dgRegistrarPersona.TabIndex = 0;
+            // 
+            // Moverformulario
+            // 
+            Moverformulario.DockIndicatorTransparencyValue = 0.6D;
+            Moverformulario.TargetControl = pSuperior;
+            Moverformulario.UseTransparentDrag = true;
+            // 
+            // rjProgressBar1
+            // 
+            rjProgressBar1.ChannelColor = Color.DarkTurquoise;
+            rjProgressBar1.ChannelHeight = 10;
+            rjProgressBar1.ForeBackColor = Color.DeepSkyBlue;
+            rjProgressBar1.ForeColor = Color.White;
+            rjProgressBar1.Location = new Point(20, 682);
+            rjProgressBar1.Name = "rjProgressBar1";
+            rjProgressBar1.ShowMaximun = true;
+            rjProgressBar1.ShowValue = RJCodeAdvance.RJControls.TextPosition.Center;
+            rjProgressBar1.Size = new Size(1042, 23);
+            rjProgressBar1.SliderColor = Color.FromArgb(78, 214, 202);
+            rjProgressBar1.SliderHeight = 6;
+            rjProgressBar1.SymbolAfter = "";
+            rjProgressBar1.SymbolBefore = "";
+            rjProgressBar1.TabIndex = 28;
+            // 
+            // circularProgressBar1
+            // 
+            circularProgressBar1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+            circularProgressBar1.AnimationSpeed = 500;
+            circularProgressBar1.BackColor = Color.Transparent;
+            circularProgressBar1.Font = new Font("Segoe UI", 72F, FontStyle.Bold, GraphicsUnit.Point);
+            circularProgressBar1.ForeColor = Color.FromArgb(64, 64, 64);
+            circularProgressBar1.InnerColor = Color.Transparent;
+            circularProgressBar1.InnerMargin = 2;
+            circularProgressBar1.InnerWidth = -1;
+            circularProgressBar1.Location = new Point(1007, 21);
+            circularProgressBar1.MarqueeAnimationSpeed = 2000;
+            circularProgressBar1.Name = "circularProgressBar1";
+            circularProgressBar1.OuterColor = Color.Gray;
+            circularProgressBar1.OuterMargin = -25;
+            circularProgressBar1.OuterWidth = 26;
+            circularProgressBar1.ProgressColor = Color.FromArgb(78, 214, 202);
+            circularProgressBar1.ProgressWidth = 5;
+            circularProgressBar1.SecondaryFont = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            circularProgressBar1.Size = new Size(55, 55);
+            circularProgressBar1.StartAngle = 270;
+            circularProgressBar1.SubscriptColor = Color.FromArgb(166, 166, 166);
+            circularProgressBar1.SubscriptMargin = new Padding(10, -35, 0, 0);
+            circularProgressBar1.SubscriptText = "";
+            circularProgressBar1.SuperscriptColor = Color.FromArgb(166, 166, 166);
+            circularProgressBar1.SuperscriptMargin = new Padding(10, 35, 0, 0);
+            circularProgressBar1.SuperscriptText = "";
+            circularProgressBar1.TabIndex = 28;
+            circularProgressBar1.TextMargin = new Padding(8, 8, 0, 0);
+            circularProgressBar1.Value = 68;
+            // 
+            // lblNombre1
+            // 
+            lblNombre1.BackColor = Color.Transparent;
+            lblNombre1.Location = new Point(114, 526);
+            lblNombre1.Name = "lblNombre1";
+            lblNombre1.Size = new Size(47, 17);
+            lblNombre1.TabIndex = 29;
+            lblNombre1.Text = "Nombre";
+            // 
+            // lblCorreo1
+            // 
+            lblCorreo1.BackColor = Color.Transparent;
+            lblCorreo1.Location = new Point(114, 549);
+            lblCorreo1.Name = "lblCorreo1";
+            lblCorreo1.Size = new Size(39, 17);
+            lblCorreo1.TabIndex = 30;
+            lblCorreo1.Text = "Correo";
+            // 
+            // lblFecha
+            // 
+            lblFecha.BackColor = Color.Transparent;
+            lblFecha.Location = new Point(114, 572);
+            lblFecha.Name = "lblFecha";
+            lblFecha.Size = new Size(104, 17);
+            lblFecha.TabIndex = 31;
+            lblFecha.Text = "Fecha Cumpleaños";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(8, 521);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(100, 72);
+            pictureBox1.TabIndex = 32;
+            pictureBox1.TabStop = false;
+            // 
+            // btnPasarDatos
+            // 
+            btnPasarDatos.DisabledState.BorderColor = Color.DarkGray;
+            btnPasarDatos.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnPasarDatos.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnPasarDatos.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnPasarDatos.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnPasarDatos.ForeColor = Color.White;
+            btnPasarDatos.Location = new Point(699, 246);
+            btnPasarDatos.Name = "btnPasarDatos";
+            btnPasarDatos.Size = new Size(180, 45);
+            btnPasarDatos.TabIndex = 26;
+            btnPasarDatos.Text = "Pasar Datos";
+            btnPasarDatos.Click += btnPasarDatos_Click;
             // 
             // frmRegistrarMiembros
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1056, 533);
-            this.Controls.Add(this.rjProgressBar1);
-            this.Controls.Add(this.tbPersona);
-            this.Controls.Add(this.pSuperior);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmRegistrarMiembros";
-            this.Text = "frmRegistrarMiembros";
-            this.Load += new System.EventHandler(this.frmRegistrarMiembros_Load);
-            this.pSuperior.ResumeLayout(false);
-            this.pSuperior.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imagePersona)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBuscarPersona)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.tbPersona.ResumeLayout(false);
-            this.tpReg.ResumeLayout(false);
-            this.tpReg.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgRegistrarPersona)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(1084, 717);
+            Controls.Add(rjProgressBar1);
+            Controls.Add(tbPersona);
+            Controls.Add(pSuperior);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "frmRegistrarMiembros";
+            Text = "frmRegistrarMiembros";
+            Load += frmRegistrarMiembros_Load;
+            pSuperior.ResumeLayout(false);
+            pSuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)imagePersona).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnBuscarPersona).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            tbPersona.ResumeLayout(false);
+            tpReg.ResumeLayout(false);
+            tpReg.PerformLayout();
+            tabPage2.ResumeLayout(false);
+            tabPage2.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)btnBuscar).EndInit();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgRegistrarPersona).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -872,5 +967,11 @@
         private Siticone.Desktop.UI.WinForms.SiticoneVSeparator siticonevSeparator1;
         private GroupBox groupBox3;
         private Siticone.Desktop.UI.WinForms.SiticoneCheckBox chkHabilitarFechas;
+        private PictureBox pictureBox1;
+        private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel lblFecha;
+        private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel lblCorreo1;
+        private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel lblNombre1;
+        private CircularProgressBar.CircularProgressBar circularProgressBar1;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton btnPasarDatos;
     }
 }

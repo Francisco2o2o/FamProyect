@@ -295,9 +295,9 @@ namespace ProyectoFamilia.FormsIncome
 
                 nomPersona = Convert.ToString(txtBuscarPersona.Text.ToString());
 
-                dtPersona = objper.NeBuscarPer(habilitarFechas,fechaInicial, fechaFinal, nomPersona, numPagina);
+                dtPersona = objper.NeBuscarPer(habilitarFechas, fechaInicial, fechaFinal, nomPersona, numPagina);
                 dgRegistrarPersona.Rows.Clear();
-                 totalResultados = dtPersona.Rows.Count;
+                totalResultados = dtPersona.Rows.Count;
 
 
                 if (dtPersona.Rows.Count > 0)
@@ -328,7 +328,7 @@ namespace ProyectoFamilia.FormsIncome
                             item["correoPersona"],
                             item["nomOcupacion"],
                             item["nomRol"]
-                            ); 
+                            );
                     }
 
                 }
@@ -403,5 +403,13 @@ namespace ProyectoFamilia.FormsIncome
             }
         }
 
+        private void btnPasarDatos_Click(object sender, EventArgs e)
+        {
+           
+
+            lblNombre1.Text = txtNombre.Text + " "+txtapePat.Text + " "+txtapeMat.Text;
+            lblCorreo1.Text = txtCorreo.Text;
+            lblFecha.Text = dtFechaNacimiento.Value.ToString("D");
+        }
     }
 }
