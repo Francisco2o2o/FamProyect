@@ -405,11 +405,16 @@ namespace ProyectoFamilia.FormsIncome
 
         private void btnPasarDatos_Click(object sender, EventArgs e)
         {
-           
 
-            lblNombre1.Text = txtNombre.Text + " "+txtapePat.Text + " "+txtapeMat.Text;
+
+            lblNombre1.Text = txtNombre.Text + " " + txtapePat.Text + " " + txtapeMat.Text;
             lblCorreo1.Text = txtCorreo.Text;
-            lblFecha.Text = dtFechaNacimiento.Value.ToString("D");
+            lblFecha.Text = dtFechaNacimiento.Value.ToString("dddd, dd' de 'MMMM' de 'yyyy");
+            // Copiar la imagen del PictureBox1 al PictureBox2
+            pbxImagenGuardada.Image = imagePersona.Image;
+
+            // Limpiar la imagen del PictureBox1
+            imagePersona.Image = null;
         }
     }
 }
