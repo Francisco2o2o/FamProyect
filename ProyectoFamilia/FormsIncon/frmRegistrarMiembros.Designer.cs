@@ -257,7 +257,7 @@
             // btnBuscarPersona
             // 
             btnBuscarPersona.Image = (Image)resources.GetObject("btnBuscarPersona.Image");
-            btnBuscarPersona.Location = new Point(969, 37);
+            btnBuscarPersona.Location = new Point(971, 77);
             btnBuscarPersona.Name = "btnBuscarPersona";
             btnBuscarPersona.Size = new Size(32, 32);
             btnBuscarPersona.SizeMode = PictureBoxSizeMode.AutoSize;
