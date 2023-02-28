@@ -152,37 +152,14 @@
         mQ1x7c1PLDWLDFDeeBf2ZSoZ4xr0Vw9VUFm4JE1/O4x5A3HhNkV6qNP/AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btnCerrarFormularios.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfnAgkPEy8BP6aGAAAEiElEQVRYR7VXS29bVRCeYyMBaUnb
-        RcujLBBtxBL+B/siwW9g0Q0LmsjUseM0xI1UFPs+7DxsxyFNHHAebbBaoG1atXkIyApQuqJPlSwqJ23t
-        JB5mju9trn3PjU0CI31R5Dtnvrlz5nWhaQlcaIUz8c+gNzEFvQMPIGSU4Kv4NgSNTQgbz6E3eR+igxPQ
-        ET8FAb3FOvUfSHvsA+hJ5IlwEzKj22LpMopH8yjWb6PA5SrKiyge30DxyxxCdrQIndo6dOppCMTfs6zs
-        QU6ffx26dI3fVFyfqUgSm7ARWHd+pkRnn0JI64PPL7xqWW1SAv0nIWLeh3yuIp7dUZM0gxeLCLnxDYrI
-        avPR+LL/Iwib62KRQq0yuhesFDYhqD+BDu1Di8VD+M2ZfPVHtaH94O5PCJ3G396RkHeeuCcWL+0cqiyh
-        +K2A/vwEipuzFNKFWqMqsM78LPqmc/KstGE/WylsUXKuqnMiouvyzm1lOviKmcaW8wN4LJ3Fw1oK/d0J
-        ynaqAFunHvTM93USjyQz+Pbot3ggPoy+gUyNEzInglrUYrWESy1slGsS7tcCtvYPY9vV/EscHx9Df8RU
-        O8Hk5xJSx3mmJTZMkfhhR48SU4yNXbOYLaE6F9enawz68zl8i97CaYyhdMKDnHEslUXf7GSNbYrIBgyl
-        P66Sc4cL6WVXndOdH9FTLoMMJmJC2XwIXuSMVro6cYvyx2l7awnhrLZBSX8QZHvlDudUYFAy8Z17GZZO
-        hAyJXXUoJ2TY6+zD0EgRzsQ+AYgmp8XynEtBgkLL4fYiOHnle2y74v6dIcnPeeQLY4nadlgfAR4s4hGF
-        UqXEeHKTnDDwnTG1EypI8m4i55mhssl4eAOhy/wDqC5LNYNFBTsSExeVhE4cH7+4+5vbIE44qxeB/myJ
-        ikKhHpxsYaMadgUxg5+xjkxOlQ0niBMCWslywNGtvGA54HXnDOkAJWVzDlAlSAeavAK+Uw6vitiJf3cF
-        Gl1BNPGAE0KpxFjjJPSuBBUaVgCDkzBi/k4ODObllqNSojAdvX0J351UvzmH3CsnGjpB4x66tAxAR+xT
-        z0bUk8AThV0IwnrjRtRLHVPZiLJFuT/u1ooP0TTzNNxkKz6cTLtbcWnB0YpZepLfqYYRj+F6gzvkjtBy
-        kno4wQPNNYx+ni5T8lMXtKVda3ONY1omDn4zWGNMSW7Dw4kDPI5XaDGx9Z7R2wf1dbl91UjEjEN+onYh
-        SdBC0jeAR4dGsJUMNbWQUOIdMlP4ZiZLC0nKayHps1gdEhh8DbrNv8SCoyL4IHnvn6KV7NaMMplc4Pq+
-        OoW+3Hh1Edl2PFue26IPmbty/VNKu37if1tKySaFfg0CsfctNg/h1Vmu5Y7ldL+4c5nX8rXGa7ktHImI
-        cU/mBCWN0mgz4ISTHyb6n43fvF7kmm70y0+za7MVrl0liQqsy6UWpFoP6n0yv/YsXKLUJ8iRMqSz9HFK
-        2xPPjiKVLI9xBv/Pv3F75VWLmwzXuavU9iNfJN+QO1zUnJSf4iH9BY9yiU79udxuQkaq+nlud7hGAvAP
-        x/Ve3zddjnsAAAAASUVORK5CYII=
-</value>
-  </data>
   <metadata name="tmHoraFecha.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <metadata name="tmFormulario.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>141, 17</value>
+  </metadata>
+  <metadata name="MenuDinamico.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>266, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>43</value>

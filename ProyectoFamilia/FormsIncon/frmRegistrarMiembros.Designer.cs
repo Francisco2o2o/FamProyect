@@ -35,6 +35,9 @@
             label4 = new Label();
             label5 = new Label();
             pSuperior = new Panel();
+            btnMinimize = new PictureBox();
+            btnClose = new PictureBox();
+            btnCerrarFormularios = new PictureBox();
             dtRegistroPersona = new RJCodeAdvance.RJControls.RJDatePicker();
             btnImagePersona = new RJCodeAdvance.RJControls.RJButton();
             imagePersona = new RJCodeAdvance.RJControls.RJCircularPictureBox();
@@ -44,7 +47,6 @@
             btnBuscarPersona = new PictureBox();
             label10 = new Label();
             groupBox1 = new GroupBox();
-            btnPasarDatos = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             txtIdPersona = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             GuardarMiembroFamilia = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             txtCorreo = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
@@ -58,12 +60,12 @@
             label6 = new Label();
             tbPersona = new TabControl();
             tpReg = new TabPage();
+            siticoneGroupBox1 = new Siticone.Desktop.UI.WinForms.SiticoneGroupBox();
+            label3 = new Label();
             pbxImagenGuardada = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             lblFecha = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             lblCorreo1 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             lblNombre1 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
-            label3 = new Label();
             tabPage2 = new TabPage();
             chkHabilitarFechas = new Siticone.Desktop.UI.WinForms.SiticoneCheckBox();
             groupBox3 = new GroupBox();
@@ -85,13 +87,19 @@
             dtFechaInicio = new Siticone.Desktop.UI.WinForms.SiticoneDateTimePicker();
             dgRegistrarPersona = new DataGridView();
             Moverformulario = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(components);
-            rjProgressBar1 = new RJCodeAdvance.RJControls.RJProgressBar();
+            pbCargaBuscarPersona = new RJCodeAdvance.RJControls.RJProgressBar();
+            tmTraerDatosPersona = new System.Windows.Forms.Timer(components);
+            btnAsignarusuario = new RJCodeAdvance.RJControls.RJButton();
             pSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btnMinimize).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnClose).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnCerrarFormularios).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imagePersona).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnBuscarPersona).BeginInit();
             groupBox1.SuspendLayout();
             tbPersona.SuspendLayout();
             tpReg.SuspendLayout();
+            siticoneGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbxImagenGuardada).BeginInit();
             tabPage2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -124,7 +132,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Ebrima", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(40, 7);
+            label4.Location = new Point(31, 14);
             label4.Name = "label4";
             label4.Size = new Size(84, 21);
             label4.TabIndex = 3;
@@ -144,6 +152,9 @@
             // pSuperior
             // 
             pSuperior.BackColor = Color.FromArgb(78, 214, 202);
+            pSuperior.Controls.Add(btnMinimize);
+            pSuperior.Controls.Add(btnClose);
+            pSuperior.Controls.Add(btnCerrarFormularios);
             pSuperior.Controls.Add(label5);
             pSuperior.Controls.Add(dtRegistroPersona);
             pSuperior.Dock = DockStyle.Top;
@@ -152,12 +163,47 @@
             pSuperior.Size = new Size(1084, 40);
             pSuperior.TabIndex = 10;
             // 
+            // btnMinimize
+            // 
+            btnMinimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnMinimize.Image = (Image)resources.GetObject("btnMinimize.Image");
+            btnMinimize.Location = new Point(991, 9);
+            btnMinimize.Name = "btnMinimize";
+            btnMinimize.Size = new Size(24, 24);
+            btnMinimize.SizeMode = PictureBoxSizeMode.AutoSize;
+            btnMinimize.TabIndex = 31;
+            btnMinimize.TabStop = false;
+            btnMinimize.Click += btnMinimize_Click;
+            // 
+            // btnClose
+            // 
+            btnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnClose.Image = (Image)resources.GetObject("btnClose.Image");
+            btnClose.Location = new Point(1017, 9);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(24, 24);
+            btnClose.SizeMode = PictureBoxSizeMode.AutoSize;
+            btnClose.TabIndex = 30;
+            btnClose.TabStop = false;
+            // 
+            // btnCerrarFormularios
+            // 
+            btnCerrarFormularios.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnCerrarFormularios.Image = (Image)resources.GetObject("btnCerrarFormularios.Image");
+            btnCerrarFormularios.Location = new Point(1048, 4);
+            btnCerrarFormularios.Name = "btnCerrarFormularios";
+            btnCerrarFormularios.Size = new Size(32, 32);
+            btnCerrarFormularios.SizeMode = PictureBoxSizeMode.AutoSize;
+            btnCerrarFormularios.TabIndex = 29;
+            btnCerrarFormularios.TabStop = false;
+            btnCerrarFormularios.Click += btnCerrarFormularios_Click;
+            // 
             // dtRegistroPersona
             // 
             dtRegistroPersona.BorderColor = Color.FromArgb(0, 124, 150);
             dtRegistroPersona.BorderSize = 2;
             dtRegistroPersona.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            dtRegistroPersona.Location = new Point(797, 2);
+            dtRegistroPersona.Location = new Point(367, 3);
             dtRegistroPersona.MinimumSize = new Size(0, 35);
             dtRegistroPersona.Name = "dtRegistroPersona";
             dtRegistroPersona.Size = new Size(283, 35);
@@ -212,12 +258,12 @@
             txtDocumento.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtDocumento.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtDocumento.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtDocumento.Location = new Point(721, 35);
+            txtDocumento.Location = new Point(719, 43);
             txtDocumento.Name = "txtDocumento";
             txtDocumento.PasswordChar = '\0';
             txtDocumento.PlaceholderText = "";
             txtDocumento.SelectedText = "";
-            txtDocumento.Size = new Size(282, 36);
+            txtDocumento.Size = new Size(312, 36);
             txtDocumento.TabIndex = 26;
             // 
             // cboOcupacion
@@ -232,7 +278,7 @@
             cboOcupacion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cboOcupacion.ForeColor = Color.FromArgb(68, 88, 112);
             cboOcupacion.ItemHeight = 30;
-            cboOcupacion.Location = new Point(40, 35);
+            cboOcupacion.Location = new Point(31, 42);
             cboOcupacion.Name = "cboOcupacion";
             cboOcupacion.Size = new Size(316, 36);
             cboOcupacion.TabIndex = 25;
@@ -249,7 +295,7 @@
             cboRol.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cboRol.ForeColor = Color.FromArgb(68, 88, 112);
             cboRol.ItemHeight = 30;
-            cboRol.Location = new Point(381, 35);
+            cboRol.Location = new Point(372, 42);
             cboRol.Name = "cboRol";
             cboRol.Size = new Size(310, 36);
             cboRol.TabIndex = 24;
@@ -257,7 +303,7 @@
             // btnBuscarPersona
             // 
             btnBuscarPersona.Image = (Image)resources.GetObject("btnBuscarPersona.Image");
-            btnBuscarPersona.Location = new Point(971, 77);
+            btnBuscarPersona.Location = new Point(996, 45);
             btnBuscarPersona.Name = "btnBuscarPersona";
             btnBuscarPersona.Size = new Size(32, 32);
             btnBuscarPersona.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -269,7 +315,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Ebrima", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(381, 11);
+            label10.Location = new Point(372, 18);
             label10.Name = "label10";
             label10.Size = new Size(37, 21);
             label10.TabIndex = 21;
@@ -277,7 +323,7 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(btnPasarDatos);
+            groupBox1.BackColor = Color.Transparent;
             groupBox1.Controls.Add(txtIdPersona);
             groupBox1.Controls.Add(GuardarMiembroFamilia);
             groupBox1.Controls.Add(txtCorreo);
@@ -294,27 +340,12 @@
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(label2);
             groupBox1.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox1.Location = new Point(3, 107);
+            groupBox1.Location = new Point(6, 108);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(1065, 404);
+            groupBox1.Size = new Size(1065, 423);
             groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
             groupBox1.Text = "Datos Personales";
-            // 
-            // btnPasarDatos
-            // 
-            btnPasarDatos.DisabledState.BorderColor = Color.DarkGray;
-            btnPasarDatos.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnPasarDatos.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnPasarDatos.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnPasarDatos.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnPasarDatos.ForeColor = Color.White;
-            btnPasarDatos.Location = new Point(699, 246);
-            btnPasarDatos.Name = "btnPasarDatos";
-            btnPasarDatos.Size = new Size(180, 45);
-            btnPasarDatos.TabIndex = 26;
-            btnPasarDatos.Text = "Pasar Datos";
-            btnPasarDatos.Click += btnPasarDatos_Click;
             // 
             // txtIdPersona
             // 
@@ -346,7 +377,7 @@
             GuardarMiembroFamilia.FillColor = Color.White;
             GuardarMiembroFamilia.Font = new Font("Ebrima", 12F, FontStyle.Regular, GraphicsUnit.Point);
             GuardarMiembroFamilia.ForeColor = Color.Black;
-            GuardarMiembroFamilia.Location = new Point(801, 338);
+            GuardarMiembroFamilia.Location = new Point(776, 343);
             GuardarMiembroFamilia.Name = "GuardarMiembroFamilia";
             GuardarMiembroFamilia.Size = new Size(195, 45);
             GuardarMiembroFamilia.TabIndex = 24;
@@ -493,31 +524,54 @@
             tbPersona.Location = new Point(0, 46);
             tbPersona.Name = "tbPersona";
             tbPersona.SelectedIndex = 0;
-            tbPersona.Size = new Size(1084, 630);
+            tbPersona.Size = new Size(1084, 656);
             tbPersona.TabIndex = 27;
             // 
             // tpReg
             // 
+            tpReg.Controls.Add(btnAsignarusuario);
+            tpReg.Controls.Add(groupBox1);
+            tpReg.Controls.Add(siticoneGroupBox1);
             tpReg.Controls.Add(pbxImagenGuardada);
             tpReg.Controls.Add(lblFecha);
             tpReg.Controls.Add(lblCorreo1);
             tpReg.Controls.Add(lblNombre1);
-            tpReg.Controls.Add(btnBuscarPersona);
-            tpReg.Controls.Add(circularProgressBar1);
-            tpReg.Controls.Add(label3);
-            tpReg.Controls.Add(txtDocumento);
-            tpReg.Controls.Add(groupBox1);
-            tpReg.Controls.Add(cboOcupacion);
-            tpReg.Controls.Add(label4);
-            tpReg.Controls.Add(cboRol);
-            tpReg.Controls.Add(label10);
             tpReg.Location = new Point(4, 24);
             tpReg.Name = "tpReg";
             tpReg.Padding = new Padding(3);
-            tpReg.Size = new Size(1076, 602);
+            tpReg.Size = new Size(1076, 628);
             tpReg.TabIndex = 0;
             tpReg.Text = "REGISTRO";
             tpReg.UseVisualStyleBackColor = true;
+            // 
+            // siticoneGroupBox1
+            // 
+            siticoneGroupBox1.BorderColor = Color.White;
+            siticoneGroupBox1.Controls.Add(btnBuscarPersona);
+            siticoneGroupBox1.Controls.Add(label10);
+            siticoneGroupBox1.Controls.Add(cboRol);
+            siticoneGroupBox1.Controls.Add(label4);
+            siticoneGroupBox1.Controls.Add(cboOcupacion);
+            siticoneGroupBox1.Controls.Add(label3);
+            siticoneGroupBox1.Controls.Add(txtDocumento);
+            siticoneGroupBox1.CustomBorderColor = Color.FromArgb(0, 192, 192);
+            siticoneGroupBox1.CustomBorderThickness = new Padding(0, 10, 0, 0);
+            siticoneGroupBox1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            siticoneGroupBox1.ForeColor = Color.FromArgb(64, 64, 64);
+            siticoneGroupBox1.Location = new Point(9, 7);
+            siticoneGroupBox1.Name = "siticoneGroupBox1";
+            siticoneGroupBox1.Size = new Size(1058, 111);
+            siticoneGroupBox1.TabIndex = 26;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Ebrima", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(738, 18);
+            label3.Name = "label3";
+            label3.Size = new Size(91, 21);
+            label3.TabIndex = 27;
+            label3.Text = "Documento";
             // 
             // pbxImagenGuardada
             // 
@@ -527,7 +581,7 @@
             pbxImagenGuardada.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             pbxImagenGuardada.BorderSize = 2;
             pbxImagenGuardada.GradientAngle = 50F;
-            pbxImagenGuardada.Location = new Point(26, 513);
+            pbxImagenGuardada.Location = new Point(41, 537);
             pbxImagenGuardada.Name = "pbxImagenGuardada";
             pbxImagenGuardada.Size = new Size(82, 82);
             pbxImagenGuardada.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -537,7 +591,7 @@
             // lblFecha
             // 
             lblFecha.BackColor = Color.Transparent;
-            lblFecha.Location = new Point(114, 572);
+            lblFecha.Location = new Point(129, 596);
             lblFecha.Name = "lblFecha";
             lblFecha.Size = new Size(104, 17);
             lblFecha.TabIndex = 31;
@@ -546,7 +600,7 @@
             // lblCorreo1
             // 
             lblCorreo1.BackColor = Color.Transparent;
-            lblCorreo1.Location = new Point(114, 549);
+            lblCorreo1.Location = new Point(129, 573);
             lblCorreo1.Name = "lblCorreo1";
             lblCorreo1.Size = new Size(39, 17);
             lblCorreo1.TabIndex = 30;
@@ -555,52 +609,11 @@
             // lblNombre1
             // 
             lblNombre1.BackColor = Color.Transparent;
-            lblNombre1.Location = new Point(114, 526);
+            lblNombre1.Location = new Point(129, 550);
             lblNombre1.Name = "lblNombre1";
             lblNombre1.Size = new Size(47, 17);
             lblNombre1.TabIndex = 29;
             lblNombre1.Text = "Nombre";
-            // 
-            // circularProgressBar1
-            // 
-            circularProgressBar1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
-            circularProgressBar1.AnimationSpeed = 500;
-            circularProgressBar1.BackColor = Color.Transparent;
-            circularProgressBar1.Font = new Font("Segoe UI", 72F, FontStyle.Bold, GraphicsUnit.Point);
-            circularProgressBar1.ForeColor = Color.FromArgb(64, 64, 64);
-            circularProgressBar1.InnerColor = Color.Transparent;
-            circularProgressBar1.InnerMargin = 2;
-            circularProgressBar1.InnerWidth = -1;
-            circularProgressBar1.Location = new Point(1007, 21);
-            circularProgressBar1.MarqueeAnimationSpeed = 2000;
-            circularProgressBar1.Name = "circularProgressBar1";
-            circularProgressBar1.OuterColor = Color.Gray;
-            circularProgressBar1.OuterMargin = -25;
-            circularProgressBar1.OuterWidth = 26;
-            circularProgressBar1.ProgressColor = Color.FromArgb(78, 214, 202);
-            circularProgressBar1.ProgressWidth = 5;
-            circularProgressBar1.SecondaryFont = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            circularProgressBar1.Size = new Size(55, 55);
-            circularProgressBar1.StartAngle = 270;
-            circularProgressBar1.SubscriptColor = Color.FromArgb(166, 166, 166);
-            circularProgressBar1.SubscriptMargin = new Padding(10, -35, 0, 0);
-            circularProgressBar1.SubscriptText = "";
-            circularProgressBar1.SuperscriptColor = Color.FromArgb(166, 166, 166);
-            circularProgressBar1.SuperscriptMargin = new Padding(10, 35, 0, 0);
-            circularProgressBar1.SuperscriptText = "";
-            circularProgressBar1.TabIndex = 28;
-            circularProgressBar1.TextMargin = new Padding(8, 8, 0, 0);
-            circularProgressBar1.Value = 68;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Ebrima", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(724, 11);
-            label3.Name = "label3";
-            label3.Size = new Size(91, 21);
-            label3.TabIndex = 27;
-            label3.Text = "Documento";
             // 
             // tabPage2
             // 
@@ -614,7 +627,7 @@
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1076, 602);
+            tabPage2.Size = new Size(1076, 628);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "MIEMBROS";
             tabPage2.UseVisualStyleBackColor = true;
@@ -871,38 +884,65 @@
             Moverformulario.TargetControl = pSuperior;
             Moverformulario.UseTransparentDrag = true;
             // 
-            // rjProgressBar1
+            // pbCargaBuscarPersona
             // 
-            rjProgressBar1.ChannelColor = Color.DarkTurquoise;
-            rjProgressBar1.ChannelHeight = 10;
-            rjProgressBar1.ForeBackColor = Color.DeepSkyBlue;
-            rjProgressBar1.ForeColor = Color.White;
-            rjProgressBar1.Location = new Point(20, 682);
-            rjProgressBar1.Name = "rjProgressBar1";
-            rjProgressBar1.ShowMaximun = true;
-            rjProgressBar1.ShowValue = RJCodeAdvance.RJControls.TextPosition.Center;
-            rjProgressBar1.Size = new Size(1042, 23);
-            rjProgressBar1.SliderColor = Color.FromArgb(78, 214, 202);
-            rjProgressBar1.SliderHeight = 6;
-            rjProgressBar1.SymbolAfter = "";
-            rjProgressBar1.SymbolBefore = "";
-            rjProgressBar1.TabIndex = 28;
+            pbCargaBuscarPersona.ChannelColor = Color.DarkTurquoise;
+            pbCargaBuscarPersona.ChannelHeight = 10;
+            pbCargaBuscarPersona.ForeBackColor = Color.DeepSkyBlue;
+            pbCargaBuscarPersona.ForeColor = Color.White;
+            pbCargaBuscarPersona.Location = new Point(20, 708);
+            pbCargaBuscarPersona.Name = "pbCargaBuscarPersona";
+            pbCargaBuscarPersona.ShowMaximun = true;
+            pbCargaBuscarPersona.ShowValue = RJCodeAdvance.RJControls.TextPosition.Center;
+            pbCargaBuscarPersona.Size = new Size(1042, 23);
+            pbCargaBuscarPersona.SliderColor = Color.Teal;
+            pbCargaBuscarPersona.SliderHeight = 6;
+            pbCargaBuscarPersona.SymbolAfter = "";
+            pbCargaBuscarPersona.SymbolBefore = "";
+            pbCargaBuscarPersona.TabIndex = 28;
+            // 
+            // tmTraerDatosPersona
+            // 
+            tmTraerDatosPersona.Tick += tmTraerDatosPersona_Tick;
+            // 
+            // btnAsignarusuario
+            // 
+            btnAsignarusuario.BackColor = Color.MediumSlateBlue;
+            btnAsignarusuario.BackgroundColor = Color.MediumSlateBlue;
+            btnAsignarusuario.BorderColor = Color.PaleVioletRed;
+            btnAsignarusuario.BorderRadius = 0;
+            btnAsignarusuario.BorderSize = 0;
+            btnAsignarusuario.FlatAppearance.BorderSize = 0;
+            btnAsignarusuario.FlatStyle = FlatStyle.Flat;
+            btnAsignarusuario.ForeColor = Color.White;
+            btnAsignarusuario.Location = new Point(791, 580);
+            btnAsignarusuario.Name = "btnAsignarusuario";
+            btnAsignarusuario.Size = new Size(150, 40);
+            btnAsignarusuario.TabIndex = 32;
+            btnAsignarusuario.Text = "Asignar Usuario";
+            btnAsignarusuario.TextColor = Color.White;
+            btnAsignarusuario.UseVisualStyleBackColor = false;
+            btnAsignarusuario.Click += btnAsignarusuario_Click;
             // 
             // frmRegistrarMiembros
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1084, 717);
-            Controls.Add(rjProgressBar1);
+            ClientSize = new Size(1084, 743);
+            Controls.Add(pbCargaBuscarPersona);
             Controls.Add(tbPersona);
             Controls.Add(pSuperior);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmRegistrarMiembros";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmRegistrarMiembros";
             Load += frmRegistrarMiembros_Load;
             pSuperior.ResumeLayout(false);
             pSuperior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)btnMinimize).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnClose).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnCerrarFormularios).EndInit();
             ((System.ComponentModel.ISupportInitialize)imagePersona).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnBuscarPersona).EndInit();
             groupBox1.ResumeLayout(false);
@@ -910,6 +950,8 @@
             tbPersona.ResumeLayout(false);
             tpReg.ResumeLayout(false);
             tpReg.PerformLayout();
+            siticoneGroupBox1.ResumeLayout(false);
+            siticoneGroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbxImagenGuardada).EndInit();
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
@@ -967,7 +1009,7 @@
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel4;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel6;
         private ComboBox cboPagina;
-        private RJCodeAdvance.RJControls.RJProgressBar rjProgressBar1;
+        private RJCodeAdvance.RJControls.RJProgressBar pbCargaBuscarPersona;
         private RJCodeAdvance.RJControls.RJButton btnTotalReg;
         private RJCodeAdvance.RJControls.RJButton btnNumFilas;
         private RJCodeAdvance.RJControls.RJButton btnTotalPaginas;
@@ -977,8 +1019,12 @@
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel lblFecha;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel lblCorreo1;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel lblNombre1;
-        private CircularProgressBar.CircularProgressBar circularProgressBar1;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton btnPasarDatos;
         private RJCodeAdvance.RJControls.RJCircularPictureBox pbxImagenGuardada;
+        private System.Windows.Forms.Timer tmTraerDatosPersona;
+        private Siticone.Desktop.UI.WinForms.SiticoneGroupBox siticoneGroupBox1;
+        private PictureBox btnCerrarFormularios;
+        private PictureBox btnMinimize;
+        private PictureBox btnClose;
+        private RJCodeAdvance.RJControls.RJButton btnAsignarusuario;
     }
 }

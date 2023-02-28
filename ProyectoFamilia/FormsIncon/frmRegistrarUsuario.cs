@@ -60,8 +60,8 @@ namespace ProyectoFamilia.FormsIncon
         {
             String lcResultado = "";
             //lcResultado = fnGuardarUsuario();
-            
-               lcResultado=fnGuardarUsuario();
+
+            lcResultado = fnGuardarUsuario();
 
             if (lcResultado == "OK")
             {
@@ -95,7 +95,7 @@ namespace ProyectoFamilia.FormsIncon
             }
             catch (Exception ex)
             {
-             
+
 
                 return lstNomPersona;
             }
@@ -107,7 +107,10 @@ namespace ProyectoFamilia.FormsIncon
 
         private void frmRegistrarUsuario_Load(object sender, EventArgs e)
         {
-            fnLLenarNomPersona(cboNombrePersona, 0, "", false);
+            // Establece la posición del formulario en la parte derecha de la pantalla
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width - this.Width, 150);
+            fnLLenarNomPersona(cboNombrePersona, 50, "", false);
             dtFechaRegistroUsuario.Visible = false;
         }
     }

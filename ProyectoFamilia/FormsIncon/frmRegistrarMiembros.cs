@@ -2,6 +2,7 @@
 using CapaEntidad;
 using CapaNegocio;
 using Microsoft.Identity.Client;
+using ProyectoFamilia.FormsIncon;
 using ProyectoFamilia.Notifications;
 using Siticone.Desktop.UI.WinForms;
 using System;
@@ -172,6 +173,12 @@ namespace ProyectoFamilia.FormsIncome
         private void frmRegistrarMiembros_Load(object sender, EventArgs e)
 
         {
+
+            // Establece la posición del formulario en la parte izquierda de la pantalla
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(280, 150);
+
+
             pasoLoad = false;
             fnLLenarRol(cboRol, 0, "", false);
             fnLLenarOcupacion(cboOcupacion, 0, "", false);
@@ -233,6 +240,10 @@ namespace ProyectoFamilia.FormsIncome
 
             if (lcResultado == "OK")
             {
+                fnLimpiarControles();
+
+                fnEnviarDatosFormulario();
+
                 MessageBox.Show("Se Grabo Satisfactoriamente Personal Trabajador", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -384,7 +395,17 @@ namespace ProyectoFamilia.FormsIncome
 
         private void btnBuscarPersona_Click(object sender, EventArgs e)
         {
-            fnTrarDatosPersona();
+            ///pbTraerClientes.Visible = true;
+            pbCargaBuscarPersona.Value = 0;
+            if (pbCargaBuscarPersona.Value == 0)
+            {
+                tmTraerDatosPersona.Start();
+            }
+            //else
+            //{
+            //    //resetProgressBar();
+            //}
+            //fnTrarDatosPersona();
         }
 
 
@@ -403,18 +424,74 @@ namespace ProyectoFamilia.FormsIncome
             }
         }
 
-        private void btnPasarDatos_Click(object sender, EventArgs e)
+
+        public void fnLimpiarControles()
         {
+            txtNombre.Text = "";
+            txtapePat.Text = "";
+            txtapeMat.Text = "";
+            txtCorreo.Text = "";
 
+            // Limpiar la imagen del PictureBox1
+            imagePersona.Image = null;
+            dtFechaNacimiento.Value = DateTime.Now;
 
+        }
+        public void fnEnviarDatosFormulario()
+        {
             lblNombre1.Text = txtNombre.Text + " " + txtapePat.Text + " " + txtapeMat.Text;
             lblCorreo1.Text = txtCorreo.Text;
             lblFecha.Text = dtFechaNacimiento.Value.ToString("dddd, dd' de 'MMMM' de 'yyyy");
             // Copiar la imagen del PictureBox1 al PictureBox2
             pbxImagenGuardada.Image = imagePersona.Image;
+        }
 
-            // Limpiar la imagen del PictureBox1
-            imagePersona.Image = null;
+        private void tmTraerDatosPersona_Tick(object sender, EventArgs e)
+        {
+
+            if (pbCargaBuscarPersona.Value < 90)
+            {
+                pbCargaBuscarPersona.Value += 10;
+            }
+            else if (pbCargaBuscarPersona.Value == 90)
+            {
+                pbCargaBuscarPersona.Value += 1;
+                fnTrarDatosPersona();
+            }
+            else if (pbCargaBuscarPersona.Value > 90 && pbCargaBuscarPersona.Value < 100)
+            {
+
+                pbCargaBuscarPersona.Value += 1;
+                pbCargaBuscarPersona.Value = 100;
+
+            }
+            else
+            {
+                if (pbCargaBuscarPersona.Value >= 100)
+                {
+                    tmTraerDatosPersona.Stop();
+
+                }
+
+            }
+
+
+        }
+
+        private void btnCerrarFormularios_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnAsignarusuario_Click(object sender, EventArgs e)
+        {
+            frmRegistrarUsuario frmUsuario = new frmRegistrarUsuario();
+            frmUsuario.Show();
         }
     }
 }
