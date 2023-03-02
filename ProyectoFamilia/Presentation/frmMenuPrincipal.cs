@@ -17,6 +17,10 @@ namespace ProyectoFamilia.Presentation
         public frmMenuPrincipal()
         {
             InitializeComponent();
+            hideSubMenu();
+
+
+
         }
 
 
@@ -40,7 +44,7 @@ namespace ProyectoFamilia.Presentation
         private void tmFormulario_Tick(object sender, EventArgs e)
         {
 
-            pbCargarFormularios.Value += 1;
+            pbCargarFormularios.Value += 5;
 
 
             lblPbFormularios.Text = pbCargarFormularios.Value.ToString() + " % ";
@@ -50,8 +54,13 @@ namespace ProyectoFamilia.Presentation
                 tmFormulario.Stop();
                 //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
                 //this.Location = Screen.PrimaryScreen.WorkingArea.Location;
-                frmRegistrarMiembros frmMiembros = new frmRegistrarMiembros();
-                frmMiembros.Show();
+                //frmRegistrarMiembros frmMiembros = new frmRegistrarMiembros();
+                //frmMiembros.Show();
+
+
+                //se instancia el formulario a llamar
+
+                openChildForm(new frmRegistrarMiembros());
 
                 //frmMiembros.StartPosition = FormStartPosition.CenterScreen;
             }
@@ -71,24 +80,126 @@ namespace ProyectoFamilia.Presentation
 
         private void btnIngresos_Click(object sender, EventArgs e)
         {
+            ShowSubMenuIngresos(pIngresos);
 
 
-            MenuDinamico.Show(btnIngresos, btnIngresos.Width, 0);
-
+            #region Codigo para llenar un panel contenedor a full scream
             /*if (pbCargarFormularios.Value == 100 && PanelMenu.Width == 254)
             {
                 this.Size = Screen.PrimaryScreen.WorkingArea.Size;
                 this.Location = Screen.PrimaryScreen.WorkingArea.Location;
             }*/
+            #endregion
         }
 
+        #region PanelDinamico
 
+        private void hideSubMenuIngresos()
+        {
+            pIngresos.Visible = false;
+            if (pFamilia.Visible == false)
+            {
+                btnEgresos.Location = new Point(4, 381);
+            }
+        }
+        private void hideSubMenu()
+        {
+            pFamilia.Visible = false;
+            if (pFamilia.Visible == false)
+            {
+                btnIngresos.Location = new Point(3, 326);
+            }
+            //----------
+           
+            //panelPlaylistSubMenu.Visible = false;
+            //panelToolsSubMenu.Visible = false;
+        }
+
+        private void ShowSubMenuIngresos(Panel SubMenuIngresos)
+        {
+            if (SubMenuIngresos.Visible == false)
+            {
+                hideSubMenu();
+                btnEgresos.Location = new Point(2, 489);
+
+                SubMenuIngresos.Visible = true;
+            }
+            else
+            {
+                SubMenuIngresos.Visible = false;
+                btnIngresos.Location = new Point(2, 382);
+            }
+        }
+        private void showSubMenu(Panel subMenu)
+        {
+           
+            if (subMenu.Visible == false)
+            {
+                hideSubMenu();
+                btnIngresos.Location = new Point(3, 437);
+                
+                subMenu.Visible = true;
+            }
+            else
+            {
+                subMenu.Visible = false;
+                btnIngresos.Location = new Point(3, 326);
+            }
+
+            //----
+           
+
+
+
+
+        }
+
+        public void fnResertProgressBar()
+        {
+            if (pbCargarFormularios.Value == 100 && lblPbFormularios.Text == "100" + " % ")
+            {
+                pbCargarFormularios.Value = 5;
+                pbCargarFormularios.Visible = false;
+                lblPbFormularios.Visible = false;
+
+            }
+        }
+
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            //if (activeForm != null) activeForm.Close();
+            //activeForm = childForm;
+            //childForm.TopLevel = false;
+            //childForm.FormBorderStyle = FormBorderStyle.None;
+            //childForm.Dock = DockStyle.Fill;
+            //PanelMenu.Controls.Add(childForm);
+            //PanelMenu.Tag = childForm;
+            //childForm.BringToFront();
+            //childForm.Show();
+
+            frmRegistrarMiembros frmRegistrarFamilia = new frmRegistrarMiembros();
+            frmRegistrarFamilia.Show();
+            fnResertProgressBar();
+        }
+
+        #endregion
         private void frmMenuPrincipal_Load(object sender, EventArgs e)
         {
+            #region Panel
 
-            //Menu desplegable
-            MenuDinamico.IsMainMenu = true;
+            btnIngresos.Location = new Point(3, 326);
 
+            #endregion
+
+            #region InicioFormulario
+
+            pbCargarFormularios.Visible = false;
+
+            #endregion
+
+
+            #region Posicion del menu en la pantalla principal
             Rectangle AreaTrabajo = Screen.PrimaryScreen.WorkingArea;
             int taskbarHeight = Screen.PrimaryScreen.Bounds.Height - AreaTrabajo.Height;
             Point taskbarLocation = new Point(AreaTrabajo.Left, AreaTrabajo.Top);
@@ -98,11 +209,33 @@ namespace ProyectoFamilia.Presentation
             lx = this.Location.X;
             ly = this.Location.Y;
             this.Size = new Size(242, Screen.PrimaryScreen.WorkingArea.Size.Height);
+            #endregion
         }
 
-        private void registrarMiembroFamiliaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnVolverLogin_Click(object sender, EventArgs e)
         {
-            tmFormulario.Start();
+
         }
+
+        private void btnFamilia_Click(object sender, EventArgs e)
+        {
+            //Mostrar Panel Con formularios Hijos
+            showSubMenu(pFamilia);
+        }
+
+        private void btnRegistrarMiembro_Click(object sender, EventArgs e)
+        {
+            //Abrir el Formulario
+            if (openChildForm != null)
+            {
+                lblPbFormularios.Visible = true;
+                pbCargarFormularios.Visible = true;
+                tmFormulario.Start();
+                hideSubMenu();
+            }
+
+        }
+
+
     }
 }
