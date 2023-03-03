@@ -8,6 +8,7 @@ namespace CapaEntidad
 {
     public class RolPersona
     {
+        public RolPersona() { }
         string nombreRol;
         int idRolPersona;
         DateTime rfechaRegistro;

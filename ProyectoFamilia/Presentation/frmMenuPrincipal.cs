@@ -235,6 +235,10 @@ namespace ProyectoFamilia.Presentation
         private void btnVolverLogin_Click(object sender, EventArgs e)
         {
 
+            frmLogin login = new frmLogin();
+            login.Show();
+            this.Hide();
+
         }
 
         private void btnFamilia_Click(object sender, EventArgs e)

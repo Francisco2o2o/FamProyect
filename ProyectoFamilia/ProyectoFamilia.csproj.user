@@ -19,6 +19,9 @@
     <Compile Update="Notifications\FormMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Notifications\frmBienvenido.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Notifications\Notify.cs">
       <SubType>Form</SubType>
     </Compile>

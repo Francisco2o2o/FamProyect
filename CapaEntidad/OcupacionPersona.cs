@@ -8,6 +8,7 @@ namespace CapaEntidad
 {
     public class OcupacionPersona
     {
+        public OcupacionPersona() { }
         int idOcupacion,idUsuario; //variable
         string nombreOcupacion;//variable
         DateTime ofechaReg;//variable

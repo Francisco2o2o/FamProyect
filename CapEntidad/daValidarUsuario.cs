@@ -25,7 +25,7 @@ namespace CapDatos
                
                 pa[0] = new SqlParameter("@username", SqlDbType.VarChar, 50);
                 pa[0].Value = obVjusuario.User;
-                pa[1] = new SqlParameter("@passUsuario", SqlDbType.VarChar, 250);
+                pa[1] = new SqlParameter("@password", SqlDbType.VarChar, 250);
                 pa[1].Value = obVjusuario.Password;
              
 

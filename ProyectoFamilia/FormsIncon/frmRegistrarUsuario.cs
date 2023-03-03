@@ -39,7 +39,7 @@ namespace ProyectoFamilia.FormsIncon
                 //objpersona.DocPersona = Convert.ToString(txtDocumento.Text.Trim());
                 objusuario.User = Convert.ToString(txtUsuario.Text.Trim());
                 objusuario.Password = Convert.ToString(txtPassword.Text.Trim());
-                objusuario.IdPersona = Convert.ToInt32(cboNombrePersona.SelectedValue);
+                objusuario.IdUser = Convert.ToInt32(cboNombrePersona.SelectedValue);
                 objusuario.FechaReg = DateTime.Now;
 
                 lcValidar = NEobjUsuario.NeGuardarUsuario(objusuario, 0).Trim();
