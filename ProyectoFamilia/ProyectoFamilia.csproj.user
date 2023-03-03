@@ -4,10 +4,16 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormsIncon\frmRegistrarIngresos.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormsIncon\frmRegistrarMiembros.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormsIncon\frmRegistrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormsIncon\frmTCod.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Notifications\FormMessageBox.cs">

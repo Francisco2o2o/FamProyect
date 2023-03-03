@@ -17,7 +17,6 @@ namespace CapDatos
             SqlParameter[] pa = new SqlParameter[4];
             ConexionSql objCnx = null; // agregamos una variable a la conexion
 
-
             try
             {
                 pa[0] = new SqlParameter("@idPersona", SqlDbType.Int);

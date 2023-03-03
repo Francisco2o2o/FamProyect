@@ -17,9 +17,9 @@ namespace ProyectoFamilia.Presentation
         public frmMenuPrincipal()
         {
             InitializeComponent();
-            hideSubMenu();
-
-
+            hideSubMenuFamilia();
+            hideSubMenuIngresos();
+            hideSubMenuEgresos();
 
         }
 
@@ -77,11 +77,23 @@ namespace ProyectoFamilia.Presentation
                 this.Location = new Point(lx, ly);
             }
         }*/
-
+        #region PANEL INGRESOS
         private void btnIngresos_Click(object sender, EventArgs e)
         {
-            ShowSubMenuIngresos(pIngresos);
+            //pFamilia.Visible = false;
+            showSubMenuIngresos(pIngresos);
+            if (pFamilia.Visible == true || pEgresos.Visible == true)
+            {
+                pFamilia.Visible = false;
+                pEgresos.Visible = false;
+                btnIngresos.Location = new Point(3, 327);
+                btnIngresos.Visible = true;
 
+            }
+            else
+            {
+                btnIngresos.Visible = true;
+            }
 
             #region Codigo para llenar un panel contenedor a full scream
             /*if (pbCargarFormularios.Value == 100 && PanelMenu.Width == 254)
@@ -92,68 +104,76 @@ namespace ProyectoFamilia.Presentation
             #endregion
         }
 
-        #region PanelDinamico
+
 
         private void hideSubMenuIngresos()
         {
             pIngresos.Visible = false;
-            if (pFamilia.Visible == false)
+            if (pIngresos.Visible == false)
             {
-                btnEgresos.Location = new Point(4, 381);
+                btnEgresos.Location = new Point(2, 379);
             }
-        }
-        private void hideSubMenu()
-        {
-            pFamilia.Visible = false;
-            if (pFamilia.Visible == false)
-            {
-                btnIngresos.Location = new Point(3, 326);
-            }
-            //----------
-           
-            //panelPlaylistSubMenu.Visible = false;
-            //panelToolsSubMenu.Visible = false;
         }
 
-        private void ShowSubMenuIngresos(Panel SubMenuIngresos)
-        {
-            if (SubMenuIngresos.Visible == false)
-            {
-                hideSubMenu();
-                btnEgresos.Location = new Point(2, 489);
 
-                SubMenuIngresos.Visible = true;
-            }
-            else
-            {
-                SubMenuIngresos.Visible = false;
-                btnIngresos.Location = new Point(2, 382);
-            }
-        }
-        private void showSubMenu(Panel subMenu)
+        private void showSubMenuIngresos(Panel subMenu)
         {
-           
+
             if (subMenu.Visible == false)
             {
-                hideSubMenu();
-                btnIngresos.Location = new Point(3, 437);
-                
+                hideSubMenuIngresos();
+
+                btnEgresos.Location = new Point(2, 486);
+
+
                 subMenu.Visible = true;
+                subMenu.Location = new Point(3, 375);
             }
             else
             {
                 subMenu.Visible = false;
-                btnIngresos.Location = new Point(3, 326);
+
+                btnEgresos.Location = new Point(2, 379);
             }
-
-            //----
-           
-
-
-
-
         }
 
+        #endregion
+
+        #region MenuFamilia
+        private void hideSubMenuFamilia()
+        {
+            pFamilia.Visible = false;
+            if (pFamilia.Visible == false)
+            {
+                btnIngresos.Location = new Point(2, 327);
+                btnEgresos.Location = new Point(2, 382);
+
+            }
+        }
+
+
+        private void showSubMenuFamilia(Panel subMenu)
+        {
+
+            if (subMenu.Visible == false)
+            {
+                hideSubMenuFamilia();
+                btnIngresos.Location = new Point(2, 430);
+                btnEgresos.Location = new Point(3, 483);
+
+
+                subMenu.Visible = true;
+                subMenu.Location = new Point(2, 323);
+            }
+            else
+            {
+                subMenu.Visible = false;
+                btnIngresos.Location = new Point(2, 327);
+                btnEgresos.Location = new Point(2, 382);
+            }
+
+        }
+        #endregion
         public void fnResertProgressBar()
         {
             if (pbCargarFormularios.Value == 100 && lblPbFormularios.Text == "100" + " % ")
@@ -183,7 +203,7 @@ namespace ProyectoFamilia.Presentation
             fnResertProgressBar();
         }
 
-        #endregion
+
         private void frmMenuPrincipal_Load(object sender, EventArgs e)
         {
             #region Panel
@@ -220,7 +240,21 @@ namespace ProyectoFamilia.Presentation
         private void btnFamilia_Click(object sender, EventArgs e)
         {
             //Mostrar Panel Con formularios Hijos
-            showSubMenu(pFamilia);
+
+            showSubMenuFamilia(pFamilia);
+            if (pIngresos.Visible == true || pEgresos.Visible == true)
+            {
+                pIngresos.Visible = false;
+                pEgresos.Visible = false;
+                btnFamilia.Location = new Point(3, 274);
+                btnFamilia.Visible = true;
+
+
+            }
+            else
+            {
+                btnFamilia.Visible = true;
+            }
         }
 
         private void btnRegistrarMiembro_Click(object sender, EventArgs e)
@@ -231,11 +265,59 @@ namespace ProyectoFamilia.Presentation
                 lblPbFormularios.Visible = true;
                 pbCargarFormularios.Visible = true;
                 tmFormulario.Start();
-                hideSubMenu();
+                hideSubMenuFamilia();
             }
 
         }
 
+        #region PANEL INGRESOS
+        private void btnEgresos_Click(object sender, EventArgs e)
+        {
+            showSubMenuEgresos(pEgresos);
+            if (pIngresos.Visible == true || pFamilia.Visible == true)
+            {
+                pFamilia.Visible = false;
+                pIngresos.Visible = false;
+                btnEgresos.Location = new Point(3, 382);
+                btnIngresos.Visible = true;
+
+            }
+            else
+            {
+                btnIngresos.Visible = true;
+            }
+        }
+        private void hideSubMenuEgresos()
+        {
+            pEgresos.Visible = false;
+            if (pEgresos.Visible == false)
+            {
+                btnEgresos.Location = new Point(3, 382);
+            }
+        }
+
+
+        private void showSubMenuEgresos(Panel subMenu)
+        {
+
+            if (subMenu.Visible == false)
+            {
+                hideSubMenuEgresos();
+
+                btnEgresos.Location = new Point(3, 382);
+
+
+                subMenu.Visible = true;
+                subMenu.Location = new Point(3, 429);
+            }
+            else
+            {
+                subMenu.Visible = false;
+
+                btnEgresos.Location = new Point(3, 382);
+            }
+        }
+        #endregion
 
     }
 }

@@ -1,4 +1,7 @@
 ﻿using CapaConexion;
+using CapaEntidad;
+using CapaNegocio;
+using CapDatos;
 using ProyectoFamilia.Notifications;
 using System;
 using System.Collections.Generic;
@@ -24,28 +27,42 @@ namespace ProyectoFamilia.Presentation
             Notify frm = new Notify();
             frm.showAlert(mensaje, type);
         }
+
+        public void fnValidarUser()
+        {
+            NeValidarUsuario ObjUsuario = new NeValidarUsuario();
+            Usuario objVusuario = new Usuario();
+            DataTable GuardarDatos ;
+            try
+            {
+                //objpersona.DocPersona = Convert.ToString(txtDocumento.Text.Trim());
+                objVusuario.User = Convert.ToString(txtUsuario.Text.Trim());
+                objVusuario.Password = Convert.ToString(txtPassword.Text.Trim());
+
+                GuardarDatos=ObjUsuario.NeValidarUser(objVusuario);
+
+                foreach (DataRow row in GuardarDatos.Rows)
+                {
+
+                    //GeneralClass.clsPersona.IdUser = row[""].ToString();
+                    GeneralClass.clsPersona.IdUser =Convert.ToInt32( row["IdUsuario"]);
+                    ;                }
+               
+
+               
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error Al Ingresar");
+            }
+
+        }
+
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            //SqlConnection c = ConexionSql();
-            //SqlCommand comand = new SqlCommand("SELECT * FROM Login WHERE usuario=@usuario AND password =@password", c);
-            //comand.Parameters.AddWithValue("@usuario", txtUsuario.Text);
-            //comand.Parameters.AddWithValue("@password", txtPassword.Text);
-
-            //c.Open();
-            //SqlDataReader reader = comand.ExecuteReader();
-           
-            //if (reader.HasRows)
-            //{
-            //    frmMenuPrincipal MenuPrincipal =  new frmMenuPrincipal();
-            //    MenuPrincipal.Show();
-            //    this.Alert("Bienvenido " + txtUsuario.Text, Notify.enmType.Info);
-
-            //}
-            //else
-            //{
-            //    System.Windows.Forms.MessageBox.Show("El Usuario o Contraseña es incorrecto, porfavor Intente nuevamente", "Error Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-            //c.Close();
+            fnValidarUser();
+            
         }
 
         private void txtUsuario_Enter(object sender, EventArgs e)
