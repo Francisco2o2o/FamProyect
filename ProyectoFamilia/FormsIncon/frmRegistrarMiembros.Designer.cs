@@ -60,6 +60,7 @@
             label6 = new Label();
             tbPersona = new TabControl();
             tpReg = new TabPage();
+            btnAsignarusuario = new RJCodeAdvance.RJControls.RJButton();
             siticoneGroupBox1 = new Siticone.Desktop.UI.WinForms.SiticoneGroupBox();
             label3 = new Label();
             pbxImagenGuardada = new RJCodeAdvance.RJControls.RJCircularPictureBox();
@@ -89,7 +90,6 @@
             Moverformulario = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(components);
             pbCargaBuscarPersona = new RJCodeAdvance.RJControls.RJProgressBar();
             tmTraerDatosPersona = new System.Windows.Forms.Timer(components);
-            btnAsignarusuario = new RJCodeAdvance.RJControls.RJButton();
             pSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnMinimize).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnClose).BeginInit();
@@ -496,6 +496,7 @@
             dtFechaNacimiento.SkinColor = Color.FromArgb(78, 214, 202);
             dtFechaNacimiento.TabIndex = 15;
             dtFechaNacimiento.TextColor = Color.White;
+            dtFechaNacimiento.ValueChanged += dtFechaNacimiento_ValueChanged;
             // 
             // label7
             // 
@@ -543,6 +544,25 @@
             tpReg.TabIndex = 0;
             tpReg.Text = "REGISTRO";
             tpReg.UseVisualStyleBackColor = true;
+            // 
+            // btnAsignarusuario
+            // 
+            btnAsignarusuario.BackColor = Color.MediumSlateBlue;
+            btnAsignarusuario.BackgroundColor = Color.MediumSlateBlue;
+            btnAsignarusuario.BorderColor = Color.PaleVioletRed;
+            btnAsignarusuario.BorderRadius = 0;
+            btnAsignarusuario.BorderSize = 0;
+            btnAsignarusuario.FlatAppearance.BorderSize = 0;
+            btnAsignarusuario.FlatStyle = FlatStyle.Flat;
+            btnAsignarusuario.ForeColor = Color.White;
+            btnAsignarusuario.Location = new Point(791, 580);
+            btnAsignarusuario.Name = "btnAsignarusuario";
+            btnAsignarusuario.Size = new Size(150, 40);
+            btnAsignarusuario.TabIndex = 32;
+            btnAsignarusuario.Text = "Asignar Usuario";
+            btnAsignarusuario.TextColor = Color.White;
+            btnAsignarusuario.UseVisualStyleBackColor = false;
+            btnAsignarusuario.Click += btnAsignarusuario_Click;
             // 
             // siticoneGroupBox1
             // 
@@ -877,6 +897,7 @@
             dgRegistrarPersona.RowTemplate.Height = 25;
             dgRegistrarPersona.Size = new Size(1064, 400);
             dgRegistrarPersona.TabIndex = 0;
+            dgRegistrarPersona.CellDoubleClick += dgRegistrarPersona_CellDoubleClick;
             // 
             // Moverformulario
             // 
@@ -904,25 +925,6 @@
             // tmTraerDatosPersona
             // 
             tmTraerDatosPersona.Tick += tmTraerDatosPersona_Tick;
-            // 
-            // btnAsignarusuario
-            // 
-            btnAsignarusuario.BackColor = Color.MediumSlateBlue;
-            btnAsignarusuario.BackgroundColor = Color.MediumSlateBlue;
-            btnAsignarusuario.BorderColor = Color.PaleVioletRed;
-            btnAsignarusuario.BorderRadius = 0;
-            btnAsignarusuario.BorderSize = 0;
-            btnAsignarusuario.FlatAppearance.BorderSize = 0;
-            btnAsignarusuario.FlatStyle = FlatStyle.Flat;
-            btnAsignarusuario.ForeColor = Color.White;
-            btnAsignarusuario.Location = new Point(791, 580);
-            btnAsignarusuario.Name = "btnAsignarusuario";
-            btnAsignarusuario.Size = new Size(150, 40);
-            btnAsignarusuario.TabIndex = 32;
-            btnAsignarusuario.Text = "Asignar Usuario";
-            btnAsignarusuario.TextColor = Color.White;
-            btnAsignarusuario.UseVisualStyleBackColor = false;
-            btnAsignarusuario.Click += btnAsignarusuario_Click;
             // 
             // frmRegistrarMiembros
             // 

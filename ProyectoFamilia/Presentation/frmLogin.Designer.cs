@@ -34,7 +34,6 @@
             txtPassword = new TextBox();
             label1 = new Label();
             label2 = new Label();
-            pictureBox1 = new PictureBox();
             linkLabel1 = new LinkLabel();
             btnIngresar = new Button();
             pictureBox2 = new PictureBox();
@@ -44,9 +43,11 @@
             siticoneSeparator2 = new Siticone.Desktop.UI.WinForms.SiticoneSeparator();
             PanelLogin = new Panel();
             MoverLogin = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(components);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            pbox = new PictureBox();
+            CambioImagen = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbox).BeginInit();
             SuspendLayout();
             // 
             // txtUsuario
@@ -58,7 +59,6 @@
             txtUsuario.Size = new Size(255, 20);
             txtUsuario.TabIndex = 0;
             txtUsuario.Text = "INGRESE USUARIO";
-            txtUsuario.TextChanged += txtUsuario_TextChanged;
             txtUsuario.Enter += txtUsuario_Enter;
             txtUsuario.Leave += txtUsuario_Leave;
             // 
@@ -93,16 +93,6 @@
             label2.Size = new Size(82, 21);
             label2.TabIndex = 3;
             label2.Text = "Password";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.lg;
-            pictureBox1.Location = new Point(12, 57);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(235, 230);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 4;
-            pictureBox1.TabStop = false;
             // 
             // linkLabel1
             // 
@@ -187,12 +177,27 @@
             MoverLogin.TargetControl = PanelLogin;
             MoverLogin.UseTransparentDrag = true;
             // 
+            // pbox
+            // 
+            pbox.Image = Properties.Resources.Logop2;
+            pbox.Location = new Point(10, 54);
+            pbox.Name = "pbox";
+            pbox.Size = new Size(235, 230);
+            pbox.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbox.TabIndex = 13;
+            pbox.TabStop = false;
+            // 
+            // CambioImagen
+            // 
+            CambioImagen.Tick += CambioImagen_Tick;
+            // 
             // frmLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(660, 299);
+            ClientSize = new Size(660, 301);
+            Controls.Add(pbox);
             Controls.Add(PanelLogin);
             Controls.Add(siticoneSeparator2);
             Controls.Add(siticoneSeparator1);
@@ -201,7 +206,6 @@
             Controls.Add(pictureBox2);
             Controls.Add(btnIngresar);
             Controls.Add(linkLabel1);
-            Controls.Add(pictureBox1);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(txtPassword);
@@ -210,9 +214,9 @@
             Name = "frmLogin";
             Text = "frmLogin";
             Load += frmLogin_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -221,7 +225,6 @@
         private TextBox txtPassword;
         private Label label1;
         private Label label2;
-        private PictureBox pictureBox1;
         private LinkLabel linkLabel1;
         private Button btnIngresar;
         private PictureBox pictureBox2;
@@ -232,5 +235,7 @@
         private Panel PanelLogin;
         private Siticone.Desktop.UI.WinForms.SiticoneDragControl MoverLogin;
         public TextBox txtUsuario;
+        private PictureBox pbox;
+        private System.Windows.Forms.Timer CambioImagen;
     }
 }

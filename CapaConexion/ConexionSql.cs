@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Security.Cryptography.X509Certificates;
+
 
 namespace CapaConexion
 {
@@ -53,11 +55,11 @@ namespace CapaConexion
             String Pass = "";
             String Usuario = "";
             String BaseDatos = "";
-            String lsCadenaCon = ""; 
-            String cArchivo = ""; 
-            String cClave1 = ""; 
+            String lsCadenaCon = "";
+            String cArchivo = "";
+            String cClave1 = "";
             String cClave2 = "";
-            String sLine = ""; 
+            String sLine = "";
             String Source = "";
             try
             {
@@ -119,7 +121,19 @@ namespace CapaConexion
             if (Pass.Trim() == "" || Usuario.Trim() == "")
                 lsCadena = "Integrated Security=True;INITIAL CATALOG=" + ((BaseDatos.Trim())) + ";DATA SOURCE=" + ((Source.Trim())) + "";
             else
-                lsCadena = "User ID=" + ((Usuario.Trim())) + ";Password=" + ((Pass.Trim())) + ";INITIAL CATALOG=" + ((BaseDatos.Trim())) + ";DATA SOURCE=" + ((Source.Trim())) + "";
+                //lsCadena = "User ID=" + ((Usuario.Trim())) + ";Password=" + ((Pass.Trim())) + ";INITIAL CATALOG=" + ((BaseDatos.Trim())) + ";DATA SOURCE=" + ((Source.Trim())) + "";
+                lsCadena = "Database=" + BaseDatos.Trim() + "; Data Source=" + Source.Trim() + "; User Id= " + Usuario.Trim() + "; Password=" + Pass.Trim() + ";TrustServerCertificate=True;";
+
+            //lsCadena = "Database=" + BaseDatos.Trim() + "; Data Source=" + Source.Trim() + "; User Id= " + Usuario.Trim() + "; Password=" + Pass.Trim() ;
+
+
+            // Crea un objeto SqlCertificate a partir del certificado SSL
+            //X509Certificate2 cert = new X509Certificate2("myCertFile.pfx", "myCertPassword");
+            //SqlCertificate sqlCert = new SqlCertificate(cert);
+
+            //// Establece el certificado SSL en la cadena de conexión
+            //SqlConnection connection = new SqlConnection(connectionString);
+            //connection.Credential = sqlCert;
 
             lsCadenaCon = lsCadena;
             return lsCadenaCon;

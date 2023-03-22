@@ -20,10 +20,17 @@ namespace ProyectoFamilia.Presentation
     public partial class frmLogin : Form
     {
         public string nombreUsuario;
+
+        //private Image[] imageLogo = new Image[9];
+
         public frmLogin()
         {
             InitializeComponent();
             txtPassword.UseSystemPasswordChar = false;
+
+
+
+
         }
         public void Alert(string mensaje, Notify.enmType type)
         {
@@ -47,14 +54,14 @@ namespace ProyectoFamilia.Presentation
 
                 if (GuardarDatos.Rows.Count > 0)
                 {
-                    Usuario clUsu = new Usuario();
+                    Usuario clUsu = new Usuario(); // creamos una nueva instancia de clase
                     Persona clPresona = new Persona();
                     RolPersona clRol = new RolPersona();
                     OcupacionPersona clOcupa = new OcupacionPersona();
 
-                    foreach (DataRow row in GuardarDatos.Rows)
+                    foreach (DataRow row in GuardarDatos.Rows) // agregamos los datos a un datatable
                     {
-                        clUsu.IdUser = Convert.ToInt32(row["idUsuario"]);
+                        clUsu.IdUser = Convert.ToInt32(row["idUsuario"]); // asignamos el valor de las variales de las claseas a las  que vienen de la base de datos
                         clUsu.User = row["userUsuario"].ToString();
                         clPresona.IdPersona = Convert.ToInt32(row["idPersona"]);
                         clPresona.NomPersona = row["nomPersona"].ToString();
@@ -93,15 +100,21 @@ namespace ProyectoFamilia.Presentation
                         //GeneralClass.clsPersona.IdPersona = Convert.ToInt32(row["idPersona"]);
                         //GeneralClass.clsPersona.Rol = Convert.ToInt32(row["idRol"]);
                         //GeneralClass.clsPersona.Ocupacion = Convert.ToInt32(row["idOcupacion"]);
-                        clPresona.clsUsuario = clUsu;
+
+                        clPresona.clsUsuario = clUsu; //agregamos las variables de las clases a una general
                         clPresona.clsRol = clRol;
                         clPresona.clsOcupa = clOcupa;
 
                     }
-                    GeneralClass.clsPersona = clPresona;
+                    GeneralClass.clsPersona = clPresona;//clase general es igual a la variable donde se juntaron todos los datos
 
 
-                    MessageBox.Show("Bienvenido al Sistema");
+                    MessageFM.Show("Datos Ingresador Correctamente",
+          "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    //this.Alert("Los Datos son Correctos", Notify.enmType.Info);
+
+                    //MessageBox.Show("Bienvenido al Sistema");
                     return true;
                 }
                 else
@@ -110,9 +123,6 @@ namespace ProyectoFamilia.Presentation
                     MessageBox.Show("Error");
                     return false;
                 }
-
-
-
 
             }
             catch (Exception ex)
@@ -149,7 +159,7 @@ namespace ProyectoFamilia.Presentation
 
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
-            
+
             if (txtUsuario.Text == "INGRESE USUARIO")
             {
                 txtUsuario.Text = "";
@@ -173,16 +183,17 @@ namespace ProyectoFamilia.Presentation
             if (txtPassword.Text == "INGRESE PASSWORD")
             {
                 txtPassword.Text = "";
-                txtPassword.UseSystemPasswordChar = true;
+                txtPassword.UseSystemPasswordChar = true; // Modo contraseña oculata activado
                 txtPassword.ForeColor = Color.Black;
             }
         }
 
         private void txtPassword_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtPassword.Text))
+
+            if (string.IsNullOrEmpty(txtPassword.Text))//Si el textBox  no tiene ningun caracter que el modo contraseña de habilite
             {
-                txtPassword.UseSystemPasswordChar=false;
+                txtPassword.UseSystemPasswordChar = false; //-> Contraseña activada
                 txtPassword.Text = "INGRESE PASSWORD";
                 txtPassword.ForeColor = Color.Silver;
             }
@@ -192,20 +203,43 @@ namespace ProyectoFamilia.Presentation
             }
 
 
-            //if (txtPassword.Text == "")
-            //{
-
-            //}
-        }
-
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
-        {
 
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            
+            CambioImagen.Interval = 1500;
+            CambioImagen.Start();
+
+        }
+
+
+        //Creamos una variable para el timer
+        int inicio = 0;
+        private void CambioImagen_Tick(object sender, EventArgs e)
+
+        {
+            //Creamos una lista para guardar las imagenes
+            List<Image> ImageLogo = new List<Image>();
+            //Agregamos las imagenes a la lista
+            //ImageLogo.Add(Properties.Resources.lg);
+            ImageLogo.Add(Properties.Resources.Logop1);
+            ImageLogo.Add(Properties.Resources.Logop2);
+            ImageLogo.Add(Properties.Resources.Logop3);
+            ImageLogo.Add(Properties.Resources.Logop4);
+            ImageLogo.Add(Properties.Resources.Logop5);
+            ImageLogo.Add(Properties.Resources.Logop6);
+            ImageLogo.Add(Properties.Resources.Logop7);
+            ImageLogo.Add(Properties.Resources.Logop8);
+            //ImageLogo.Add(Properties.Resources.lg);
+            pbox.Image = ImageLogo[inicio];
+            inicio++;
+
+            //Si Inicio es mayor al de la lista, se reinicia a 0 para comenzar de nuevo
+            if (inicio >= ImageLogo.Count)
+            {
+                inicio = 0;
+            }
         }
     }
 }

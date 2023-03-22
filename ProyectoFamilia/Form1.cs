@@ -80,7 +80,7 @@ namespace ProyectoFamilia
             //childForm.Show();
             ///lblTitle.Text = childForm.Text;
         }
-       
+
         private void Reset()
         {
             DisableButton();
@@ -104,8 +104,8 @@ namespace ProyectoFamilia
             #region Mensaje de Error / MessageBoxButtons.OK = boton /MessageBoxIcon.Error = icono Error
 
             MessageFM.Show("This is an example of an Error-Stop Icon Message Box.",
-               "Error-Stop Icon",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                
+               "Error-Stop Icon", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             #endregion
 
         }
@@ -121,17 +121,17 @@ namespace ProyectoFamilia
 
         }
 
-      
+
 
         private void siticoneComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void rjComboBox1_OnSelectedIndexChanged_1(object sender, EventArgs e)
         {
-            
-            
+
+
 
         }
 

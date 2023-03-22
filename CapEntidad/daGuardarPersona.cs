@@ -14,7 +14,7 @@ namespace CapDatos
     {
         public String daGuardaPersona(Persona objpersona, Int32 condicion)
         {
-            SqlParameter[] pa = new SqlParameter[10];
+            SqlParameter[] pa = new SqlParameter[11];
             ConexionSql objCnx = null; // agregamos una variable a la conexion
 
 

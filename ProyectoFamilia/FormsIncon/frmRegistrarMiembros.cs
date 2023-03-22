@@ -29,7 +29,9 @@ namespace ProyectoFamilia.FormsIncome
         {
             InitializeComponent();
             dgRegistrarPersona.Columns.Add("Numero", "N°");
-            //dgRegistrarPersona.Columns.Add("Id", "ID"); // nombre que se asignara a columna -  Texto de la columna
+            dgRegistrarPersona.Columns.Add("Id", "ID"); // nombre que se asignara a columna -  Texto de la columna
+            dgRegistrarPersona.Columns.Add("IdRol", "IDRol");
+            dgRegistrarPersona.Columns.Add("IdOcu", "IDOcu");
             dgRegistrarPersona.Columns.Add("Nom", "Nombre");
             dgRegistrarPersona.Columns.Add("ApePat", "Apellido Paterno");
             dgRegistrarPersona.Columns.Add("ApeMat", "Apellido Materno");
@@ -77,7 +79,7 @@ namespace ProyectoFamilia.FormsIncome
 
             try
             {
-                objpersona.IdPersona = Convert.ToInt32(txtIdPersona.Text.Trim());
+                objpersona.IdPersona = Convert.ToInt32(txtIdPersona.Text.Trim() == "" ? "0" : txtIdPersona.Text.Trim());
                 objpersona.DocPersona = Convert.ToString(txtDocumento.Text.Trim());
                 objpersona.NomPersona = Convert.ToString(txtNombre.Text.Trim());
                 objpersona.ApePat = Convert.ToString(txtapePat.Text.Trim());
@@ -236,7 +238,7 @@ namespace ProyectoFamilia.FormsIncome
         {
             String lcResultado = "";
             lcResultado = fnGuardarPersona();
-            fnValidadFecha();
+            //fnValidadFecha();
 
             if (lcResultado == "OK")
             {
@@ -331,7 +333,9 @@ namespace ProyectoFamilia.FormsIncome
                         y++;
                         dgRegistrarPersona.Rows.Add(
                             y,
-                            //item["idPersona"],
+                            item["idPersona"],
+                            item["idRol"],
+                            item["idOcupacion"],
                             item["nomPersona"],
                             item["apePat"],
                             item["apeMat"],
@@ -340,7 +344,12 @@ namespace ProyectoFamilia.FormsIncome
                             item["nomOcupacion"],
                             item["nomRol"]
                             );
+
                     }
+                    dgRegistrarPersona.Columns[1].Visible = false;//Oculatra la segunda colummna, en este caso donde se encuentra la id
+                    dgRegistrarPersona.Columns[2].Visible = false;
+                    dgRegistrarPersona.Columns[3].Visible = false;
+
 
                 }
 
@@ -493,5 +502,40 @@ namespace ProyectoFamilia.FormsIncome
             frmRegistrarUsuario frmUsuario = new frmRegistrarUsuario();
             frmUsuario.Show();
         }
+
+        private void dgRegistrarPersona_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dgRegistrarPersona.Rows[e.RowIndex];
+                string data = row.Cells[1].Value.ToString(); // Cambia 0 por el índice de la 
+                txtIdPersona.Text = data;
+                string data2 = row.Cells[2].Value.ToString();
+                cboRol.SelectedValue = Convert.ToInt32(data2);
+                string data3 = row.Cells[3].Value.ToString();
+                cboOcupacion.SelectedValue = Convert.ToInt32(data3);
+                string data4 = row.Cells[4].Value.ToString();
+                txtNombre.Text = data4;
+                string data5 = row.Cells[5].Value.ToString();
+                txtapePat.Text = data5;
+                string data6 = row.Cells[6].Value.ToString();
+                txtapeMat.Text = data6;
+                string data7 = row.Cells[7].Value.ToString();
+                txtDocumento.Text = data7;
+                string data8 = row.Cells[8].Value.ToString();
+                txtCorreo.Text = data8;
+                tbPersona.SelectedIndex = 0;
+
+            }
+
+
+
+        }
+
+        private void dtFechaNacimiento_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
+
 }
