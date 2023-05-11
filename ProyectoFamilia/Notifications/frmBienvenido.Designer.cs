@@ -36,17 +36,17 @@
             // 
             // pBienvenido
             // 
-            pBienvenido.ChannelColor = Color.LightSteelBlue;
+            pBienvenido.ChannelColor = Color.White;
             pBienvenido.ChannelHeight = 20;
             pBienvenido.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            pBienvenido.ForeBackColor = Color.RoyalBlue;
+            pBienvenido.ForeBackColor = Color.DarkCyan;
             pBienvenido.ForeColor = Color.White;
             pBienvenido.Location = new Point(12, 50);
             pBienvenido.Name = "pBienvenido";
             pBienvenido.ShowMaximun = false;
             pBienvenido.ShowValue = RJCodeAdvance.RJControls.TextPosition.Right;
             pBienvenido.Size = new Size(444, 23);
-            pBienvenido.SliderColor = Color.DodgerBlue;
+            pBienvenido.SliderColor = Color.SkyBlue;
             pBienvenido.SliderHeight = 10;
             pBienvenido.SymbolAfter = "";
             pBienvenido.SymbolBefore = "";
@@ -60,6 +60,7 @@
             // 
             lblBienvenido.BackColor = Color.Transparent;
             lblBienvenido.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblBienvenido.ForeColor = Color.White;
             lblBienvenido.Location = new Point(12, 21);
             lblBienvenido.Name = "lblBienvenido";
             lblBienvenido.Size = new Size(66, 23);
@@ -70,6 +71,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(26, 129, 128);
             ClientSize = new Size(477, 83);
             Controls.Add(lblBienvenido);
             Controls.Add(pBienvenido);

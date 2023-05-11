@@ -45,9 +45,15 @@
             MoverLogin = new Siticone.Desktop.UI.WinForms.SiticoneDragControl(components);
             pbox = new PictureBox();
             CambioImagen = new System.Windows.Forms.Timer(components);
+            btnMinimize = new PictureBox();
+            btnClose = new PictureBox();
+            pboxPassword = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnMinimize).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnClose).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboxPassword).BeginInit();
             SuspendLayout();
             // 
             // txtUsuario
@@ -59,6 +65,7 @@
             txtUsuario.Size = new Size(255, 20);
             txtUsuario.TabIndex = 0;
             txtUsuario.Text = "INGRESE USUARIO";
+            txtUsuario.TextChanged += txtUsuario_TextChanged;
             txtUsuario.Enter += txtUsuario_Enter;
             txtUsuario.Leave += txtUsuario_Leave;
             // 
@@ -71,6 +78,7 @@
             txtPassword.Size = new Size(255, 20);
             txtPassword.TabIndex = 1;
             txtPassword.Text = "INGRESE PASSWORD";
+            txtPassword.TextChanged += txtPassword_TextChanged;
             txtPassword.Enter += txtPassword_Enter;
             txtPassword.Leave += txtPassword_Leave;
             // 
@@ -191,13 +199,49 @@
             // 
             CambioImagen.Tick += CambioImagen_Tick;
             // 
+            // btnMinimize
+            // 
+            btnMinimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnMinimize.Image = (Image)resources.GetObject("btnMinimize.Image");
+            btnMinimize.Location = new Point(599, 50);
+            btnMinimize.Name = "btnMinimize";
+            btnMinimize.Size = new Size(24, 24);
+            btnMinimize.SizeMode = PictureBoxSizeMode.AutoSize;
+            btnMinimize.TabIndex = 33;
+            btnMinimize.TabStop = false;
+            // 
+            // btnClose
+            // 
+            btnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnClose.Image = (Image)resources.GetObject("btnClose.Image");
+            btnClose.Location = new Point(629, 50);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(24, 24);
+            btnClose.SizeMode = PictureBoxSizeMode.AutoSize;
+            btnClose.TabIndex = 32;
+            btnClose.TabStop = false;
+            btnClose.Click += btnClose_Click;
+            // 
+            // pboxPassword
+            // 
+            pboxPassword.Image = Properties.Resources.Ver;
+            pboxPassword.Location = new Point(617, 157);
+            pboxPassword.Name = "pboxPassword";
+            pboxPassword.Size = new Size(24, 23);
+            pboxPassword.TabIndex = 34;
+            pboxPassword.TabStop = false;
+            pboxPassword.Click += pboxPassword_Click;
+            // 
             // frmLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(660, 301);
+            Controls.Add(pboxPassword);
+            Controls.Add(btnMinimize);
             Controls.Add(pbox);
+            Controls.Add(btnClose);
             Controls.Add(PanelLogin);
             Controls.Add(siticoneSeparator2);
             Controls.Add(siticoneSeparator1);
@@ -212,11 +256,15 @@
             Controls.Add(txtUsuario);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmLogin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmLogin";
             Load += frmLogin_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnMinimize).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnClose).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboxPassword).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -237,5 +285,8 @@
         public TextBox txtUsuario;
         private PictureBox pbox;
         private System.Windows.Forms.Timer CambioImagen;
+        private PictureBox btnMinimize;
+        private PictureBox btnClose;
+        private PictureBox pboxPassword;
     }
 }

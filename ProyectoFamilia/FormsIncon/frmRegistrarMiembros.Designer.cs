@@ -30,6 +30,8 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistrarMiembros));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             label1 = new Label();
             label2 = new Label();
             label4 = new Label();
@@ -40,13 +42,13 @@
             btnCerrarFormularios = new PictureBox();
             dtRegistroPersona = new RJCodeAdvance.RJControls.RJDatePicker();
             btnImagePersona = new RJCodeAdvance.RJControls.RJButton();
-            imagePersona = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             txtDocumento = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             cboOcupacion = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             cboRol = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             btnBuscarPersona = new PictureBox();
             label10 = new Label();
             groupBox1 = new GroupBox();
+            imagePersona = new PictureBox();
             txtIdPersona = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             GuardarMiembroFamilia = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             txtCorreo = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
@@ -67,7 +69,7 @@
             lblFecha = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             lblCorreo1 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             lblNombre1 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            tabPage2 = new TabPage();
+            tbMiembros = new TabPage();
             chkHabilitarFechas = new Siticone.Desktop.UI.WinForms.SiticoneCheckBox();
             groupBox3 = new GroupBox();
             siticonevSeparator1 = new Siticone.Desktop.UI.WinForms.SiticoneVSeparator();
@@ -94,14 +96,14 @@
             ((System.ComponentModel.ISupportInitialize)btnMinimize).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnClose).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnCerrarFormularios).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)imagePersona).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnBuscarPersona).BeginInit();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)imagePersona).BeginInit();
             tbPersona.SuspendLayout();
             tpReg.SuspendLayout();
             siticoneGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbxImagenGuardada).BeginInit();
-            tabPage2.SuspendLayout();
+            tbMiembros.SuspendLayout();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnBuscar).BeginInit();
             groupBox2.SuspendLayout();
@@ -230,22 +232,6 @@
             btnImagePersona.UseVisualStyleBackColor = false;
             btnImagePersona.Click += btnFotoMiembroFamilia_Click;
             // 
-            // imagePersona
-            // 
-            imagePersona.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            imagePersona.BorderColor = Color.FromArgb(0, 124, 150);
-            imagePersona.BorderColor2 = Color.FromArgb(0, 124, 150);
-            imagePersona.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            imagePersona.BorderSize = 2;
-            imagePersona.GradientAngle = 50F;
-            imagePersona.Image = (Image)resources.GetObject("imagePersona.Image");
-            imagePersona.Location = new Point(441, 128);
-            imagePersona.Name = "imagePersona";
-            imagePersona.Size = new Size(185, 185);
-            imagePersona.SizeMode = PictureBoxSizeMode.StretchImage;
-            imagePersona.TabIndex = 12;
-            imagePersona.TabStop = false;
-            // 
             // txtDocumento
             // 
             txtDocumento.BorderColor = Color.FromArgb(64, 64, 64);
@@ -324,6 +310,7 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.Transparent;
+            groupBox1.Controls.Add(imagePersona);
             groupBox1.Controls.Add(txtIdPersona);
             groupBox1.Controls.Add(GuardarMiembroFamilia);
             groupBox1.Controls.Add(txtCorreo);
@@ -336,7 +323,6 @@
             groupBox1.Controls.Add(label7);
             groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(btnImagePersona);
-            groupBox1.Controls.Add(imagePersona);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(label2);
             groupBox1.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
@@ -346,6 +332,16 @@
             groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
             groupBox1.Text = "Datos Personales";
+            // 
+            // imagePersona
+            // 
+            imagePersona.Image = Properties.Resources.AvatarDefect;
+            imagePersona.Location = new Point(440, 99);
+            imagePersona.Name = "imagePersona";
+            imagePersona.Size = new Size(200, 229);
+            imagePersona.SizeMode = PictureBoxSizeMode.Zoom;
+            imagePersona.TabIndex = 26;
+            imagePersona.TabStop = false;
             // 
             // txtIdPersona
             // 
@@ -368,6 +364,8 @@
             // 
             // GuardarMiembroFamilia
             // 
+            GuardarMiembroFamilia.BackgroundImage = (Image)resources.GetObject("GuardarMiembroFamilia.BackgroundImage");
+            GuardarMiembroFamilia.BackgroundImageLayout = ImageLayout.None;
             GuardarMiembroFamilia.BorderRadius = 3;
             GuardarMiembroFamilia.BorderThickness = 1;
             GuardarMiembroFamilia.DisabledState.BorderColor = Color.DarkGray;
@@ -377,9 +375,11 @@
             GuardarMiembroFamilia.FillColor = Color.White;
             GuardarMiembroFamilia.Font = new Font("Ebrima", 12F, FontStyle.Regular, GraphicsUnit.Point);
             GuardarMiembroFamilia.ForeColor = Color.Black;
-            GuardarMiembroFamilia.Location = new Point(776, 343);
+            GuardarMiembroFamilia.Image = (Image)resources.GetObject("GuardarMiembroFamilia.Image");
+            GuardarMiembroFamilia.ImageOffset = new Point(-30, 0);
+            GuardarMiembroFamilia.Location = new Point(741, 343);
             GuardarMiembroFamilia.Name = "GuardarMiembroFamilia";
-            GuardarMiembroFamilia.Size = new Size(195, 45);
+            GuardarMiembroFamilia.Size = new Size(264, 40);
             GuardarMiembroFamilia.TabIndex = 24;
             GuardarMiembroFamilia.Text = "Guardar";
             GuardarMiembroFamilia.Click += GuardarMiembroFamilia_Click_1;
@@ -496,7 +496,6 @@
             dtFechaNacimiento.SkinColor = Color.FromArgb(78, 214, 202);
             dtFechaNacimiento.TabIndex = 15;
             dtFechaNacimiento.TextColor = Color.White;
-            dtFechaNacimiento.ValueChanged += dtFechaNacimiento_ValueChanged;
             // 
             // label7
             // 
@@ -512,7 +511,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(441, 48);
+            label6.Location = new Point(451, 48);
             label6.Name = "label6";
             label6.Size = new Size(185, 21);
             label6.TabIndex = 13;
@@ -521,7 +520,7 @@
             // tbPersona
             // 
             tbPersona.Controls.Add(tpReg);
-            tbPersona.Controls.Add(tabPage2);
+            tbPersona.Controls.Add(tbMiembros);
             tbPersona.Location = new Point(0, 46);
             tbPersona.Name = "tbPersona";
             tbPersona.SelectedIndex = 0;
@@ -635,22 +634,23 @@
             lblNombre1.TabIndex = 29;
             lblNombre1.Text = "Nombre";
             // 
-            // tabPage2
+            // tbMiembros
             // 
-            tabPage2.Controls.Add(chkHabilitarFechas);
-            tabPage2.Controls.Add(groupBox3);
-            tabPage2.Controls.Add(btnBuscar);
-            tabPage2.Controls.Add(siticoneHtmlLabel3);
-            tabPage2.Controls.Add(txtBuscarPersona);
-            tabPage2.Controls.Add(groupBox2);
-            tabPage2.Controls.Add(dgRegistrarPersona);
-            tabPage2.Location = new Point(4, 24);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1076, 628);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "MIEMBROS";
-            tabPage2.UseVisualStyleBackColor = true;
+            tbMiembros.Controls.Add(chkHabilitarFechas);
+            tbMiembros.Controls.Add(groupBox3);
+            tbMiembros.Controls.Add(btnBuscar);
+            tbMiembros.Controls.Add(siticoneHtmlLabel3);
+            tbMiembros.Controls.Add(txtBuscarPersona);
+            tbMiembros.Controls.Add(groupBox2);
+            tbMiembros.Controls.Add(dgRegistrarPersona);
+            tbMiembros.Location = new Point(4, 24);
+            tbMiembros.Name = "tbMiembros";
+            tbMiembros.Padding = new Padding(3);
+            tbMiembros.Size = new Size(1076, 628);
+            tbMiembros.TabIndex = 1;
+            tbMiembros.Text = "MIEMBROS";
+            tbMiembros.UseVisualStyleBackColor = true;
+            tbMiembros.Click += tbMiembros_Click;
             // 
             // chkHabilitarFechas
             // 
@@ -789,7 +789,7 @@
             // btnBuscar
             // 
             btnBuscar.Image = (Image)resources.GetObject("btnBuscar.Image");
-            btnBuscar.Location = new Point(1037, 80);
+            btnBuscar.Location = new Point(1036, 81);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(32, 32);
             btnBuscar.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -891,10 +891,35 @@
             // 
             // dgRegistrarPersona
             // 
+            dgRegistrarPersona.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgRegistrarPersona.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgRegistrarPersona.BackgroundColor = Color.White;
+            dgRegistrarPersona.BorderStyle = BorderStyle.None;
+            dgRegistrarPersona.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 124, 150);
+            dataGridViewCellStyle1.Font = new Font("Ebrima", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = Color.Teal;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgRegistrarPersona.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgRegistrarPersona.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.White;
+            dataGridViewCellStyle2.Font = new Font("Ebrima", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Silver;
+            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgRegistrarPersona.DefaultCellStyle = dataGridViewCellStyle2;
+            dgRegistrarPersona.EnableHeadersVisualStyles = false;
+            dgRegistrarPersona.GridColor = Color.Teal;
             dgRegistrarPersona.Location = new Point(6, 139);
             dgRegistrarPersona.Name = "dgRegistrarPersona";
+            dgRegistrarPersona.RowHeadersVisible = false;
             dgRegistrarPersona.RowTemplate.Height = 25;
+            dgRegistrarPersona.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgRegistrarPersona.Size = new Size(1064, 400);
             dgRegistrarPersona.TabIndex = 0;
             dgRegistrarPersona.CellDoubleClick += dgRegistrarPersona_CellDoubleClick;
@@ -945,18 +970,18 @@
             ((System.ComponentModel.ISupportInitialize)btnMinimize).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnClose).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnCerrarFormularios).EndInit();
-            ((System.ComponentModel.ISupportInitialize)imagePersona).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnBuscarPersona).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)imagePersona).EndInit();
             tbPersona.ResumeLayout(false);
             tpReg.ResumeLayout(false);
             tpReg.PerformLayout();
             siticoneGroupBox1.ResumeLayout(false);
             siticoneGroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbxImagenGuardada).EndInit();
-            tabPage2.ResumeLayout(false);
-            tabPage2.PerformLayout();
+            tbMiembros.ResumeLayout(false);
+            tbMiembros.PerformLayout();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)btnBuscar).EndInit();
@@ -974,7 +999,6 @@
         private Label label5;
         private Panel pSuperior;
         private RJCodeAdvance.RJControls.RJButton btnImagePersona;
-        private RJCodeAdvance.RJControls.RJCircularPictureBox imagePersona;
         private GroupBox groupBox1;
         private RJCodeAdvance.RJControls.RJDatePicker dtFechaNacimiento;
         private Label label7;
@@ -995,7 +1019,7 @@
         private TabControl tbPersona;
         private TabPage tpReg;
         private Label label3;
-        private TabPage tabPage2;
+        private TabPage tbMiembros;
         private Siticone.Desktop.UI.WinForms.SiticoneDragControl Moverformulario;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel3;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox txtBuscarPersona;
@@ -1028,5 +1052,6 @@
         private PictureBox btnMinimize;
         private PictureBox btnClose;
         private RJCodeAdvance.RJControls.RJButton btnAsignarusuario;
+        private PictureBox imagePersona;
     }
 }

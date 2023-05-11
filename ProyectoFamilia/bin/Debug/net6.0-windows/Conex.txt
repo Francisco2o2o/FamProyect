@@ -1,0 +1,4 @@
+Server=DESKTOP-RHLRD4R
+DataBase=Familia
+User=sa
+Password=123456

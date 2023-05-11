@@ -1,0 +1,245 @@
+D:\C#\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.exe
+D:\C#\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.deps.json
+D:\C#\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.runtimeconfig.json
+D:\C#\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.dll
+D:\C#\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.pdb
+D:\C#\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\CircularProgressBar.dll
+D:\C#\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\Siticone.Desktop.UI.dll
+D:\C#\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\C#\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\WinFormAnimation.dll
+D:\C#\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\C#\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\C#\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\C#\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\C#\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\C#\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.csproj.AssemblyReference.cache
+D:\C#\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Form1.resources
+D:\C#\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Presentation.frmLogin.resources
+D:\C#\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.csproj.GenerateResource.cache
+D:\C#\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.AssemblyInfoInputs.cache
+D:\C#\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.AssemblyInfo.cs
+D:\C#\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.csproj.CoreCompileInputs.cache
+D:\C#\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.csproj.CopyComplete
+D:\C#\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.dll
+D:\C#\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\refint\ProyectoFamilia.dll
+D:\C#\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.pdb
+D:\C#\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.genruntimeconfig.cache
+D:\C#\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ref\ProyectoFamilia.dll
+D:\C#\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Presentation.frmMenuPrincipal.resources
+D:\C#\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Properties.Resources.resources
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.exe
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.deps.json
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.runtimeconfig.json
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.dll
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.pdb
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\CircularProgressBar.dll
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\RJCodeAdvance.RJControls.dll
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\Siticone.Desktop.UI.dll
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\WinFormAnimation.dll
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.csproj.AssemblyReference.cache
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Form1.resources
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.FormsIncome.frmRegistrarMiembros.resources
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Notifications.Notify.resources
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Presentation.frmLogin.resources
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Presentation.frmMenuPrincipal.resources
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Properties.Resources.resources
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Reports.frmReporteMimebrosFamilia.resources
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.csproj.GenerateResource.cache
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.GeneratedMSBuildEditorConfig.editorconfig
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.AssemblyInfoInputs.cache
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.AssemblyInfo.cs
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.csproj.CoreCompileInputs.cache
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.csproj.CopyComplete
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.dll
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\refint\ProyectoFamilia.dll
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.pdb
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.genruntimeconfig.cache
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ref\ProyectoFamilia.dll
+G:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.FormsIncon.frmRegistrarUsuario.resources
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.exe
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.deps.json
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.runtimeconfig.json
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.dll
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.pdb
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\CircularProgressBar.dll
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\RJCodeAdvance.RJControls.dll
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\Siticone.Desktop.UI.dll
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\WinFormAnimation.dll
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.csproj.AssemblyReference.cache
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Form1.resources
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.FormsIncome.frmRegistrarMiembros.resources
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.FormsIncon.frmRegistrarUsuario.resources
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Notifications.Notify.resources
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Presentation.frmLogin.resources
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Presentation.frmMenuPrincipal.resources
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Properties.Resources.resources
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Reports.frmReporteMimebrosFamilia.resources
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.csproj.GenerateResource.cache
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.GeneratedMSBuildEditorConfig.editorconfig
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.AssemblyInfoInputs.cache
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.AssemblyInfo.cs
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.csproj.CoreCompileInputs.cache
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.csproj.CopyComplete
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.dll
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\refint\ProyectoFamilia.dll
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.pdb
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.genruntimeconfig.cache
+F:\Ð a r k n e s s\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ref\ProyectoFamilia.dll
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.exe
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.deps.json
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.runtimeconfig.json
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.dll
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.pdb
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\CircularProgressBar.dll
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\RJCodeAdvance.RJControls.dll
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\Siticone.Desktop.UI.dll
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\WinFormAnimation.dll
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.csproj.AssemblyReference.cache
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Form1.resources
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.FormsIncome.frmRegistrarMiembros.resources
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.FormsIncon.frmRegistrarUsuario.resources
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Notifications.Notify.resources
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Presentation.frmLogin.resources
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Presentation.frmMenuPrincipal.resources
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Properties.Resources.resources
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Reports.frmReporteMimebrosFamilia.resources
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.csproj.GenerateResource.cache
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.AssemblyInfoInputs.cache
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.AssemblyInfo.cs
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.csproj.CoreCompileInputs.cache
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.csproj.CopyComplete
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.dll
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\refint\ProyectoFamilia.dll
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.pdb
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.genruntimeconfig.cache
+D:\C#\FamiliaProyecto\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ref\ProyectoFamilia.dll
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.csproj.AssemblyReference.cache
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Form1.resources
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.FormsIncome.frmRegistrarMiembros.resources
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.FormsIncon.frmRegistrarUsuario.resources
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Notifications.FormMessageBox.resources
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Notifications.Notify.resources
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Presentation.frmLogin.resources
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Presentation.frmMenuPrincipal.resources
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Properties.Resources.resources
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.csproj.GenerateResource.cache
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.AssemblyInfoInputs.cache
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.AssemblyInfo.cs
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.csproj.CoreCompileInputs.cache
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.dll
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\refint\ProyectoFamilia.dll
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.pdb
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.exe
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.deps.json
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.runtimeconfig.json
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.dll
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.pdb
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\CircularProgressBar.dll
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\RJCodeAdvance.RJControls.dll
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\Siticone.Desktop.UI.dll
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\WinFormAnimation.dll
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.csproj.CopyComplete
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.genruntimeconfig.cache
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\obj\Debug\net6.0-windows\ref\ProyectoFamilia.dll
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\CapaNegocio.dll
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\CapDatos.dll
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\CapaNegocio.pdb
+C:\Users\venta\OneDrive\Imágenes\ProyectoFamilia\ProyectoFamilia\bin\Debug\net6.0-windows\CapDatos.pdb
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.exe
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.deps.json
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.runtimeconfig.json
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\ProyectoFamilia.pdb
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\CircularProgressBar.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\RJCodeAdvance.RJControls.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\Siticone.Desktop.UI.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\WinFormAnimation.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\CapaNegocio.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\CapDatos.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\CapaNegocio.pdb
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\CapDatos.pdb
+D:\C#\GitProyect\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.csproj.AssemblyReference.cache
+D:\C#\GitProyect\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Form1.resources
+D:\C#\GitProyect\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.FormsIncome.frmRegistrarMiembros.resources
+D:\C#\GitProyect\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.FormsIncon.frmRegistrarUsuario.resources
+D:\C#\GitProyect\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Notifications.FormMessageBox.resources
+D:\C#\GitProyect\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Notifications.Notify.resources
+D:\C#\GitProyect\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Presentation.frmLogin.resources
+D:\C#\GitProyect\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Presentation.frmMenuPrincipal.resources
+D:\C#\GitProyect\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Properties.Resources.resources
+D:\C#\GitProyect\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.csproj.GenerateResource.cache
+D:\C#\GitProyect\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\GitProyect\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.AssemblyInfoInputs.cache
+D:\C#\GitProyect\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.AssemblyInfo.cs
+D:\C#\GitProyect\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.csproj.CoreCompileInputs.cache
+D:\C#\GitProyect\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.csproj.CopyComplete
+D:\C#\GitProyect\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.dll
+D:\C#\GitProyect\ProyectoFamilia\obj\Debug\net6.0-windows\refint\ProyectoFamilia.dll
+D:\C#\GitProyect\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.pdb
+D:\C#\GitProyect\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.genruntimeconfig.cache
+D:\C#\GitProyect\ProyectoFamilia\obj\Debug\net6.0-windows\ref\ProyectoFamilia.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\Azure.Core.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\Azure.Identity.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Abstractions.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\Microsoft.SqlServer.Server.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\System.Configuration.ConfigurationManager.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\System.Memory.Data.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\CapaConexion.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\CapaEntidad.dll
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\CapaEntidad.pdb
+D:\C#\GitProyect\ProyectoFamilia\bin\Debug\net6.0-windows\CapaConexion.pdb
+D:\C#\GitProyect\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.FormsIncon.frmRegistrarIngresos.resources
+D:\C#\GitProyect\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.FormsIncon.frmTCod.resources
+D:\C#\GitProyect\ProyectoFamilia\obj\Debug\net6.0-windows\ProyectoFamilia.Notifications.frmBienvenido.resources

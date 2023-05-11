@@ -84,9 +84,6 @@ namespace ProyectoFamilia.Presentation
 
                         //GeneralClass.clsPersona.clsUsuario.IdUser =     
                         //GeneralClass.clsPersona.clsUsuario.User = row["userUsuario"].ToString();
-
-
-
                         //GeneralClass.clsPersona.NomPersona = row["nomPersona"].ToString();
                         //GeneralClass.clsPersona.ApePat = row["apePat"].ToString();
                         //GeneralClass.clsPersona.ApeMat = row["apeMat"].ToString();
@@ -127,13 +124,13 @@ namespace ProyectoFamilia.Presentation
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Datos Incorrecto. Vuelva a ingresar nuevamente");
+                MessageFM.Show("Datos Incorrectos.\nIngreses su Usuario y Password nuevamente",
+          "Error Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
 
             }
 
         }
-
 
 
         private void btnIngresar_Click(object sender, EventArgs e)
@@ -152,10 +149,7 @@ namespace ProyectoFamilia.Presentation
                 //MessageBox.Show("Ingrese sus Datos Correctos");
             }
 
-
-
         }
-
 
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
@@ -174,6 +168,7 @@ namespace ProyectoFamilia.Presentation
             {
                 txtUsuario.Text = "INGRESE USUARIO";
                 txtUsuario.ForeColor = Color.Silver;
+
             }
         }
 
@@ -185,6 +180,8 @@ namespace ProyectoFamilia.Presentation
                 txtPassword.Text = "";
                 txtPassword.UseSystemPasswordChar = true; // Modo contraseña oculata activado
                 txtPassword.ForeColor = Color.Black;
+
+
             }
         }
 
@@ -196,6 +193,7 @@ namespace ProyectoFamilia.Presentation
                 txtPassword.UseSystemPasswordChar = false; //-> Contraseña activada
                 txtPassword.Text = "INGRESE PASSWORD";
                 txtPassword.ForeColor = Color.Silver;
+
             }
             else
             {
@@ -208,9 +206,15 @@ namespace ProyectoFamilia.Presentation
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
+
+
             CambioImagen.Interval = 1500;
             CambioImagen.Start();
 
+            if (txtPassword.Text == "INGRESE PASSWORD")
+            {
+                pboxPassword.Visible = false;
+            }
         }
 
 
@@ -240,6 +244,63 @@ namespace ProyectoFamilia.Presentation
             {
                 inicio = 0;
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            //Cerrar Todos los formulario si alguno esta abierto y no es visible
+            //foreach (Form form in Application.OpenForms)
+            //{
+            //    if (form.Name != "MainForm")
+            //    {
+            //        form.Close();
+            //    }
+            //}
+
+            //Usamos el metodo cast para convertir en un array Application.OpenForms
+            Form[] openForms = Application.OpenForms.Cast<Form>().ToArray();
+            foreach (Form form in openForms)
+            {
+                form.Close();
+            }
+
+        }
+
+        private void pboxPassword_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.UseSystemPasswordChar == true)
+            {
+                txtPassword.UseSystemPasswordChar = false;
+                pboxPassword.Image = Properties.Resources.NoVer;
+            }
+            else if (txtPassword.UseSystemPasswordChar == false)
+            {
+                txtPassword.UseSystemPasswordChar = true;
+                pboxPassword.Image = Properties.Resources.Ver;
+            }
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+            if (!string.IsNullOrEmpty(txtPassword.Text))
+            {
+                pboxPassword.Visible = true;
+            }
+            else
+            {
+                pboxPassword.Visible = false;
+            }
+
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+            if(txtPassword.Text== "INGRESE PASSWORD" && pboxPassword.Visible == true)
+            {
+                pboxPassword.Visible = false;
+            }
+            
         }
     }
 }

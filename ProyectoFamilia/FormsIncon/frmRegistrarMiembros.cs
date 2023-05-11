@@ -62,7 +62,7 @@ namespace ProyectoFamilia.FormsIncome
 
             if (ms.Length == 0)
             {
-                imagePersona.Image = Properties.Resources.imgLoad;
+                imagePersona.Image = Properties.Resources.AvatarDefect;
             }
             ms = new MemoryStream();
             imagePersona.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
@@ -175,6 +175,16 @@ namespace ProyectoFamilia.FormsIncome
         private void frmRegistrarMiembros_Load(object sender, EventArgs e)
 
         {
+            //Ocultar la barra de carga infeior
+            pbCargaBuscarPersona.Visible = false;
+
+            //dgRegistrarPersona.Columns["Numero"].Visible = false;
+
+            //Oculatar las columnas creadas en el datagridview
+            dgRegistrarPersona.Columns["Id"].Visible = false;
+            dgRegistrarPersona.Columns["IdRol"].Visible = false;
+            dgRegistrarPersona.Columns["IdOcu"].Visible = false;
+
 
             // Establece la posición del formulario en la parte izquierda de la pantalla
             this.StartPosition = FormStartPosition.Manual;
@@ -397,7 +407,10 @@ namespace ProyectoFamilia.FormsIncome
                 bResul = fnBuscarPersona(dgRegistrarPersona, 0);
                 if (!bResul)
                 {
-                    MessageBox.Show("Error al Buscar Familiar. Comunicar a Administrador de Sistema", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageFM.Show("Error al Buscar Familiar. Comunicar a Administrador de Sistema",
+          "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    //MessageBox.Show("Error al Buscar Familiar. Comunicar a Administrador de Sistema", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
         }
@@ -405,6 +418,9 @@ namespace ProyectoFamilia.FormsIncome
         private void btnBuscarPersona_Click(object sender, EventArgs e)
         {
             ///pbTraerClientes.Visible = true;
+
+            pbCargaBuscarPersona.Visible = true;
+
             pbCargaBuscarPersona.Value = 0;
             if (pbCargaBuscarPersona.Value == 0)
             {
@@ -428,7 +444,8 @@ namespace ProyectoFamilia.FormsIncome
                 bResul = fnBuscarPersona(dgRegistrarPersona, numPagina);
                 if (!bResul)
                 {
-                    MessageBox.Show("Error al Buscar Cliente. Comunicar a Administrador de Sistema", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageFM.Show("Error al Buscar Familiar. Comunicar a Administrador de Sistema",
+          "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -472,7 +489,7 @@ namespace ProyectoFamilia.FormsIncome
 
                 pbCargaBuscarPersona.Value += 1;
                 pbCargaBuscarPersona.Value = 100;
-
+                pbCargaBuscarPersona.Visible = false;
             }
             else
             {
@@ -532,7 +549,7 @@ namespace ProyectoFamilia.FormsIncome
 
         }
 
-        private void dtFechaNacimiento_ValueChanged(object sender, EventArgs e)
+        private void tbMiembros_Click(object sender, EventArgs e)
         {
 
         }

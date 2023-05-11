@@ -1,0 +1,12 @@
+D:\C#\GitProyect\CapaConexion\bin\Debug\net6.0\CapaConexion.deps.json
+D:\C#\GitProyect\CapaConexion\bin\Debug\net6.0\CapaConexion.dll
+D:\C#\GitProyect\CapaConexion\bin\Debug\net6.0\CapaConexion.pdb
+D:\C#\GitProyect\CapaConexion\obj\Debug\net6.0\CapaConexion.csproj.AssemblyReference.cache
+D:\C#\GitProyect\CapaConexion\obj\Debug\net6.0\CapaConexion.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\GitProyect\CapaConexion\obj\Debug\net6.0\CapaConexion.AssemblyInfoInputs.cache
+D:\C#\GitProyect\CapaConexion\obj\Debug\net6.0\CapaConexion.AssemblyInfo.cs
+D:\C#\GitProyect\CapaConexion\obj\Debug\net6.0\CapaConexion.csproj.CoreCompileInputs.cache
+D:\C#\GitProyect\CapaConexion\obj\Debug\net6.0\CapaConexion.dll
+D:\C#\GitProyect\CapaConexion\obj\Debug\net6.0\refint\CapaConexion.dll
+D:\C#\GitProyect\CapaConexion\obj\Debug\net6.0\CapaConexion.pdb
+D:\C#\GitProyect\CapaConexion\obj\Debug\net6.0\ref\CapaConexion.dll

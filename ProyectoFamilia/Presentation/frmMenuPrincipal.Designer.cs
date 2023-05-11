@@ -36,13 +36,13 @@
             pbCargarFormularios = new CircularProgressBar.CircularProgressBar();
             lblFecha = new Label();
             lblHora = new Label();
+            pFamilia = new Panel();
+            btnRegistrarMiembro = new Button();
+            btnRegistraUsuario = new Button();
             pictureBox1 = new PictureBox();
             btnVolverLogin = new Button();
             btnFamilia = new Button();
             btnIngresos = new Button();
-            pFamilia = new Panel();
-            btnRegistrarMiembro = new Button();
-            btnRegistraUsuario = new Button();
             pEgresos = new Panel();
             button3 = new Button();
             button4 = new Button();
@@ -61,8 +61,8 @@
             tmHoraFecha = new System.Windows.Forms.Timer(components);
             tmFormulario = new System.Windows.Forms.Timer(components);
             PanelMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             pFamilia.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             pEgresos.SuspendLayout();
             pIngresos.SuspendLayout();
             PanelSupeior.SuspendLayout();
@@ -166,11 +166,52 @@
             lblHora.Anchor = AnchorStyles.Bottom;
             lblHora.AutoSize = true;
             lblHora.Font = new Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            lblHora.Location = new Point(91, 996);
+            lblHora.Location = new Point(71, 996);
             lblHora.Name = "lblHora";
             lblHora.Size = new Size(60, 25);
             lblHora.TabIndex = 5;
             lblHora.Text = "Hora";
+            // 
+            // pFamilia
+            // 
+            pFamilia.BackColor = Color.LightGray;
+            pFamilia.Controls.Add(btnRegistrarMiembro);
+            pFamilia.Controls.Add(btnRegistraUsuario);
+            pFamilia.Location = new Point(3, 324);
+            pFamilia.Name = "pFamilia";
+            pFamilia.Size = new Size(235, 108);
+            pFamilia.TabIndex = 8;
+            // 
+            // btnRegistrarMiembro
+            // 
+            btnRegistrarMiembro.FlatAppearance.BorderColor = Color.FromArgb(0, 192, 192);
+            btnRegistrarMiembro.FlatAppearance.BorderSize = 2;
+            btnRegistrarMiembro.FlatStyle = FlatStyle.Flat;
+            btnRegistrarMiembro.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnRegistrarMiembro.ImageAlign = ContentAlignment.MiddleLeft;
+            btnRegistrarMiembro.Location = new Point(0, 5);
+            btnRegistrarMiembro.Name = "btnRegistrarMiembro";
+            btnRegistrarMiembro.Padding = new Padding(30, 0, 0, 0);
+            btnRegistrarMiembro.Size = new Size(236, 48);
+            btnRegistrarMiembro.TabIndex = 10;
+            btnRegistrarMiembro.Text = "Registrar Miembro";
+            btnRegistrarMiembro.UseVisualStyleBackColor = true;
+            btnRegistrarMiembro.Click += btnRegistrarMiembro_Click;
+            // 
+            // btnRegistraUsuario
+            // 
+            btnRegistraUsuario.FlatAppearance.BorderColor = Color.FromArgb(0, 192, 192);
+            btnRegistraUsuario.FlatAppearance.BorderSize = 2;
+            btnRegistraUsuario.FlatStyle = FlatStyle.Flat;
+            btnRegistraUsuario.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnRegistraUsuario.ImageAlign = ContentAlignment.MiddleLeft;
+            btnRegistraUsuario.Location = new Point(-1, 56);
+            btnRegistraUsuario.Name = "btnRegistraUsuario";
+            btnRegistraUsuario.Padding = new Padding(30, 0, 20, 0);
+            btnRegistraUsuario.Size = new Size(236, 48);
+            btnRegistraUsuario.TabIndex = 9;
+            btnRegistraUsuario.Text = "Registra Usuario";
+            btnRegistraUsuario.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -232,47 +273,6 @@
             btnIngresos.Text = "INGRESOS";
             btnIngresos.UseVisualStyleBackColor = true;
             btnIngresos.Click += btnIngresos_Click;
-            // 
-            // pFamilia
-            // 
-            pFamilia.BackColor = Color.LightGray;
-            pFamilia.Controls.Add(btnRegistrarMiembro);
-            pFamilia.Controls.Add(btnRegistraUsuario);
-            pFamilia.Location = new Point(3, 324);
-            pFamilia.Name = "pFamilia";
-            pFamilia.Size = new Size(235, 108);
-            pFamilia.TabIndex = 8;
-            // 
-            // btnRegistrarMiembro
-            // 
-            btnRegistrarMiembro.FlatAppearance.BorderColor = Color.FromArgb(0, 192, 192);
-            btnRegistrarMiembro.FlatAppearance.BorderSize = 2;
-            btnRegistrarMiembro.FlatStyle = FlatStyle.Flat;
-            btnRegistrarMiembro.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnRegistrarMiembro.ImageAlign = ContentAlignment.MiddleLeft;
-            btnRegistrarMiembro.Location = new Point(0, 5);
-            btnRegistrarMiembro.Name = "btnRegistrarMiembro";
-            btnRegistrarMiembro.Padding = new Padding(30, 0, 0, 0);
-            btnRegistrarMiembro.Size = new Size(236, 48);
-            btnRegistrarMiembro.TabIndex = 10;
-            btnRegistrarMiembro.Text = "Registrar Miembro";
-            btnRegistrarMiembro.UseVisualStyleBackColor = true;
-            btnRegistrarMiembro.Click += btnRegistrarMiembro_Click;
-            // 
-            // btnRegistraUsuario
-            // 
-            btnRegistraUsuario.FlatAppearance.BorderColor = Color.FromArgb(0, 192, 192);
-            btnRegistraUsuario.FlatAppearance.BorderSize = 2;
-            btnRegistraUsuario.FlatStyle = FlatStyle.Flat;
-            btnRegistraUsuario.Font = new Font("Century Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnRegistraUsuario.ImageAlign = ContentAlignment.MiddleLeft;
-            btnRegistraUsuario.Location = new Point(-1, 56);
-            btnRegistraUsuario.Name = "btnRegistraUsuario";
-            btnRegistraUsuario.Padding = new Padding(30, 0, 20, 0);
-            btnRegistraUsuario.Size = new Size(236, 48);
-            btnRegistraUsuario.TabIndex = 9;
-            btnRegistraUsuario.Text = "Registra Usuario";
-            btnRegistraUsuario.UseVisualStyleBackColor = true;
             // 
             // pEgresos
             // 
@@ -483,8 +483,8 @@
             Load += frmMenuPrincipal_Load;
             PanelMenu.ResumeLayout(false);
             PanelMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             pFamilia.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             pEgresos.ResumeLayout(false);
             pIngresos.ResumeLayout(false);
             PanelSupeior.ResumeLayout(false);
